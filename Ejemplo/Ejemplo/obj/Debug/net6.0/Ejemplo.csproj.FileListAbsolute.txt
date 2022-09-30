@@ -1,0 +1,15 @@
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\bin\Debug\net6.0\Ejemplo.exe
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\bin\Debug\net6.0\Ejemplo.deps.json
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\bin\Debug\net6.0\Ejemplo.runtimeconfig.json
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\bin\Debug\net6.0\Ejemplo.dll
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\bin\Debug\net6.0\Ejemplo.pdb
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\obj\Debug\net6.0\Ejemplo.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\obj\Debug\net6.0\Ejemplo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\obj\Debug\net6.0\Ejemplo.AssemblyInfoInputs.cache
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\obj\Debug\net6.0\Ejemplo.AssemblyInfo.cs
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\obj\Debug\net6.0\Ejemplo.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\obj\Debug\net6.0\Ejemplo.dll
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\obj\Debug\net6.0\refint\Ejemplo.dll
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\obj\Debug\net6.0\Ejemplo.pdb
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\obj\Debug\net6.0\Ejemplo.genruntimeconfig.cache
+D:\Documentos\VS-DI\DI\Ejemplo\Ejemplo\obj\Debug\net6.0\ref\Ejemplo.dll
