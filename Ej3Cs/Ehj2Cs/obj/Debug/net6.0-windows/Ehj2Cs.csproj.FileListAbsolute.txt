@@ -1,0 +1,17 @@
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\bin\Debug\net6.0-windows\Ehj2Cs.exe
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\bin\Debug\net6.0-windows\Ehj2Cs.deps.json
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\bin\Debug\net6.0-windows\Ehj2Cs.runtimeconfig.json
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\bin\Debug\net6.0-windows\Ehj2Cs.dll
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\bin\Debug\net6.0-windows\Ehj2Cs.pdb
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ehj2Cs.csproj.AssemblyReference.cache
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ehj2Cs.Form1.resources
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ehj2Cs.csproj.GenerateResource.cache
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ehj2Cs.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ehj2Cs.AssemblyInfoInputs.cache
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ehj2Cs.AssemblyInfo.cs
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ehj2Cs.csproj.CoreCompileInputs.cache
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ehj2Cs.dll
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\refint\Ehj2Cs.dll
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ehj2Cs.pdb
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ehj2Cs.genruntimeconfig.cache
+D:\Documentos\RepositorioDI\Ehj2Cs\Ehj2Cs\obj\Debug\net6.0-windows\ref\Ehj2Cs.dll

@@ -1,0 +1,15 @@
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\bin\Debug\net6.0\PrimerosEjercicios.exe
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\bin\Debug\net6.0\PrimerosEjercicios.deps.json
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\bin\Debug\net6.0\PrimerosEjercicios.runtimeconfig.json
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\bin\Debug\net6.0\PrimerosEjercicios.dll
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\bin\Debug\net6.0\PrimerosEjercicios.pdb
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\obj\Debug\net6.0\PrimerosEjercicios.csproj.AssemblyReference.cache
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\obj\Debug\net6.0\PrimerosEjercicios.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\obj\Debug\net6.0\PrimerosEjercicios.AssemblyInfoInputs.cache
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\obj\Debug\net6.0\PrimerosEjercicios.AssemblyInfo.cs
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\obj\Debug\net6.0\PrimerosEjercicios.csproj.CoreCompileInputs.cache
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\obj\Debug\net6.0\PrimerosEjercicios.dll
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\obj\Debug\net6.0\refint\PrimerosEjercicios.dll
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\obj\Debug\net6.0\PrimerosEjercicios.pdb
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\obj\Debug\net6.0\PrimerosEjercicios.genruntimeconfig.cache
+D:\Documentos\RepositorioDI\PrimerosEjercicios\PrimerosEjercicios\obj\Debug\net6.0\ref\PrimerosEjercicios.dll

@@ -1,0 +1,15 @@
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\obj\Debug\net6.0\Figura.csproj.AssemblyReference.cache
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\obj\Debug\net6.0\Figura.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\obj\Debug\net6.0\Figura.AssemblyInfoInputs.cache
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\obj\Debug\net6.0\Figura.AssemblyInfo.cs
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\obj\Debug\net6.0\Figura.csproj.CoreCompileInputs.cache
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\bin\Debug\net6.0\Figura.exe
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\bin\Debug\net6.0\Figura.deps.json
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\bin\Debug\net6.0\Figura.runtimeconfig.json
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\bin\Debug\net6.0\Figura.dll
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\bin\Debug\net6.0\Figura.pdb
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\obj\Debug\net6.0\Figura.dll
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\obj\Debug\net6.0\refint\Figura.dll
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\obj\Debug\net6.0\Figura.pdb
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\obj\Debug\net6.0\Figura.genruntimeconfig.cache
+D:\Documentos\RepositorioDI\PrimerosEjercicios\Figura\obj\Debug\net6.0\ref\Figura.dll

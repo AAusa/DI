@@ -1,0 +1,15 @@
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\bin\Debug\net6.0\Ej4Cs.exe
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\bin\Debug\net6.0\Ej4Cs.deps.json
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\bin\Debug\net6.0\Ej4Cs.runtimeconfig.json
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\bin\Debug\net6.0\Ej4Cs.dll
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\bin\Debug\net6.0\Ej4Cs.pdb
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\obj\Debug\net6.0\Ej4Cs.csproj.AssemblyReference.cache
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\obj\Debug\net6.0\Ej4Cs.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\obj\Debug\net6.0\Ej4Cs.AssemblyInfoInputs.cache
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\obj\Debug\net6.0\Ej4Cs.AssemblyInfo.cs
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\obj\Debug\net6.0\Ej4Cs.csproj.CoreCompileInputs.cache
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\obj\Debug\net6.0\Ej4Cs.dll
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\obj\Debug\net6.0\refint\Ej4Cs.dll
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\obj\Debug\net6.0\Ej4Cs.pdb
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\obj\Debug\net6.0\Ej4Cs.genruntimeconfig.cache
+D:\Documentos\RepositorioDI\Ej4Cs\Ej4Cs\obj\Debug\net6.0\ref\Ej4Cs.dll

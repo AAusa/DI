@@ -1,0 +1,11 @@
+D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\bin\Debug\NavegadorWeb.exe.config
+D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\bin\Debug\NavegadorWeb.exe
+D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\bin\Debug\NavegadorWeb.pdb
+D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.csproj.AssemblyReference.cache
+D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.csproj.SuggestedBindingRedirects.cache
+D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.Form1.resources
+D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.Properties.Resources.resources
+D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.csproj.GenerateResource.cache
+D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.csproj.CoreCompileInputs.cache
+D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.exe
+D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.pdb
