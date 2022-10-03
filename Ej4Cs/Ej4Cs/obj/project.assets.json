@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\RepositorioDI\\Ej4Cs\\Ej4Cs\\Ej4Cs.csproj",
+      "projectUniqueName": "D:\\Documentos\\VS-DI\\DI\\Ej4Cs\\Ej4Cs\\Ej4Cs.csproj",
       "projectName": "Ej4Cs",
-      "projectPath": "D:\\Documentos\\RepositorioDI\\Ej4Cs\\Ej4Cs\\Ej4Cs.csproj",
+      "projectPath": "D:\\Documentos\\VS-DI\\DI\\Ej4Cs\\Ej4Cs\\Ej4Cs.csproj",
       "packagesPath": "C:\\Users\\alu\\.nuget\\packages\\",
-      "outputPath": "D:\\Documentos\\RepositorioDI\\Ej4Cs\\Ej4Cs\\obj\\",
+      "outputPath": "D:\\Documentos\\VS-DI\\DI\\Ej4Cs\\Ej4Cs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

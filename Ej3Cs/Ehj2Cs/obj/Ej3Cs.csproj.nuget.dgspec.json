@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\RepositorioDI\\Ej3Cs\\Ehj2Cs\\Ej3Cs.csproj": {}
+    "D:\\Documentos\\VS-DI\\DI\\Ej3Cs\\Ehj2Cs\\Ej3Cs.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\RepositorioDI\\Ej3Cs\\Ehj2Cs\\Ej3Cs.csproj": {
+    "D:\\Documentos\\VS-DI\\DI\\Ej3Cs\\Ehj2Cs\\Ej3Cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\RepositorioDI\\Ej3Cs\\Ehj2Cs\\Ej3Cs.csproj",
+        "projectUniqueName": "D:\\Documentos\\VS-DI\\DI\\Ej3Cs\\Ehj2Cs\\Ej3Cs.csproj",
         "projectName": "Ej3Cs",
-        "projectPath": "D:\\Documentos\\RepositorioDI\\Ej3Cs\\Ehj2Cs\\Ej3Cs.csproj",
+        "projectPath": "D:\\Documentos\\VS-DI\\DI\\Ej3Cs\\Ehj2Cs\\Ej3Cs.csproj",
         "packagesPath": "C:\\Users\\alu\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\RepositorioDI\\Ej3Cs\\Ehj2Cs\\obj\\",
+        "outputPath": "D:\\Documentos\\VS-DI\\DI\\Ej3Cs\\Ehj2Cs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

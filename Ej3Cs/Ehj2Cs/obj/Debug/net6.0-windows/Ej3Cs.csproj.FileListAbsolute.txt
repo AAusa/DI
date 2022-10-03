@@ -1,0 +1,17 @@
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\bin\Debug\net6.0-windows\Ej3Cs.exe
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\bin\Debug\net6.0-windows\Ej3Cs.deps.json
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\bin\Debug\net6.0-windows\Ej3Cs.runtimeconfig.json
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\bin\Debug\net6.0-windows\Ej3Cs.dll
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\bin\Debug\net6.0-windows\Ej3Cs.pdb
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ej3Cs.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ehj2Cs.Form1.resources
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ej3Cs.csproj.GenerateResource.cache
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ej3Cs.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ej3Cs.AssemblyInfoInputs.cache
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ej3Cs.AssemblyInfo.cs
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ej3Cs.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ej3Cs.dll
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\refint\Ej3Cs.dll
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ej3Cs.pdb
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\Ej3Cs.genruntimeconfig.cache
+D:\Documentos\VS-DI\DI\Ej3Cs\Ehj2Cs\obj\Debug\net6.0-windows\ref\Ej3Cs.dll
