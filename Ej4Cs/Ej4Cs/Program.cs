@@ -1,100 +1,79 @@
-﻿public class Principal
+﻿using System;
+
+public class Principal
 {
     public object tecla { get; private set; }
 
     public static void Main(String[] args)
     {
-        Random random = new Random();
         Principal principal = new Principal();
-        Boolean terminar = false; 
-        int repetir = 1;
-        int max = 0, aleatorio = 0;
-        String jugar = "play";
+        Boolean terminar = false;
+        
         while (!terminar)
         {
-            principal.dibujaCuadro();
-            principal.opcionesMenu();
-            int opcion = int.Parse(Console.ReadLine());
-            while(repetir == 1 && !terminar)
-            {
-                switch (opcion)
-                {
-                    case 1:
-                        Console.WriteLine("Max:");
-                        max = int.Parse(Console.ReadLine());
-                        principal.opcion1(max);
-                        break;
-                    case 2:
-                        aleatorio = random.Next(1, 100);
-                        principal.opcion2(aleatorio);
-                        break;
-                    case 3:
-                        principal.opcion3();
-                        break;
-                    case 4:
-                        String todos = "todo";
-                        //Mejorar goto
+            int posicionY = 3;
+            principal.dibujar(posicionY);
+            ConsoleKey tecla = Console.ReadKey().Key;
 
-                        switch (todos)
-                        {
-                            case "f1":
-                                Console.WriteLine("Juego1");
-                                Console.WriteLine("Max:");
-                                max = int.Parse(Console.ReadLine());
-                                principal.opcion1(max);
-                                goto case "f2";
-                                break;
-                            case "f2":
-                                Console.WriteLine("Juego2");
-                                aleatorio = random.Next(1, 100);
-                                principal.opcion2(aleatorio);
-                                goto case "f3";
-                                break;
-                            case "f3":
-                                Console.WriteLine("Juego3");
-                                principal.opcion3();
-                                break;
-                            case "todo":
-                                goto case "f1";                                
-                        }
-                        break;
-                    case 5:
-                        terminar = true;
-                        break;
+            while (tecla != ConsoleKey.Enter)
+            {
+                //Mov. al pulsar la tecla de arriba
+                if (tecla == ConsoleKey.UpArrow)
+                {
+                    if (posicionY == 3)
+                    {
+                        posicionY = 8;
+                    }
+                    posicionY--;
                 }
-                Console.WriteLine("Quieres repetir el mismo? 1 -> si / otraNum -> no");
-                repetir = int.Parse(Console.ReadLine());
-                if(repetir != 1) terminar = true;
+                //Mov. al pulsar la tecla de abajo
+                else if (tecla == ConsoleKey.DownArrow)
+                {
+                    if (posicionY == 7)
+                    {
+                        posicionY = 2;
+                    }
+                    posicionY++;
+                }
+                principal.dibujar(posicionY);
+                tecla = Console.ReadKey().Key;
             }
+            principal.jugar(posicionY);
         }
         Console.WriteLine("Fin :)");
     }
 
-    private void dibujaCuadro()
+    private void dibujar(int posicionY = 3)
     {
+        Principal principal = new Principal();
         Console.Clear();
         Console.SetCursorPosition(2, 2);
-        for (int i = 1; i <= 20; i++)
-        {
-            if(i == 1 || i == 20)
-            {
-                Console.Write("*");
-            }
-            else
-            {
-                Console.Write("-");
-            }
-        }
-        for (int i = 3; i <= 8; i++)
+        principal.dibujarLinea();
+        for (int i = 3; i < 8; i++)
         {
             Console.SetCursorPosition(2, i);
             Console.Write("|");
             Console.SetCursorPosition(21, i);
             Console.Write("|");
             Console.SetCursorPosition(8, i);
-            Console.WriteLine("Juego " + (i-2));
+            if(i == posicionY)
+            {
+                abrirColorear(posicionY);
+                Console.WriteLine("Juego " + (i - 2));
+                cerrarColorear(posicionY);
+            }
+            else
+            {
+                Console.WriteLine("Juego " + (i-2));
+            }
         }
-        Console.SetCursorPosition(2, 9);
+        Console.SetCursorPosition(2, 8);
+        principal.dibujarLinea();
+    }
+
+
+    private void dibujarLinea()
+    {
         for (int i = 1; i <= 20; i++)
         {
             if (i == 1 || i == 20)
@@ -107,46 +86,85 @@
             }
         }
     }
-    // x = 8, y = entre 3 y 9
-    private void opcionesMenu()
+
+    private void abrirColorear(int posicionY)
     {
-        int posicionY = 3;
-        colorear(posicionY);
-        ConsoleKey tecla = Console.ReadKey().Key;
-        while(tecla != ConsoleKey.Enter)
+        Console.ForegroundColor = ConsoleColor.Green;
+    }
+    private void cerrarColorear(int posicionY)
+    {
+        Console.ForegroundColor = ConsoleColor.White;
+    }
+    // x = 8, y = entre 3 y 7 (ambos incluidos)
+    private void menu()
+    {
+        
+    }
+
+    public void jugar(int posicionY)
+    {
+        Random random = new Random();
+        Principal principal = new Principal();
+        Boolean terminar = false;
+        int repetir = 1;
+        int max = 0, aleatorio = 0;
+        String jugar = "play";
+        Console.Clear();
+        Console.WriteLine(posicionY);
+        while (repetir == 1 && !terminar)
         {
-            if (tecla == ConsoleKey.UpArrow)
+            switch (posicionY)
             {
-                if (posicionY == 3)
-                {
-                    posicionY = 9;
-                }
-                posicionY--;
-                colorear(posicionY);
+                case 3:
+                    Console.WriteLine("Max:");
+                    max = int.Parse(Console.ReadLine());
+                    principal.opcion1(max);
+                    break;
+                case 4:
+                    aleatorio = random.Next(1, 100);
+                    principal.opcion2(aleatorio);
+                    break;
+                case 5:
+                    principal.opcion3();
+                    break;
+                case 6:
+                    String todos = "todo";
+                    switch (todos)
+                    {
+                        case "f1":
+                            Console.WriteLine("Juego1");
+                            Console.WriteLine("Max:");
+                            max = int.Parse(Console.ReadLine());
+                            principal.opcion1(max);
+                            goto case "f2";
+                        case "f2":
+                            Console.WriteLine("Juego2");
+                            aleatorio = random.Next(1, 100);
+                            principal.opcion2(aleatorio);
+                            goto case "f3";
+                        case "f3":
+                            Console.WriteLine("Juego3");
+                            principal.opcion3();
+                            break;
+                        case "todo":
+                            goto case "f1";
+                    }
+                    break;
+                case 7:
+                    terminar = true;
+                    break;
             }
-            else if (tecla == ConsoleKey.DownArrow)
-            {
-           
-                if (posicionY == 8)
-                {
-                    posicionY = 2;
-                }
-                posicionY++;
-                colorear(posicionY);
-            }
-            tecla = Console.ReadKey().Key;
+            Console.WriteLine("Quieres repetir el mismo? 1 -> si / otraNum -> no");
+            repetir = int.Parse(Console.ReadLine());
+            if (repetir != 1) terminar = true;
         }
     }
 
-        private void colorear(int posicionY)
-    {
-        Console.SetCursorPosition(8, posicionY);
-        Console.ForegroundColor = ConsoleColor.Green;
-    }
-        //Falta colorear en la opcion seleccionada
-        //y que al dar Enter entre en la funcion
 
-        private void opcion1(int max = 6)
+    //Falta colorear en la opcion seleccionada
+    //y que al dar Enter entre en la funcion
+
+    private void opcion1(int max = 6)
     {
         Random random = new Random();
         Console.WriteLine("Número:");
