@@ -3,7 +3,13 @@
 public class Principal
 {
     public object tecla { get; private set; }
-
+    String enunciadoJuego1 = "Pedir un número, tirar diez dados e informar al usuario de cuantas veces ha acertado.";
+    String enunciadoJuego2 = "Juego adivina un número. El ordenador saca un número aleatorio entre 1 y 100. El usuario tiene 5 intentos para adivinarlo.Se informa mayor/menor en cada intento así como el número de intentos restantes. ";
+    String enunciadoJuego3 = "Realizar una quiniela: Se deben dar 14 resultados aleatorios como 1, X ó 2 de forma ponderada. La probabilidad de sacar 1 sea del 60%, la de sacar X sea 25% y la de sacar un 2 sea un 15%. Se debe realizar al menos una función que devuelva un 1 una X o un 2 ponderado de la forma anterior., sacando un número de 1 a 100 y seleccionando el valor devuelto con un switch con clausula when.";
+    String enunciadoJuego4 = "Jugar a todos. El programa pasará por los 3 apartados anteriores.";
+    String enunciadoJuego5 = "Salir";
+    int posicionY = 2;
+    int cursor = 5;
     public static void Main(String[] args)
     {
         Principal principal = new Principal();
@@ -15,6 +21,7 @@ public class Principal
             principal.dibujar(posicionY);
             ConsoleKey tecla = Console.ReadKey().Key;
 
+            // x = 8, y = entre 3 y 7 (ambos incluidos)
             while (tecla != ConsoleKey.Enter)
             {
                 //Mov. al pulsar la tecla de arriba
@@ -71,6 +78,80 @@ public class Principal
         principal.dibujarLinea();
     }
 
+    private void cursorOpciones()
+    {
+        Console.SetCursorPosition(40, cursor);
+        if (cursor == 6) cursor = 5;
+        cursor++;
+    }
+
+        private void menuOpciones()
+    {
+        int elegirOpcion = 1;//En repetir
+        dibujarOpciones(elegirOpcion);
+        Console.SetCursorPosition(40, 5);
+        ConsoleKey tecla = Console.ReadKey().Key;
+        int posicionYmenu = 5;
+        while (tecla != ConsoleKey.Enter)
+        {
+            //Mov. al pulsar la tecla de arriba
+            if (tecla == ConsoleKey.UpArrow)
+            {
+                if (posicionYmenu == 5)
+                {
+                    posicionYmenu = 6;
+                }
+                posicionYmenu--;
+            }
+            //Mov. al pulsar la tecla de abajo
+            else if (tecla == ConsoleKey.DownArrow)
+            {
+                if (posicionYmenu == 6)
+                {
+                    posicionYmenu = 5;
+                }
+                posicionYmenu++;
+            }
+            dibujarOpciones(posicionYmenu);
+            Console.SetCursorPosition(40, posicionYmenu);
+            tecla = Console.ReadKey().Key;
+        }
+    }
+    private void dibujarOpciones(int elegirOpcion)
+    {
+        Principal principal = new Principal();
+        for (int i = 5; i <= 6; i++)
+        {
+            cursorOpciones();
+            if (i == elegirOpcion)
+            {
+                abrirColorear(elegirOpcion);
+                if(i == 5)
+                {
+                    Console.WriteLine("Repetir");
+                }
+                else
+                {
+                    Console.WriteLine("Salir");
+                }
+                cerrarColorear(elegirOpcion);
+            }
+            else
+            {
+                if (i == 6)
+                {
+                    Console.WriteLine("Repetir");
+                }
+                else
+                {
+                    Console.WriteLine("Salir");
+                }
+            }
+        }
+    }
+
+
+
 
     private void dibujarLinea()
     {
@@ -95,39 +176,44 @@ public class Principal
     {
         Console.ForegroundColor = ConsoleColor.White;
     }
-    // x = 8, y = entre 3 y 7 (ambos incluidos)
-    private void menu()
+    /*
+    private void moverCursorY()
     {
-        
+        Console.SetCursorPosition(2, posicionY);
+        posicionY++;
     }
+    */
 
     public void jugar(int posicionY)
     {
         Random random = new Random();
         Principal principal = new Principal();
         Boolean terminar = false;
-        int repetir = 1;
-        int max = 0, aleatorio = 0;
+        int repetir = 1, max = 0, aleatorio = 0;
         String jugar = "play";
         Console.Clear();
-        Console.WriteLine(posicionY);
+        //Console.WriteLine(posicionY);
         while (repetir == 1 && !terminar)
         {
             switch (posicionY)
             {
                 case 3:
+                    Console.WriteLine(enunciadoJuego1);
                     Console.WriteLine("Max:");
                     max = int.Parse(Console.ReadLine());
                     principal.opcion1(max);
                     break;
                 case 4:
+                    Console.WriteLine(enunciadoJuego2);
                     aleatorio = random.Next(1, 100);
                     principal.opcion2(aleatorio);
                     break;
                 case 5:
+                    Console.WriteLine(enunciadoJuego3);
                     principal.opcion3();
                     break;
                 case 6:
+                    Console.WriteLine(enunciadoJuego4);
                     String todos = "todo";
                     switch (todos)
                     {
@@ -151,12 +237,12 @@ public class Principal
                     }
                     break;
                 case 7:
+                    Console.WriteLine(enunciadoJuego5);
                     terminar = true;
                     break;
             }
-            Console.WriteLine("Quieres repetir el mismo? 1 -> si / otraNum -> no");
-            repetir = int.Parse(Console.ReadLine());
-            if (repetir != 1) terminar = true;
+
+            menuOpciones();
         }
     }
 
