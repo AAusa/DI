@@ -1,0 +1,15 @@
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\bin\Debug\net6.0\Ej6Cs.exe
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\bin\Debug\net6.0\Ej6Cs.deps.json
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\bin\Debug\net6.0\Ej6Cs.runtimeconfig.json
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\bin\Debug\net6.0\Ej6Cs.dll
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\bin\Debug\net6.0\Ej6Cs.pdb
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\obj\Debug\net6.0\Ej6Cs.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\obj\Debug\net6.0\Ej6Cs.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\obj\Debug\net6.0\Ej6Cs.AssemblyInfoInputs.cache
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\obj\Debug\net6.0\Ej6Cs.AssemblyInfo.cs
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\obj\Debug\net6.0\Ej6Cs.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\obj\Debug\net6.0\Ej6Cs.dll
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\obj\Debug\net6.0\refint\Ej6Cs.dll
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\obj\Debug\net6.0\Ej6Cs.pdb
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\obj\Debug\net6.0\Ej6Cs.genruntimeconfig.cache
+D:\Documentos\VS-DI\DI\Ej6Cs\Ej6Cs\obj\Debug\net6.0\ref\Ej6Cs.dll

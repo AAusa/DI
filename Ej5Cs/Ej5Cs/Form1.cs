@@ -7,28 +7,20 @@ namespace Ej5Cs
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string text = textBox1.Text;
+            DialogResult a;
+            a = MessageBox.Show("Quieres establecer " + text + " como título?", "Cambiar titulo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            if (a == DialogResult.Yes)
+            {
+                Text = text;
+            }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            label1.Text = "¿Establecer titulo?";
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "Si")
-            {
-                this.Text = textBox1.Text;
-            }
         }
     }
 }
