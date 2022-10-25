@@ -8,25 +8,25 @@
     void Menu()
     {
         bool ejecutar = false;
-
+        int posX = 1, posY = 10;
         for (int k = 0; ;)
         {
-            PintaMenu(k);
+            PintaMenu(posX, posY);
             ConsoleKeyInfo cki = Console.ReadKey(true);
             // k se convierta en x,y que se van incrementando y en pintarMenu se controla cual se pinta con setPosition
             switch (cki.Key)
             {
-                case ConsoleKey.UpArrow: k--; break;
-                case ConsoleKey.DownArrow: k++; break;
+                case ConsoleKey.UpArrow: posY++; break;
+                case ConsoleKey.DownArrow: posY--; break;
+                case ConsoleKey.RightArrow: posX++; break;
+                case ConsoleKey.LeftArrow: posX--; break;
                 case ConsoleKey.Enter: ejecutar = true; break;
             }
-
-            if (k < 0) k = 2; else if (k > 2) k = 0;
-
+            //LIMITES TABLERO
             if (ejecutar)
             {
                 ejecutar = false;
-                switch (k)
+                switch (posY)
                 {
                     case 0: Opcion1(); break;
                     case 1: Opcion2(); break;
@@ -38,21 +38,30 @@
 
     /*
      * Limite tablero jugables:
-     *      5,6 a 5,24
+     *      6,6 a 6,24
      *      15,6 a 15,24
      */
-    void PintaMenu(int k)
+    void PintaMenu(int posX, int posY)
     {
         ConsoleColor cc = ConsoleColor.White;
         ConsoleColor sel = ConsoleColor.Red;
         menuHorizontal();
         menuVertical();
-
-        /*
+        int contX = 1, contY = 10;
+        //Pinta el fondo de cada celda
+        for (int y = 6; y <= 15; y++) // coordenadas ejeY
+        {
+            for (int x = 6; x <= 24; x += 2)// coordenadas celdas vacias de ejeX
+            {
+                Console.SetCursorPosition(x, y);// Todas las posiciones del tablero
+                Console.BackgroundColor = (posX == contX++ && posY == contY) ? Console.BackgroundColor = ConsoleColor.Red : Console.BackgroundColor = ConsoleColor.DarkBlue;
+                Console.WriteLine(" ");
+            }
+            contX = 1;
+            contY--;
+        }
         Console.BackgroundColor = ConsoleColor.Black;
-        Console.SetCursorPosition(5, 5);
-        Console.ForegroundColor = k == 0 ? sel : cc;
-        Console.WriteLine("1. Opción Uno");
+        /*
         Console.SetCursorPosition(5, 7);
         Console.ForegroundColor = k == 1 ? sel : cc;
         Console.WriteLine("2. Opción Dos");
@@ -60,6 +69,7 @@
         Console.ForegroundColor = k == 2 ? sel : cc;
         Console.WriteLine("3. Salir");
         */
+
     }
 
     /*
