@@ -4,14 +4,25 @@
     {
         new Program().Menu();
     }
-
+    int barcoMaquinaX = 0, barcoMaquinaY = 0;
+    int barcoUsuarioX = 0, barcoUsuarioY = 0;
+    int coordenadaBarcoMaquinaX = 0, coordenadaBarcoMaquinaY = 0;
+    int coordenadaBarcoUsuarioX = 0, coordenadaBarcoUsuarioY = 0;
+    bool fijarBarcoMaquina = false;
+    bool fijarBarcoUsuario = false;
+    int k;
     void Menu()
     {
         bool ejecutar = false;
+        //Limites no de tablero sino de juego:
+        //      x = 1 - 10
+        //      y = 1 - 10 
         int posX = 1, posY = 10;
-        for (int k = 0; ;)
+        for (k = 0; ;k++)
         {
+            //if(k == 0) 
             PintaMenu(posX, posY);
+            if (k == 0) generarBarco(posX, posY);
             ConsoleKeyInfo cki = Console.ReadKey(true);
             // k se convierta en x,y que se van incrementando y en pintarMenu se controla cual se pinta con setPosition
             switch (cki.Key)
@@ -20,9 +31,18 @@
                 case ConsoleKey.DownArrow: posY--; break;
                 case ConsoleKey.RightArrow: posX++; break;
                 case ConsoleKey.LeftArrow: posX--; break;
-                case ConsoleKey.Enter: ejecutar = true; break;
+                case ConsoleKey.Enter:
+                    Console.WriteLine("Enter");
+                    if (!fijarBarcoUsuario) generarBarco(posX, posY); fijarBarcoUsuario = true;
+                    //ejecutar = true; 
+                    break;
             }
-            //LIMITES TABLERO
+            //limites tablero x e y:
+            if (posX > 10) posX = 1;
+            if (posX < 1) posX = 10;
+            if (posY > 10) posY = 1;
+            if (posY < 1) posY = 10;
+
             if (ejecutar)
             {
                 ejecutar = false;
@@ -38,29 +58,67 @@
 
     /*
      * Limite tablero jugables:
-     *      6,6 a 6,24
-     *      15,6 a 15,24
+     *      6,6 a 24,6
+     *      6,15 a 24,15
      */
     void PintaMenu(int posX, int posY)
     {
-        ConsoleColor cc = ConsoleColor.White;
-        ConsoleColor sel = ConsoleColor.Red;
         menuHorizontal();
         menuVertical();
         int contX = 1, contY = 10;
-        //Pinta el fondo de cada celda
-        for (int y = 6; y <= 15; y++) // coordenadas ejeY
-        {
-            for (int x = 6; x <= 24; x += 2)// coordenadas celdas vacias de ejeX
+        //if(k == 0)
+        //{
+            //Pinta el fondo de cada celda
+            for (int y = 6; y <= 15; y++) // coordenadas ejeY
             {
-                Console.SetCursorPosition(x, y);// Todas las posiciones del tablero
-                Console.BackgroundColor = (posX == contX++ && posY == contY) ? Console.BackgroundColor = ConsoleColor.Red : Console.BackgroundColor = ConsoleColor.DarkBlue;
-                Console.WriteLine(" ");
+                for (int x = 6; x <= 24; x += 2)// coordenadas celdas vacias de ejeX
+                {
+                    Console.SetCursorPosition(x, y);// Todas las posiciones del tablero
+                    if (y == coordenadaBarcoUsuarioY && x == coordenadaBarcoUsuarioX)
+                    {
+                        Console.BackgroundColor = (posX == contX++ && posY == contY) ? Console.BackgroundColor = ConsoleColor.Red : Console.BackgroundColor = ConsoleColor.DarkBlue;
+                        Console.WriteLine("O");
+                    }
+                    else
+                    {
+                        Console.BackgroundColor = (posX == contX++ && posY == contY) ? Console.BackgroundColor = ConsoleColor.Red : Console.BackgroundColor = ConsoleColor.DarkBlue;
+                        Console.WriteLine(" ");
+                    }
+                }
+                contX = 1;
+                contY--;
             }
-            contX = 1;
-            contY--;
+            Console.BackgroundColor = ConsoleColor.Black;
+        //}
+        /*
+        else
+        {
+            //Pinta el fondo de cada celda
+            for (int y = 6; y <= 15; y++) // coordenadas ejeY
+            {
+                for (int x = 6; x <= 24; x += 2)// coordenadas celdas vacias de ejeX
+                {
+                    Console.SetCursorPosition(x, y);// Todas las posiciones del tablero
+                    if (y == coordenadaBarcoUsuarioY && x == coordenadaBarcoUsuarioX)
+                    {
+                        Console.WriteLine("O");
+                    }
+                    else
+                    {
+                        if(posX == contX++ && posY == contY)
+                        {
+                            Console.BackgroundColor = (posX == contX++ && posY == contY) ? Console.BackgroundColor = ConsoleColor.Red : Console.BackgroundColor = ConsoleColor.DarkBlue;
+                            Console.WriteLine("");
+                        }
+
+                    }
+                }
+                contX = 1;
+                contY--;
+            }
         }
-        Console.BackgroundColor = ConsoleColor.Black;
+        */
+
         /*
         Console.SetCursorPosition(5, 7);
         Console.ForegroundColor = k == 1 ? sel : cc;
@@ -71,6 +129,46 @@
         */
 
     }
+    /*
+     * Usado para generar barco de la maquina y del usuario, ambos aleatorios
+     */
+    private void generarBarco(int posX, int posY)
+    {
+        Random aleatorio = new Random();
+        int x = aleatorio.Next(1, 19);//PosicionX barco
+        int y = aleatorio.Next(8);//PosicionY barco
+        if(!fijarBarcoMaquina)
+        {
+            barcoMaquinaX = x;
+            barcoMaquinaY = y;
+            coordenadaBarcoMaquinaX = (x % 2 == 0) ? x + 6 : x + 5;
+            coordenadaBarcoMaquinaY = y + 6;
+
+            //Traducir posiciones del juego a coordenadas tablero
+            //      Y --> Puede generar de posicion 6 a 14
+            //      X --> Puede generar de posicion 6 a 24
+
+            Console.SetCursorPosition(coordenadaBarcoMaquinaX, coordenadaBarcoMaquinaY); //if para que no se coloque en las lineas verticales del tablero
+            Console.WriteLine("X");
+            fijarBarcoMaquina = true;
+        }
+        else
+        {
+            //GENERAR BARCO EN EL LUGAR QUE CORRESPONDE, NO ALEATORIO
+            //barcoUsuarioX = x;
+            //barcoUsuarioY = y;
+            //Traducir posiciones del juego a coordenadas tablero
+            //      Y --> Puede generar de posicion 6 a 14
+            //      X --> Puede generar de posicion 6 a 24
+            //coordenadaBarcoUsuarioX = (x % 2 == 0) ? x + 6 : x + 5;
+            //coordenadaBarcoUsuarioY = y + 6;
+            Console.SetCursorPosition(6 + (posX - 1) * 2, 6 + posY - 1); //if para que no se coloque en las lineas verticales del tablero
+            Console.WriteLine("O");
+        }
+
+        
+    }
+
 
     /*
      * Metodo que dibuja las lineas horizontales del menu inicial
