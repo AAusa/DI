@@ -1,0 +1,15 @@
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\obj\Debug\net6.0\HundirFlotaEj.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\obj\Debug\net6.0\HundirFlotaEj.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\obj\Debug\net6.0\HundirFlotaEj.AssemblyInfoInputs.cache
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\obj\Debug\net6.0\HundirFlotaEj.AssemblyInfo.cs
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\obj\Debug\net6.0\HundirFlotaEj.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\bin\Debug\net6.0\HundirFlotaEj.exe
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\bin\Debug\net6.0\HundirFlotaEj.deps.json
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\bin\Debug\net6.0\HundirFlotaEj.runtimeconfig.json
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\bin\Debug\net6.0\HundirFlotaEj.dll
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\bin\Debug\net6.0\HundirFlotaEj.pdb
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\obj\Debug\net6.0\HundirFlotaEj.dll
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\obj\Debug\net6.0\refint\HundirFlotaEj.dll
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\obj\Debug\net6.0\HundirFlotaEj.pdb
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\obj\Debug\net6.0\HundirFlotaEj.genruntimeconfig.cache
+D:\Documentos\VS-DI\DI\HundirFlotaEj\HundirFlotaEj\obj\Debug\net6.0\ref\HundirFlotaEj.dll

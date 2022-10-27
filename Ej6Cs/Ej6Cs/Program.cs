@@ -4,27 +4,30 @@
     {
         new Program().Menu();
     }
-    int barcoMaquinaX = 0, barcoMaquinaY = 0;
-    int barcoUsuarioX = 0, barcoUsuarioY = 0;
+    int barcoMaquinaX = 0, barcoMaquinaY = 0;//x --> posiciones 1 - 10
+    int barcoUsuarioX = 0, barcoUsuarioY = 0;//y --> posiciones 10 - 1
     int coordenadaBarcoMaquinaX = 0, coordenadaBarcoMaquinaY = 0;
     int coordenadaBarcoUsuarioX = 0, coordenadaBarcoUsuarioY = 0;
-    bool fijarBarcoMaquina = false;
-    bool fijarBarcoUsuario = false;
+    bool fijarBarcoMaquina = false, fijarBarcoUsuario = false, turnoMaquina = true;
     int k;
     void Menu()
     {
-        bool ejecutar = false;
-        //Limites no de tablero sino de juego:
-        //      x = 1 - 10
-        //      y = 1 - 10 
         int posX = 1, posY = 10;
         for (k = 0; ;k++)
         {
-            //if(k == 0) 
+            //if (k == 0) 
             PintaMenu(posX, posY);
+            Console.SetCursorPosition(30, 6);
+            Console.WriteLine("Presiona Enter para que se realicen los turnos.");
+            Console.SetCursorPosition(30, 7);
+            Console.WriteLine("En el primer turno selecciona tu barco");
+            Console.SetCursorPosition(30, 8);
+            Console.WriteLine("Presiona Enter para que la maquina realice su primer turno");
+
             if (k == 0) generarBarco(posX, posY);
             ConsoleKeyInfo cki = Console.ReadKey(true);
             // k se convierta en x,y que se van incrementando y en pintarMenu se controla cual se pinta con setPosition
+            
             switch (cki.Key)
             {
                 case ConsoleKey.UpArrow: posY++; break;
@@ -32,9 +35,25 @@
                 case ConsoleKey.RightArrow: posX++; break;
                 case ConsoleKey.LeftArrow: posX--; break;
                 case ConsoleKey.Enter:
-                    Console.WriteLine("Enter");
-                    if (!fijarBarcoUsuario) generarBarco(posX, posY); fijarBarcoUsuario = true;
-                    //ejecutar = true; 
+                    if (!fijarBarcoUsuario)
+                    {
+                        generarBarco(posX, posY);
+                        fijarBarcoUsuario = true;
+                    }
+                    else
+                    {
+                        if (turnoMaquina)
+                        {
+                            Console.SetCursorPosition(30, 9);
+                            Console.WriteLine("Turno del usuario:  ");
+                        }
+                        else
+                        {
+                            Console.SetCursorPosition(30, 9);
+                            Console.WriteLine("Turno de la maquina:");
+                        }
+                        jugar(posX, posY);
+                    }
                     break;
             }
             //limites tablero x e y:
@@ -42,23 +61,12 @@
             if (posX < 1) posX = 10;
             if (posY > 10) posY = 1;
             if (posY < 1) posY = 10;
-
-            if (ejecutar)
-            {
-                ejecutar = false;
-                switch (posY)
-                {
-                    case 0: Opcion1(); break;
-                    case 1: Opcion2(); break;
-                    case 2: return;
-                }
-            }
         }
     }
 
     /*
      * Limite tablero jugables:
-     *      6,6 a 24,6
+     *      6,6 a 4,6
      *      6,15 a 24,15
      */
     void PintaMenu(int posX, int posY)
@@ -89,44 +97,6 @@
                 contY--;
             }
             Console.BackgroundColor = ConsoleColor.Black;
-        //}
-        /*
-        else
-        {
-            //Pinta el fondo de cada celda
-            for (int y = 6; y <= 15; y++) // coordenadas ejeY
-            {
-                for (int x = 6; x <= 24; x += 2)// coordenadas celdas vacias de ejeX
-                {
-                    Console.SetCursorPosition(x, y);// Todas las posiciones del tablero
-                    if (y == coordenadaBarcoUsuarioY && x == coordenadaBarcoUsuarioX)
-                    {
-                        Console.WriteLine("O");
-                    }
-                    else
-                    {
-                        if(posX == contX++ && posY == contY)
-                        {
-                            Console.BackgroundColor = (posX == contX++ && posY == contY) ? Console.BackgroundColor = ConsoleColor.Red : Console.BackgroundColor = ConsoleColor.DarkBlue;
-                            Console.WriteLine("");
-                        }
-
-                    }
-                }
-                contX = 1;
-                contY--;
-            }
-        }
-        */
-
-        /*
-        Console.SetCursorPosition(5, 7);
-        Console.ForegroundColor = k == 1 ? sel : cc;
-        Console.WriteLine("2. Opción Dos");
-        Console.SetCursorPosition(5, 9);
-        Console.ForegroundColor = k == 2 ? sel : cc;
-        Console.WriteLine("3. Salir");
-        */
 
     }
     /*
@@ -148,25 +118,52 @@
             //      Y --> Puede generar de posicion 6 a 14
             //      X --> Puede generar de posicion 6 a 24
 
-            Console.SetCursorPosition(coordenadaBarcoMaquinaX, coordenadaBarcoMaquinaY); //if para que no se coloque en las lineas verticales del tablero
+            Console.SetCursorPosition(coordenadaBarcoMaquinaX, coordenadaBarcoMaquinaY);
             Console.WriteLine("X");
             fijarBarcoMaquina = true;
         }
         else
         {
-            //GENERAR BARCO EN EL LUGAR QUE CORRESPONDE, NO ALEATORIO
-            //barcoUsuarioX = x;
-            //barcoUsuarioY = y;
-            //Traducir posiciones del juego a coordenadas tablero
-            //      Y --> Puede generar de posicion 6 a 14
-            //      X --> Puede generar de posicion 6 a 24
-            //coordenadaBarcoUsuarioX = (x % 2 == 0) ? x + 6 : x + 5;
-            //coordenadaBarcoUsuarioY = y + 6;
-            Console.SetCursorPosition(6 + (posX - 1) * 2, 6 + posY - 1); //if para que no se coloque en las lineas verticales del tablero
-            Console.WriteLine("O");
-        }
+            Console.SetCursorPosition(6 + (posX - 1) * 2, 6 - posY + 10);
+            coordenadaBarcoUsuarioY = 6 - posY + 10;
+            coordenadaBarcoUsuarioX = 6 + (posX - 1) * 2;
 
-        
+            Console.WriteLine("O");
+        } 
+    }
+
+    private void jugar(int posXUsuario, int posYUsuario)
+    {
+        if (turnoMaquina)//Turno maquina
+        {
+            Random aleatorio = new Random();
+            int x = aleatorio.Next(1, 19);//PosicionX barco
+            int y = aleatorio.Next(8);//PosicionY barco
+            int coordenadaMaquinaX = (x % 2 == 0) ? x + 6 : x + 5;//turno maquina
+            int coordenadaMaquinaY = y + 6;
+            if (coordenadaMaquinaX == coordenadaBarcoUsuarioX && coordenadaMaquinaX == coordenadaBarcoUsuarioY)
+            {
+                Console.SetCursorPosition(30, 11);
+                Console.WriteLine("Gana la maquina!");
+                Environment.Exit(1);
+            }
+            turnoMaquina = false;
+        }
+        else//Turno usuario
+        {
+            Console.SetCursorPosition(6 + (posXUsuario - 1) * 2, 6 - posYUsuario + 10); //if para que no se coloque en las lineas verticales del tablero
+            int coordenadaUsuarioY = 6 - posYUsuario + 10;
+            int coordenadaUsuarioX = 6 + (posXUsuario - 1) * 2;
+
+            if (coordenadaUsuarioX == coordenadaBarcoMaquinaX && coordenadaUsuarioY == coordenadaBarcoMaquinaY)
+            {
+                Console.SetCursorPosition(30, 11);
+                Console.WriteLine("Gana el usuario!");
+                Environment.Exit(1);
+
+            }
+            turnoMaquina = true;
+        }
     }
 
 
@@ -220,20 +217,4 @@
             }
         }     
     }
-
-
-    void Opcion1()
-    {
-        Console.SetCursorPosition(5, 15);
-        Console.ForegroundColor = ConsoleColor.Magenta;
-        Console.WriteLine("O P C I Ó N   1");
-    }
-
-    void Opcion2()
-    {
-        Console.SetCursorPosition(5, 15);
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine("O P C I Ó N   2");
-    }
-
 }
