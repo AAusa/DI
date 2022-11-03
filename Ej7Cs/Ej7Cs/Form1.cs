@@ -3,64 +3,102 @@ namespace Ej7Cs
     public partial class Form1 : Form
     {
         bool orden = true; // Saber numero a rellenar true: v1, false: v2
-        int valor1,valor2, resultado, operacion;
+        int valor, operacion;
+        double resultado = 0;
         public Form1()
         {
             InitializeComponent();
+            Text = "Calculadora";
         }
 
-
-        private void button12_Click(object sender, EventArgs e)
+        private void operar()
         {
-            switch(operacion)
+            switch (operacion)
             {
-                case 0:
-                    resultado = valor1 + valor2;
+                case 0: //suma
+                    resultado += valor;
                     break;
-                case 1:
-                    resultado = valor1 - valor2;
+                case 1: //resta
+                    resultado -= valor;
                     break;
-                case 2:
-                    resultado = valor1 * valor2;
+                case 2: //multi
+                    resultado *= valor;
                     break;
-                case 3:
-                    resultado = valor1 / valor2;
+                case 3: //div
+                    resultado /= valor;
                     break;
             }
             pantalla.Clear();
             pantalla.Text = resultado.ToString();
         }
 
-        private void b2_Click(object sender, EventArgs e)
+        private void bResultado_Click(object sender, EventArgs e)
+        {
+            operar();
+        }
+
+        private void b0_Click(object sender, EventArgs e)
         {
             if (orden)
             {
-                valor1 = 2;
-                pantalla.Text = valor1.ToString();
-                orden = false;
+                valor = 0;
+                pantalla.Text = valor.ToString();
             }
             else
             {
-                valor2 = 2; pantalla.Clear(); pantalla.Text = valor2.ToString();
+                valor = 0; pantalla.Clear(); pantalla.Text = valor.ToString();
             }
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            operacion = 0;
         }
 
         private void b1_Click(object sender, EventArgs e)
         {
-            if (orden) 
+            if (orden)
             {
-                valor1 = 1;
-                pantalla.Text = valor1.ToString();
-                orden = false; 
+                valor = 1;
+                pantalla.Text = valor.ToString();
             }
-            else 
+            else
             {
-                valor2 = 1; pantalla.Clear(); pantalla.Text = valor2.ToString(); 
+                valor = 1; pantalla.Clear(); pantalla.Text = valor.ToString();
+            }
+        }
+
+        private void b2_Click(object sender, EventArgs e)
+        {
+            if (orden)
+            {
+                valor = 2;
+                pantalla.Text = valor.ToString();
+            }
+            else
+            {
+                valor = 2; pantalla.Clear(); pantalla.Text = valor.ToString();
+            }
+        }
+
+        private void b3_Click(object sender, EventArgs e)
+        {
+            if (orden)
+            {
+                valor = 3;
+                pantalla.Text = valor.ToString();
+            }
+            else
+            {
+                valor = 3; pantalla.Clear(); pantalla.Text = valor.ToString();
+            }
+        }
+
+        private void b4_Click(object sender, EventArgs e)
+        {
+            if (orden)
+            {
+                valor = 4;
+                pantalla.Text = valor.ToString();
+            }
+            else
+            {
+                valor = 4; pantalla.Clear(); pantalla.Text = valor.ToString();
             }
         }
 
@@ -68,24 +106,88 @@ namespace Ej7Cs
         {
             if (orden)
             {
-                valor1 = 5;
-                pantalla.Text = valor1.ToString();
-                orden = false;
+                valor = 5;
+                pantalla.Text = valor.ToString();
             }
             else
             {
-                valor2 = 5; pantalla.Clear(); pantalla.Text = valor2.ToString();
+                valor = 5; pantalla.Clear(); pantalla.Text = valor.ToString();
             }
         }
 
-        private void bMultiplicar_Click(object sender, EventArgs e)
+        private void b6_Click(object sender, EventArgs e)
         {
-            operacion = 2;
+            if (orden)
+            {
+                valor = 6;
+                pantalla.Text = valor.ToString();
+            }
+            else
+            {
+                valor = 6; pantalla.Clear(); pantalla.Text = valor.ToString();
+            }
         }
+
+        private void b7_Click(object sender, EventArgs e)
+        {
+            if (orden)
+            {
+                valor = 7;
+                pantalla.Text = valor.ToString();
+            }
+            else
+            {
+                valor = 7; pantalla.Clear(); pantalla.Text = valor.ToString();
+            }
+        }
+
+        private void b8_Click(object sender, EventArgs e)
+        {
+            if (orden)
+            {
+                valor = 8;
+                pantalla.Text = valor.ToString();
+            }
+            else
+            {
+                valor = 8; pantalla.Clear(); pantalla.Text = valor.ToString();
+            }
+        }
+
+        private void b9_Click(object sender, EventArgs e)
+        {
+            if (orden)
+            {
+                valor = 9;
+                pantalla.Text = valor.ToString();
+            }
+            else
+            {
+                valor = 9; pantalla.Clear(); pantalla.Text = valor.ToString();
+            }
+        }
+
+        private void bC_Click(object sender, EventArgs e)
+        {
+            valor = 0;
+            resultado = 0;
+            orden = true;
+            pantalla.Text = valor.ToString();
+        }
+
 
         private void bCe_Click(object sender, EventArgs e)
         {
-
+            if (orden)
+            {
+                valor = 0;
+                resultado = 0;
+                pantalla.Text = valor.ToString();
+            }
+            else
+            {
+                valor = 0; pantalla.Clear(); pantalla.Text = valor.ToString();
+            }
         }
 
         private void bRaiz_Click(object sender, EventArgs e)
@@ -93,87 +195,68 @@ namespace Ej7Cs
 
         }
 
-        private void b8_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void b7_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void b9_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void b6_Click(object sender, EventArgs e)
-        {
-        }
-
         private void bComa_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void bSuma_Click(object sender, EventArgs e)
+        {
+            orden = false;
+            operacion = 0;
+            operar();
+        }
+
         private void bRestar_Click(object sender, EventArgs e)
         {
+            orden = false;
             operacion = 1;
+            if (resultado > 0)
+            {
+                operar();
+            }
+            else
+            {
+                resultado = valor;
+            }        
+        }
+
+        private void bMultiplicar_Click(object sender, EventArgs e)
+        {
+            orden = false;
+            operacion = 2;
+            if (resultado > 0)
+            {
+                operar();
+            }
+            else
+            {
+                resultado = valor;
+            }
         }
 
         private void bDivision_Click(object sender, EventArgs e)
         {
-            operacion = 2;
-        }
-
-        private void b4_Click(object sender, EventArgs e)
-        {
-            if (orden)
+            orden = false;
+            operacion = 3;
+            if (resultado > 0)
             {
-                valor1 = 4;
-                pantalla.Text = valor1.ToString();
-                orden = false;
+                operar();
             }
             else
             {
-                valor2 = 4; pantalla.Clear(); pantalla.Text = valor2.ToString();
+                resultado = valor;
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void bFraccion_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void b3_Click(object sender, EventArgs e)
+        private void masMenos_Click(object sender, EventArgs e)
         {
-            if (orden)
-            {
-                valor1 = 3;
-                pantalla.Text = valor1.ToString();
-                orden = false;
-            }
-            else
-            {
-                valor2 = 3; pantalla.Clear(); pantalla.Text = valor2.ToString();
-            }
-        }
-
-        private void b0_Click(object sender, EventArgs e)
-        {
-            if (orden)
-            {
-                valor1 = 0;
-                pantalla.Text = valor1.ToString();
-                orden = false;
-            }
-            else
-            {
-                valor2 = 0; pantalla.Clear(); pantalla.Text = valor2.ToString();
-            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

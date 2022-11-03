@@ -146,6 +146,7 @@
             this.masMenos.TabIndex = 0;
             this.masMenos.Text = "⁺/₋";
             this.masMenos.UseVisualStyleBackColor = false;
+            this.masMenos.Click += new System.EventHandler(this.masMenos_Click);
             // 
             // b0
             // 
@@ -182,7 +183,7 @@
             this.bResultado.TabIndex = 3;
             this.bResultado.Text = "=";
             this.bResultado.UseVisualStyleBackColor = false;
-            this.bResultado.Click += new System.EventHandler(this.button12_Click);
+            this.bResultado.Click += new System.EventHandler(this.bResultado_Click);
             // 
             // bSuma
             // 
@@ -195,7 +196,7 @@
             this.bSuma.TabIndex = 7;
             this.bSuma.Text = "+";
             this.bSuma.UseVisualStyleBackColor = false;
-            this.bSuma.Click += new System.EventHandler(this.button13_Click);
+            this.bSuma.Click += new System.EventHandler(this.bSuma_Click);
             // 
             // b3
             // 
@@ -353,6 +354,7 @@
             this.bC.TabIndex = 22;
             this.bC.Text = "C";
             this.bC.UseVisualStyleBackColor = false;
+            this.bC.Click += new System.EventHandler(this.bC_Click);
             // 
             // bCe
             // 
