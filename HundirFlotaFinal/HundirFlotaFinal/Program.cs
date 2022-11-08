@@ -7,7 +7,8 @@ namespace Hundir{
             //Funcionamiento completo del juego, puede convenir comentar parte del código para comprobar que funcionan los métodos que vamos creando   
             Tablero tableroUsuario = Tablero.tableroUser();
             Tablero tableroMaquina = Tablero.tableroMaquina();
-            Dibuja.DibujaCuadro(55,2);
+            Dibuja.DibujaCuadro(55, 2);
+            Dibuja.TableroJuegoUsuario(tableroUsuario, 55,2);
             /*
             Console.Clear();
 

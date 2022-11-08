@@ -29,20 +29,19 @@ namespace Hundir
                 Console.SetCursorPosition(x + 11, contadorY + y);
                 System.Console.WriteLine("|");
             }
-            // Linea tablero arriba.:
-            for (int contadorX = 0; contadorX < 10; contadorX++)
-            {
-                Console.SetCursorPosition(contadorX+x+1, y);
-                System.Console.WriteLine("-");
-            }
-            // Linea tablero abajo:
-            for (int contadorX = 0; contadorX < 10; contadorX++)
-            {
-                Console.SetCursorPosition(contadorX +x+1, y+20);
-                System.Console.WriteLine("-");
-            }
 
-
+            // Lineas tablero horizontales.:
+            for (int contadorY = 0; contadorY < 21; contadorY++)//Mueve ejeY
+            {
+                if(contadorY % 2 == 0)//En las lineas pares
+                {
+                    for (int contadorX = 0; contadorX < 10; contadorX++)////Mueve ejeX
+                    {
+                        Console.SetCursorPosition(contadorX + x + 1, contadorY + y);
+                        System.Console.WriteLine("—");
+                    }
+                }
+            }
         }
 
         //Representa el tablero de juego de un jugador
@@ -60,6 +59,33 @@ namespace Hundir
             //Tablero.Barcos --> Array de barcos
 
             //Para dibujar agua o barco puede convenir utilizar el método  CoordenadaEnBarcos de la clase Tablero
+            DibujaCuadro(x,y);
+            // Lineas tablero horizontales.:
+            for (int contadorY = 0; contadorY < 10; contadorY++)//Mueve ejeY donde hay huecos
+            {
+                for (int contadorX = 0; contadorX < 10; contadorX++)////Mueve ejeX
+                {
+                    if (T.Mar[contadorX, contadorY] == false)//Coordenada no elegida
+                    {
+                        Console.SetCursorPosition(contadorX + x + 1, contadorY * 2 + 1 + y);
+                        Console.BackgroundColor = ConsoleColor.Gray;
+                        System.Console.WriteLine(" ");
+                    }
+                    else
+                    {
+                        if (T.CoordenadaEnBarcos(contadorX, contadorY))//Si hay barco
+                        {
+                            Console.BackgroundColor = ConsoleColor.Red;
+                            System.Console.WriteLine(" ");
+                        }
+                        else//Si no hay barco
+                        {
+                            Console.BackgroundColor = ConsoleColor.Blue;
+                            System.Console.WriteLine(" ");
+                        }
+                    }
+                }
+            }
         }
 
         //Representa el tablero final de un jugador/máquina
