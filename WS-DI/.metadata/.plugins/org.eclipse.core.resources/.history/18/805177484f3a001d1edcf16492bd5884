@@ -1,0 +1,28 @@
+
+public abstract class Figura implements PropiedadesObjeto {
+	protected String nombreForma, color = "Blanco";
+	protected Punto centroForma = new Punto(0,0);
+	
+	public String getNombreForma() {		
+		return nombreForma;
+	}
+	public void setNombreForma(String nombreForma) {
+		this.nombreForma = nombreForma;
+	}
+	
+	public static Figura mayorArea(Figura[] figuras) {
+		Figura resultado = figuras[0];
+		double mayor = figuras[0].calcularArea();
+		for(int i = 1; i < figuras.length; i++) {
+			if(figuras[i].calcularArea() > mayor) {
+				resultado = figuras[i];
+			}
+		}
+		return resultado;
+	}
+	
+	@Override
+	public String toString() {
+		return nombreForma + " " + color + " de centro (" + (int)centroForma.coordenadaX + "," +  (int)centroForma.coordenadaY + ") área " + calcularArea() + " y perímetro " + calcularPerimetro();
+	}
+}

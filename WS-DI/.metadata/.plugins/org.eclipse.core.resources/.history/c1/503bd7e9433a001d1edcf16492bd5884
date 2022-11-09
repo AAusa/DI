@@ -1,0 +1,11 @@
+
+public class Cuadrado extends Rectangulo {
+	
+	public Cuadrado(double l) {
+		super(l, l);
+	}
+	
+	public String toString() {
+		return super.toString();
+	}
+}

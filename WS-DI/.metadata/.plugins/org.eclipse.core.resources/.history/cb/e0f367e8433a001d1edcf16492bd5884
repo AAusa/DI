@@ -1,0 +1,11 @@
+
+public class Circulo extends Elipse {
+
+	public Circulo(double r) {
+		super(r, r);
+	}
+	
+	public String toString() {
+		return super.toString();
+	}
+}

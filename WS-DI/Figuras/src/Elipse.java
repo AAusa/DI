@@ -1,0 +1,43 @@
+
+public class Elipse extends Figura {
+	protected double rMayor = 0;
+	protected double rMenor = 0;
+	
+	public Elipse(double rMayor, double rMenor) {
+		this.rMayor = rMayor;
+		this.rMenor = rMenor;
+		nombreForma = "elipse";
+	}
+
+	public double getrMayor() {
+		return rMayor;
+	}
+
+	public void setrMayor(double rMayor) {
+		this.rMayor = rMayor;
+	}
+
+	public double getrMenor() {
+		return rMenor;
+	}
+
+	public void setrMenor(double rMenor) {
+		this.rMenor = rMenor;
+	}
+
+	@Override
+	public double calcularArea() {
+		return rMayor * rMenor * Math.PI;
+	}
+
+	@Override
+	public double calcularPerimetro() {
+		return 2 * Math.PI * Math.sqrt((rMayor * rMayor + rMenor * rMenor) / 2);
+	}
+
+	@Override
+	public String toString() {
+		return nombreForma + " " + color + " de centro (" + centroForma.coordenadaX + "," +  centroForma.coordenadaY + ") área " + calcularArea() + " y perímetro " + calcularPerimetro();
+	}
+
+}

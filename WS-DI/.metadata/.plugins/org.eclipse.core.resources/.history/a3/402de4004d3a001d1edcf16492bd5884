@@ -1,0 +1,19 @@
+
+public abstract class Figura implements PropiedadesObjeto {
+	protected String nombreForma, color = "Blanco";
+	protected Punto centroForma;
+	centroForma.coordenadaX = 1;
+	centroForma.coordenadaY = 1;
+	
+	public String getNombreForma() {		
+		return nombreForma;
+	}
+	public void setNombreForma(String nombreForma) {
+		this.nombreForma = nombreForma;
+	}
+	
+	@Override
+	public String toString() {
+		return nombreForma + " " + color + " de centro (" + centroForma.coordenadaX + "," +  centroForma.coordenadaY + ") área " + calcularArea() + " y perímetro " + calcularPerimetro();
+	}
+}

@@ -21,24 +21,24 @@ namespace Hundir
             for (int contadorY = 0; contadorY < 21; contadorY++)
             {
                 Console.SetCursorPosition(x, contadorY + y);
-                System.Console.WriteLine("|");
+                System.Console.WriteLine("¡");
             }
             // Linea tablero dcha.:
             for (int contadorY = 0; contadorY < 21; contadorY++)
             {
                 Console.SetCursorPosition(x + 11, contadorY + y);
-                System.Console.WriteLine("|");
+                System.Console.WriteLine("!");
             }
 
             // Lineas tablero horizontales.:
             for (int contadorY = 0; contadorY < 21; contadorY++)//Mueve ejeY
             {
-                if(contadorY % 2 == 0)//En las lineas pares
+                if (contadorY % 2 == 0)//En las lineas pares
                 {
                     for (int contadorX = 0; contadorX < 10; contadorX++)////Mueve ejeX
                     {
                         Console.SetCursorPosition(contadorX + x + 1, contadorY + y);
-                        System.Console.WriteLine("—");
+                        System.Console.WriteLine("=");
                     }
                 }
             }
@@ -59,15 +59,15 @@ namespace Hundir
             //Tablero.Barcos --> Array de barcos
 
             //Para dibujar agua o barco puede convenir utilizar el método  CoordenadaEnBarcos de la clase Tablero
-            DibujaCuadro(x,y);
+            DibujaCuadro(x, y);
             // Lineas tablero horizontales.:
             for (int contadorY = 0; contadorY < 10; contadorY++)//Mueve ejeY donde hay huecos
             {
                 for (int contadorX = 0; contadorX < 10; contadorX++)////Mueve ejeX
                 {
+                    Console.SetCursorPosition(contadorX + x + 1, contadorY * 2 + 1 + y);
                     if (T.Mar[contadorX, contadorY] == false)//Coordenada no elegida
                     {
-                        Console.SetCursorPosition(contadorX + x + 1, contadorY * 2 + 1 + y);
                         Console.BackgroundColor = ConsoleColor.Gray;
                         System.Console.WriteLine(" ");
                     }
@@ -86,10 +86,11 @@ namespace Hundir
                     }
                 }
             }
+            Console.BackgroundColor = ConsoleColor.Black;
         }
 
         //Representa el tablero final de un jugador/máquina
-        public static void DibujaFinal(Barco [] B, int x, int y)
+        public static void DibujaFinal(Barco[] B, int x, int y)
         {
             //Debe dibujar:
             //              Rojo si una coordenada es barco
@@ -99,6 +100,26 @@ namespace Hundir
             //B --> Array de barcos
 
             //Para dibujar agua o barco puede convenir utilizar el método CoordenadaEnBarcos (static) de la clase tablero
+            DibujaCuadro(x, y);
+            // Lineas tablero horizontales.:
+            for (int contadorY = 0; contadorY < 10; contadorY++)//Mueve ejeY donde hay huecos
+            {
+                for (int contadorX = 0; contadorX < 10; contadorX++)////Mueve ejeX
+                {
+                    Console.SetCursorPosition(contadorX + x + 1, contadorY * 2 + 1 + y);
+                    if (Tablero.CoordenadaEnBarcos(B, contadorX, contadorY) == true)//Barco
+                    {
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        System.Console.WriteLine(" ");
+                    }
+                    else//Si no hay barco
+                    {
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                        System.Console.WriteLine(" ");
+                    }
+                }
+            }
+            Console.BackgroundColor = ConsoleColor.Black;
 
         }
 
@@ -115,7 +136,43 @@ namespace Hundir
         //Para dibujar agua o barco puede convenir utilizar el método creaBarco de la clase Barco
         {
 
-
+            DibujaCuadro(x, y);
+            // Lineas tablero horizontales.:
+            for (int contadorY = 0; contadorY < 10; contadorY++)//Mueve ejeY donde hay huecos
+            {
+                for (int contadorX = 0; contadorX < 10; contadorX++)////Mueve ejeX
+                {
+                    Console.SetCursorPosition(contadorX + x + 1, contadorY * 2 + 1 + y);
+                    if (T.Mar[contadorX, contadorY] == true)//Coordenada elegida
+                    {
+                        if (T.CoordenadaEnBarcos(contadorX, contadorY))//Si hay barco se escribe X en rojo
+                        {
+                            Console.BackgroundColor = ConsoleColor.Red;
+                            System.Console.WriteLine("X");
+                        }
+                        else//No hay barco se escribe X en azul
+                        {
+                            Console.BackgroundColor = ConsoleColor.Blue;
+                            System.Console.WriteLine("X");
+                        }
+                    }
+                    else
+                    {
+                        if (T.CoordenadaEnBarcos(contadorX, contadorY))//Si hay barco
+                        {
+                            Console.BackgroundColor = ConsoleColor.Red;
+                            System.Console.WriteLine(" ");
+                        }
+                        else//Si no hay barco
+                        {
+                            Console.BackgroundColor = ConsoleColor.Blue;
+                            System.Console.WriteLine(" ");
+                        }
+                    }
+                }
+            }
+            Console.BackgroundColor = ConsoleColor.Black;
         }
     }
 }
+

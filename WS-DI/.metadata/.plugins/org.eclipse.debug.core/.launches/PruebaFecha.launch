@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/Ej4/src/Ej4/PruebaFecha.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="Ej4.PruebaFecha"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="Ej4"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Ej4"/>
+</launchConfiguration>

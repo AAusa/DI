@@ -9,11 +9,11 @@ namespace Hundir{
             Tablero tableroMaquina = Tablero.tableroMaquina();
             Dibuja.DibujaCuadro(55, 2);
             Dibuja.TableroJuegoUsuario(tableroUsuario, 55,2);
-            /*
+            
             Console.Clear();
 
 
-            while(tableroUsuario.TotalTocados < 2 && tableroMaquina.TotalTocados < 2 ){
+            while(tableroUsuario.TotalTocados < 20 && tableroMaquina.TotalTocados < 20 ){
                 tableroUsuario.juegaUsuario(2,2);
                 tableroMaquina.juegaMaquina(55,2);
             }
@@ -31,7 +31,7 @@ namespace Hundir{
                 Console.WriteLine("Lo siento, has perdido! ");
             }
             Console.ReadKey();
-            */
+            
         }
     }
 
