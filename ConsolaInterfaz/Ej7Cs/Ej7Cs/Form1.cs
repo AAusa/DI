@@ -191,23 +191,14 @@ namespace Ej7Cs
         {
             valor = 0;
             resultado = 0;
-            orden = true;
-            pantalla.Text = valor.ToString();
+            pantalla.Text = "";
         }
 
 
         private void bCe_Click(object sender, EventArgs e)
         {
-            if (orden)
-            {
-                valor = 0;
-                resultado = 0;
-                pantalla.Text = valor.ToString();
-            }
-            else
-            {
-                valor = 0; pantalla.Clear(); pantalla.Text = valor.ToString();
-            }
+            pantalla.Text = "";
+            valor = 0;
         }
 
         private void bRaiz_Click(object sender, EventArgs e)
@@ -223,7 +214,7 @@ namespace Ej7Cs
         private void bSuma_Click(object sender, EventArgs e)
         {
             resultado = int.Parse(pantalla.Text);//Resultado tiene el primer digito
-            pantalla.Text = resultado.ToString() + "+";
+            pantalla.Text = "";
             operacion = 0;
             //orden = false;
             //operar();
@@ -233,7 +224,7 @@ namespace Ej7Cs
         private void bRestar_Click(object sender, EventArgs e)
         {
             resultado = int.Parse(pantalla.Text);//Resultado tiene el primer digito
-            pantalla.Text = resultado.ToString() + "-";
+            pantalla.Text = "";
             operacion = 1;
             //orden = false;
             //operacion = 1;
@@ -250,7 +241,7 @@ namespace Ej7Cs
         private void bMultiplicar_Click(object sender, EventArgs e)
         {
             resultado = int.Parse(pantalla.Text);//Resultado tiene el primer digito
-            pantalla.Text = resultado.ToString() + "*";
+            pantalla.Text = "";
             operacion = 2;
             //orden = false;
             //operacion = 2;
@@ -267,7 +258,7 @@ namespace Ej7Cs
         private void bDivision_Click(object sender, EventArgs e)
         {
             resultado = int.Parse(pantalla.Text);//Resultado tiene el primer digito
-            pantalla.Text = resultado.ToString() + "/";
+            pantalla.Text = "";
             operacion = 3;
             //orden = false;
             //operacion = 3;
