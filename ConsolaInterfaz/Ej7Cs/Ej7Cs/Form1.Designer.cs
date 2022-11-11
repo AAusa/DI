@@ -342,6 +342,7 @@
             this.bBorrar.TabIndex = 23;
             this.bBorrar.Text = "⌫";
             this.bBorrar.UseVisualStyleBackColor = false;
+            this.bBorrar.Click += new System.EventHandler(this.bBorrar_Click);
             // 
             // bC
             // 
@@ -380,6 +381,7 @@
             this.bPorcentaje.TabIndex = 20;
             this.bPorcentaje.Text = "%";
             this.bPorcentaje.UseVisualStyleBackColor = false;
+            this.bPorcentaje.Click += new System.EventHandler(this.bPorcentaje_Click);
             // 
             // bDivision
             // 
@@ -418,6 +420,7 @@
             this.bPotencia.TabIndex = 17;
             this.bPotencia.Text = "x²";
             this.bPotencia.UseVisualStyleBackColor = false;
+            this.bPotencia.Click += new System.EventHandler(this.bPotencia_Click);
             // 
             // bFraccion
             // 
