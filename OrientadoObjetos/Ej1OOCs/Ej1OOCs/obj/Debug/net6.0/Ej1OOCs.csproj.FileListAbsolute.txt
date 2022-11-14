@@ -1,0 +1,5 @@
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs.AssemblyInfoInputs.cache
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs.AssemblyInfo.cs
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs.csproj.CoreCompileInputs.cache

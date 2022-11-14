@@ -41,6 +41,9 @@ namespace Ej7Cs
                 case 7: //porcentaje
                     resultado = Convert.ToDouble(pantalla.Text) / 100;
                     break;
+                case 8: //masMenos
+                    resultado = - Convert.ToDouble(pantalla.Text);
+                    break;
             }
             pantalla.Clear();
             pantalla.Text = resultado.ToString();
@@ -55,150 +58,60 @@ namespace Ej7Cs
         {
             valor = 0;
             pantalla.Text += valor.ToString();
-            //if (orden)
-            //{
-            //    valor = 0;
-            //    pantalla.Text = valor.ToString();
-            //}
-            //else
-            //{
-            //    valor = 0; pantalla.Clear(); pantalla.Text = valor.ToString();
-            //}
         }
 
         private void b1_Click(object sender, EventArgs e)
         {
             valor = 1;
             pantalla.Text += valor.ToString();
-            //if (orden)
-            //{
-            //    valor = 1;
-            //    pantalla.Text = valor.ToString();
-            //}
-            //else
-            //{
-            //    valor = 1; pantalla.Clear(); pantalla.Text = valor.ToString();
-            //}
         }
 
         private void b2_Click(object sender, EventArgs e)
         {
             valor = 2;
             pantalla.Text += valor.ToString();
-            //if (orden)
-            //{
-            //    valor = 2;
-            //    pantalla.Text = valor.ToString();
-            //}
-            //else
-            //{
-            //    valor = 2; pantalla.Clear(); pantalla.Text = valor.ToString();
-            //}
         }
 
         private void b3_Click(object sender, EventArgs e)
         {
             valor = 3;
             pantalla.Text += valor.ToString();
-            //if (orden)
-            //{
-            //    valor = 3;
-            //    pantalla.Text = valor.ToString();
-            //}
-            //else
-            //{
-            //    valor = 3; pantalla.Clear(); pantalla.Text = valor.ToString();
-            //}
         }
 
         private void b4_Click(object sender, EventArgs e)
         {
             valor = 4;
             pantalla.Text += valor.ToString();
-            //if (orden)
-            //{
-            //    valor = 4;
-            //    pantalla.Text = valor.ToString();
-            //}
-            //else
-            //{
-            //    valor = 4; pantalla.Clear(); pantalla.Text = valor.ToString();
-            //}
         }
 
         private void b5_Click(object sender, EventArgs e)
         {
             valor = 5;
             pantalla.Text += valor.ToString();
-            //if (orden)
-            //{
-            //    valor = 5;
-            //    pantalla.Text = valor.ToString();
-            //}
-            //else
-            //{
-            //    valor = 5; pantalla.Clear(); pantalla.Text = valor.ToString();
-            //}
         }
 
         private void b6_Click(object sender, EventArgs e)
         {
             valor = 6;
             pantalla.Text += valor.ToString();
-            //if (orden)
-            //{
-            //    valor = 6;
-            //    pantalla.Text = valor.ToString();
-            //}
-            //else
-            //{
-            //    valor = 6; pantalla.Clear(); pantalla.Text = valor.ToString();
-            //}
         }
 
         private void b7_Click(object sender, EventArgs e)
         {
             valor = 7;
             pantalla.Text += valor.ToString();
-            //if (orden)
-            //{
-            //    valor = 7;
-            //    pantalla.Text = valor.ToString();
-            //}
-            //else
-            //{
-            //    valor = 7; pantalla.Clear(); pantalla.Text = valor.ToString();
-            //}
         }
 
         private void b8_Click(object sender, EventArgs e)
         {
             valor = 8;
             pantalla.Text += valor.ToString();
-            //if (orden)
-            //{
-            //    valor = 8;
-            //    pantalla.Text = valor.ToString();
-            //}
-            //else
-            //{
-            //    valor = 8; pantalla.Clear(); pantalla.Text = valor.ToString();
-            //}
         }
 
         private void b9_Click(object sender, EventArgs e)
         {
             valor = 9;
             pantalla.Text += valor.ToString();
-            //if (orden)
-            //{
-            //    valor = 9;
-            //    pantalla.Text = valor.ToString();
-            //}
-            //else
-            //{
-            //    valor = 9; pantalla.Clear(); pantalla.Text = valor.ToString();
-            //}
         }
 
         private void bC_Click(object sender, EventArgs e)
@@ -226,31 +139,18 @@ namespace Ej7Cs
             pantalla.Text += ",";
         }
 
-        private void bSuma_Click(object sender, EventArgs e)
+        private void bSuma_Click (object sender, EventArgs e)
         {
             resultado = Convert.ToDouble(pantalla.Text);
             pantalla.Text = "";
             operacion = 0;
-            //orden = false;
-            //operar();
-
         }
 
         private void bRestar_Click(object sender, EventArgs e)
         {
             resultado = Convert.ToDouble(pantalla.Text);
             pantalla.Text = "";
-            operacion = 1;
-            //orden = false;
-            //operacion = 1;
-            //if (resultado > 0)
-            //{
-            //    operar();
-            //}
-            //else
-            //{
-            //    resultado = valor;
-            //}        
+            operacion = 1;       
         }
 
         private void bMultiplicar_Click(object sender, EventArgs e)
@@ -258,16 +158,6 @@ namespace Ej7Cs
             resultado = Convert.ToDouble(pantalla.Text);
             pantalla.Text = "";
             operacion = 2;
-            //orden = false;
-            //operacion = 2;
-            //if (resultado > 0)
-            //{
-            //    operar();
-            //}
-            //else
-            //{
-            //    resultado = valor;
-            //}
         }
 
         private void bDivision_Click(object sender, EventArgs e)
@@ -275,16 +165,6 @@ namespace Ej7Cs
             resultado = Convert.ToDouble(pantalla.Text);
             pantalla.Text = "";
             operacion = 3;
-            //orden = false;
-            //operacion = 3;
-            //if (resultado > 0)
-            //{
-            //    operar();
-            //}
-            //else
-            //{
-            //    resultado = valor;
-            //}
         }
 
 
@@ -296,6 +176,8 @@ namespace Ej7Cs
 
         private void masMenos_Click(object sender, EventArgs e)
         {
+            operacion = 8;
+            operar();
         }
 
         private void bBorrar_Click(object sender, EventArgs e)

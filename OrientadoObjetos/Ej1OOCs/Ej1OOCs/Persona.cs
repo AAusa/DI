@@ -72,7 +72,7 @@
         System.Console.WriteLine("Nombre: " + nombre + ". Apellidos: " + apellidos + ". Edad: " + edad + ". Dni: " + dni);
     }
 
-    public void introducir()
+    public virtual void introducir()
     {
         System.Console.WriteLine("Nombre:");
         nombre = Console.ReadLine();
