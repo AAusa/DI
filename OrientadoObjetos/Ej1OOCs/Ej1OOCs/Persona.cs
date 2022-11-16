@@ -64,12 +64,12 @@
         get
         {
             Char[] letrasDNI = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
-            return dni + letrasDNI[int.Parse(dni.ToString()) % 23];
+            return dni + letrasDNI[Int64.Parse(dni.ToString()) % 23];
         }
     }
     public virtual void mostrar()
     {
-        System.Console.WriteLine("Nombre: " + nombre + ". Apellidos: " + apellidos + ". Edad: " + edad + ". Dni: " + dni);
+        System.Console.WriteLine("Nombre: " + nombre + ". Apellidos: " + apellidos + ". Edad: " + edad + ". Dni: " + Dni);
     }
 
     public virtual void introducir()

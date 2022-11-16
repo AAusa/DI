@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\VS-DI\\DI\\PrimerosEjercicios\\Figura\\Figura.csproj": {}
+    "D:\\Documentos\\VS-DI\\DI\\ConsolaInterfaz\\PrimerosEjercicios\\Figura\\Figura.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\VS-DI\\DI\\PrimerosEjercicios\\Figura\\Figura.csproj": {
+    "D:\\Documentos\\VS-DI\\DI\\ConsolaInterfaz\\PrimerosEjercicios\\Figura\\Figura.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\VS-DI\\DI\\PrimerosEjercicios\\Figura\\Figura.csproj",
+        "projectUniqueName": "D:\\Documentos\\VS-DI\\DI\\ConsolaInterfaz\\PrimerosEjercicios\\Figura\\Figura.csproj",
         "projectName": "Figura",
-        "projectPath": "D:\\Documentos\\VS-DI\\DI\\PrimerosEjercicios\\Figura\\Figura.csproj",
+        "projectPath": "D:\\Documentos\\VS-DI\\DI\\ConsolaInterfaz\\PrimerosEjercicios\\Figura\\Figura.csproj",
         "packagesPath": "C:\\Users\\alu\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\VS-DI\\DI\\PrimerosEjercicios\\Figura\\obj\\",
+        "outputPath": "D:\\Documentos\\VS-DI\\DI\\ConsolaInterfaz\\PrimerosEjercicios\\Figura\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -9,3 +9,14 @@ D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.csp
 D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.csproj.CoreCompileInputs.cache
 D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.exe
 D:\Documentos\RepositorioDI\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.pdb
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\NavegadorWeb\NavegadorWeb\bin\Debug\NavegadorWeb.exe.config
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\NavegadorWeb\NavegadorWeb\bin\Debug\NavegadorWeb.exe
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\NavegadorWeb\NavegadorWeb\bin\Debug\NavegadorWeb.pdb
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.csproj.SuggestedBindingRedirects.cache
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.Form1.resources
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.Properties.Resources.resources
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.csproj.GenerateResource.cache
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.exe
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\NavegadorWeb\NavegadorWeb\obj\Debug\NavegadorWeb.pdb

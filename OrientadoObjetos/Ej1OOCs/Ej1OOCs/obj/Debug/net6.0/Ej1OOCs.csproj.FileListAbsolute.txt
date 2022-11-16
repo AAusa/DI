@@ -3,3 +3,13 @@ D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs
 D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs.AssemblyInfoInputs.cache
 D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs.AssemblyInfo.cs
 D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\bin\Debug\net6.0\Ej1OOCs.exe
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\bin\Debug\net6.0\Ej1OOCs.deps.json
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\bin\Debug\net6.0\Ej1OOCs.runtimeconfig.json
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\bin\Debug\net6.0\Ej1OOCs.dll
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\bin\Debug\net6.0\Ej1OOCs.pdb
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs.dll
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\refint\Ej1OOCs.dll
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs.pdb
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\Ej1OOCs.genruntimeconfig.cache
+D:\Documentos\VS-DI\DI\OrientadoObjetos\Ej1OOCs\Ej1OOCs\obj\Debug\net6.0\ref\Ej1OOCs.dll

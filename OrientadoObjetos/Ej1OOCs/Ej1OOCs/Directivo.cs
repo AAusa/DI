@@ -7,7 +7,6 @@ public class Directivo : Persona, IPastaGansa
     private double beneficios;
     private int nPersonasAcargo;
     private double PastaGanada;
-    Directivo d;//Para decrementar los beneficios con --
 
     public Directivo(int edad, String nombre, String apellidos, String dni, double beneficios, int nPersonasAcargo, String dpto)
     :base(edad, nombre, apellidos, dni)
@@ -15,12 +14,10 @@ public class Directivo : Persona, IPastaGansa
         this.nPersonasAcargo = nPersonasAcargo;
         this.beneficios = beneficios;
         this.dpto = dpto;
-        d = new Directivo(Edad, Nombre, Apellidos, Dni, beneficios, nPersonasAcargo, dpto);
     }
 
     public Directivo() : this(0, "", "", "", 0, 0, "")
     {
-        d = new Directivo(0, "", "", "", 0, 0, "");
     }
 
     public override void mostrar()
@@ -53,7 +50,9 @@ public class Directivo : Persona, IPastaGansa
 
     public double ganarPasta(double beneficiosTotales)
     {
-        if(beneficiosTotales > 0)
+        Directivo d = new Directivo(Edad, Nombre, Apellidos, Dni, beneficios, nPersonasAcargo, dpto);
+
+        if (beneficiosTotales > 0)
         {
             PastaGanada = beneficios / 100 * beneficiosTotales;
         }
@@ -61,6 +60,7 @@ public class Directivo : Persona, IPastaGansa
         {
             PastaGanada = 0;
             d--;
+            this.beneficios = d.beneficios;
         }
         return PastaGanada;
     }
