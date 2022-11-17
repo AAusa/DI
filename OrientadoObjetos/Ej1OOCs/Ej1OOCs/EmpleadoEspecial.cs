@@ -3,8 +3,8 @@
 
     private double PastaGanada;
 
-    public EmpleadoEspecial(int edad, String nombre, String apellidos, String dni, double salario, int irpf, String nTfno)
-    : base(edad, nombre, apellidos, dni, salario, irpf, nTfno)
+    public EmpleadoEspecial(int edad, String nombre, String apellidos, String dni, double salario, String nTfno)
+    : base(edad, nombre, apellidos, dni, salario, nTfno)
     {
     }
 

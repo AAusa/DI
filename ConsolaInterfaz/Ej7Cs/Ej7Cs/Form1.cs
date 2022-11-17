@@ -1,52 +1,61 @@
 using System;
+using System.Linq.Expressions;
 
 namespace Ej7Cs
 {
     public partial class Form1 : Form
     {
-        bool orden = true; // Saber numero a rellenar true: v1, false: v2
         int valor, operacion;
         double resultado = 0;
         public Form1()
         {
             InitializeComponent();
             Text = "Calculadora";
+            info.Text = "Instrucciones:\n\to Orden de uso: valor + operacion + valor + igual.\n\to No pulsar operación e = consecutivamente.";
         }
 
         private void operar()
         {
-            switch (operacion)
+            try
             {
-                case 0: //suma
-                    resultado += valor;
-                    break;
-                case 1: //resta
-                    resultado -= valor;
-                    break;
-                case 2: //multi
-                    resultado *= valor;
-                    break;
-                case 3: //div
-                    resultado /= valor;
-                    break;
-                case 4: //pot
-                    resultado *= resultado;
-                    break;
-                case 5: //raiz
-                    resultado = Math.Sqrt(Convert.ToDouble(pantalla.Text));
-                    break;
-                case 6: //fraccion
-                    resultado = 1 / Convert.ToDouble(pantalla.Text);
-                    break;
-                case 7: //porcentaje
-                    resultado = Convert.ToDouble(pantalla.Text) / 100;
-                    break;
-                case 8: //masMenos
-                    resultado = - Convert.ToDouble(pantalla.Text);
-                    break;
+                switch (operacion)
+                {
+                    case 0: //suma
+                        resultado += valor;
+                        break;
+                    case 1: //resta
+                        resultado -= valor;
+                        break;
+                    case 2: //multi
+                        resultado *= valor;
+                        break;
+                    case 3: //div
+                        resultado /= valor;
+                        break;
+                    case 4: //pot
+                        resultado *= resultado;
+                        break;
+                    case 5: //raiz
+                        resultado = Math.Sqrt(Convert.ToDouble(pantalla.Text));
+                        break;
+                    case 6: //fraccion
+                        resultado = 1 / Convert.ToDouble(pantalla.Text);
+                        break;
+                    case 7: //porcentaje
+                        resultado = Convert.ToDouble(pantalla.Text) / 100;
+                        break;
+                    case 8: //masMenos
+                        resultado = -Convert.ToDouble(pantalla.Text);
+                        break;
+                }
+                operacion = -1;
+                pantalla.Clear();
+                pantalla.Text = resultado.ToString();
             }
-            pantalla.Clear();
-            pantalla.Text = resultado.ToString();
+            catch (System.FormatException ex)
+            {
+                info.Text = "Introduce nº";
+            };
         }
 
         private void bResultado_Click(object sender, EventArgs e)
@@ -130,54 +139,112 @@ namespace Ej7Cs
 
         private void bRaiz_Click(object sender, EventArgs e)
         {
-            operacion = 5;
-            operar();
+            try
+            {
+                operacion = 5;
+                operar();
+            }
+            catch (System.FormatException ex)
+            {
+                info.Text = "Introduce nº";
+            };
         }
 
         private void bComa_Click(object sender, EventArgs e)
         {
-            pantalla.Text += ",";
+            if(pantalla.Text != "")
+            {
+                pantalla.Text += ",";
+            }
+            else
+            {
+                info.Text = "Introduce nº";
+            }
         }
 
         private void bSuma_Click (object sender, EventArgs e)
         {
-            resultado = Convert.ToDouble(pantalla.Text);
-            pantalla.Text = "";
-            operacion = 0;
+            try
+            {
+                resultado += Convert.ToDouble(pantalla.Text);
+                pantalla.Text = "";
+                operacion = 0;
+            }
+            catch(System.FormatException ex)
+            {
+                info.Text = "Introduce nº";
+            };
         }
 
         private void bRestar_Click(object sender, EventArgs e)
         {
-            resultado = Convert.ToDouble(pantalla.Text);
-            pantalla.Text = "";
-            operacion = 1;       
+            try
+            {
+                resultado = Convert.ToDouble(pantalla.Text);
+                pantalla.Text = "";
+                operacion = 1;
+            }
+            catch (System.FormatException ex)
+            {
+                info.Text = "Introduce nº";
+            };
         }
 
         private void bMultiplicar_Click(object sender, EventArgs e)
         {
-            resultado = Convert.ToDouble(pantalla.Text);
-            pantalla.Text = "";
-            operacion = 2;
+            try
+            {
+                resultado = Convert.ToDouble(pantalla.Text);
+                pantalla.Text = "";
+                operacion = 2;
+            }
+            catch (System.FormatException ex)
+            {
+                info.Text = "Introduce nº";
+            };
+
         }
 
         private void bDivision_Click(object sender, EventArgs e)
         {
-            resultado = Convert.ToDouble(pantalla.Text);
-            pantalla.Text = "";
-            operacion = 3;
+            try
+            {
+                resultado = Convert.ToDouble(pantalla.Text);
+                pantalla.Text = "";
+                operacion = 3;
+            }
+            
+            catch (System.FormatException ex)
+            {
+                info.Text = "Introduce nº";
+            };
         }
 
 
         private void bFraccion_Click(object sender, EventArgs e)
         {
-            operacion = 6;
-            operar();
+            try
+            {
+                operacion = 6;
+                operar();
+            }
+            catch (System.FormatException ex)
+            {
+                info.Text = "Introduce nº";
+            };
         }
 
         private void masMenos_Click(object sender, EventArgs e)
         {
-            operacion = 8;
-            operar();
+            try
+            {
+                operacion = 8;
+                operar();
+            }
+            catch (System.FormatException ex)
+            {
+                info.Text = "Introduce nº";
+            };
         }
 
         private void bBorrar_Click(object sender, EventArgs e)
@@ -190,16 +257,30 @@ namespace Ej7Cs
 
         private void bPotencia_Click(object sender, EventArgs e)
         {
-            resultado = Convert.ToDouble(pantalla.Text);
-            pantalla.Text = "";
-            operacion = 4;
-            operar();
+            try
+            {
+                resultado = Convert.ToDouble(pantalla.Text);
+                pantalla.Text = "";
+                operacion = 4;
+                operar();
+            }
+            catch (System.FormatException ex)
+            {
+                info.Text = "Introduce nº";
+            };
         }
 
         private void bPorcentaje_Click(object sender, EventArgs e)
         {
-            operacion = 7;
-            operar();
+            try
+            {
+                operacion = 7;
+                operar();
+            }
+            catch (System.FormatException ex)
+            {
+                info.Text = "Introduce nº";
+            };
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

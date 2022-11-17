@@ -1,0 +1,16 @@
+D:\Documentos\VS-DI\DI\Ej4CsNew\Ej4CsNew\bin\Debug\Ej4CsNew.exe.config
+D:\Documentos\VS-DI\DI\Ej4CsNew\Ej4CsNew\bin\Debug\Ej4CsNew.exe
+D:\Documentos\VS-DI\DI\Ej4CsNew\Ej4CsNew\bin\Debug\Ej4CsNew.pdb
+D:\Documentos\VS-DI\DI\Ej4CsNew\Ej4CsNew\obj\Debug\Ej4CsNew.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\Ej4CsNew\Ej4CsNew\obj\Debug\Ej4CsNew.csproj.SuggestedBindingRedirects.cache
+D:\Documentos\VS-DI\DI\Ej4CsNew\Ej4CsNew\obj\Debug\Ej4CsNew.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\Ej4CsNew\Ej4CsNew\obj\Debug\Ej4CsNew.exe
+D:\Documentos\VS-DI\DI\Ej4CsNew\Ej4CsNew\obj\Debug\Ej4CsNew.pdb
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\Ej4CsNew\Ej4CsNew\obj\Debug\Ej4CsNew.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\Ej4CsNew\Ej4CsNew\obj\Debug\Ej4CsNew.csproj.SuggestedBindingRedirects.cache
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\Ej4CsNew\Ej4CsNew\obj\Debug\Ej4CsNew.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\Ej4CsNew\Ej4CsNew\obj\Debug\Ej4CsNew.exe
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\Ej4CsNew\Ej4CsNew\obj\Debug\Ej4CsNew.pdb
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\Ej4CsNew\Ej4CsNew\bin\Debug\Ej4CsNew.exe.config
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\Ej4CsNew\Ej4CsNew\bin\Debug\Ej4CsNew.exe
+D:\Documentos\VS-DI\DI\ConsolaInterfaz\Ej4CsNew\Ej4CsNew\bin\Debug\Ej4CsNew.pdb

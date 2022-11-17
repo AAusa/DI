@@ -4,15 +4,14 @@
     private int irpf;
     private String nTfno;
 
-    public Empleado(int edad, String nombre, String apellidos, String dni, double salario, int irpf, String nTfno)
+    public Empleado(int edad, String nombre, String apellidos, String dni, double salario, String nTfno)
     :base(edad, nombre, apellidos, dni)
     {
         this.salario = salario;
-        this.irpf = irpf;
         this.nTfno = nTfno;
     }
 
-    public Empleado() : this(0, "", "", "", 0, 0, "")
+    public Empleado() : this(0, "", "", "", 0, "")
     {
     }
 

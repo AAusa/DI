@@ -61,6 +61,7 @@
             this.bPotencia = new System.Windows.Forms.Button();
             this.bFraccion = new System.Windows.Forms.Button();
             this.pantalla = new System.Windows.Forms.TextBox();
+            this.info = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -439,7 +440,7 @@
             // 
             this.pantalla.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pantalla.Font = new System.Drawing.Font("Segoe UI", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pantalla.Location = new System.Drawing.Point(5, 54);
+            this.pantalla.Location = new System.Drawing.Point(6, 62);
             this.pantalla.MaximumSize = new System.Drawing.Size(308, 100);
             this.pantalla.Name = "pantalla";
             this.pantalla.Size = new System.Drawing.Size(308, 70);
@@ -447,10 +448,21 @@
             this.pantalla.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.pantalla.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // info
+            // 
+            this.info.AutoSize = true;
+            this.info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.info.Location = new System.Drawing.Point(11, 11);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(0, 15);
+            this.info.TabIndex = 25;
+            this.info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(319, 485);
+            this.Controls.Add(this.info);
             this.Controls.Add(this.pantalla);
             this.Controls.Add(this.bBorrar);
             this.Controls.Add(this.bC);
@@ -517,5 +529,6 @@
         private Button bPotencia;
         private Button bFraccion;
         private TextBox pantalla;
+        private Label info;
     }
 }

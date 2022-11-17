@@ -21,9 +21,9 @@ public class Principal
     }
     public static void Main(String[]args)
     {
-        Persona empleado = new Empleado(18, "Juan", "Jimenez Perez", "12312652", 800, 2, "686123123");
+        Persona empleado = new Empleado(18, "Juan", "Jimenez Perez", "12312652", 800, "686123123");
         Persona directivo = new Directivo(28, "Pepe", "Perez Marco", "12312332", 12, 3, "Informatica");
-        Empleado empleadoEspecial = new EmpleadoEspecial(38, "Jimena", "Jimenez Marques", "14312312", 700, 1, "643334123");
+        Empleado empleadoEspecial = new EmpleadoEspecial(38, "Jimena", "Jimenez Marques", "14312312", 700, "643334123");
 
         Console.WriteLine("1.- Visualizar los datos del Directivo");
         Console.WriteLine("2.- Visualizar datos Empleado");
