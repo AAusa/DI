@@ -1,0 +1,15 @@
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\bin\Debug\net6.0\menuConsola.exe
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\bin\Debug\net6.0\menuConsola.deps.json
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\bin\Debug\net6.0\menuConsola.runtimeconfig.json
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\bin\Debug\net6.0\menuConsola.dll
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\bin\Debug\net6.0\menuConsola.pdb
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\obj\Debug\net6.0\menuConsola.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\obj\Debug\net6.0\menuConsola.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\obj\Debug\net6.0\menuConsola.AssemblyInfoInputs.cache
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\obj\Debug\net6.0\menuConsola.AssemblyInfo.cs
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\obj\Debug\net6.0\menuConsola.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\obj\Debug\net6.0\menuConsola.dll
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\obj\Debug\net6.0\refint\menuConsola.dll
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\obj\Debug\net6.0\menuConsola.pdb
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\obj\Debug\net6.0\menuConsola.genruntimeconfig.cache
+D:\Documentos\VS-DI\DI\menuConsola\menuConsola\obj\Debug\net6.0\ref\menuConsola.dll
