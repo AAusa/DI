@@ -12,6 +12,7 @@ namespace ConsoleApplication1
 
         void Menu()
         {
+            Random random = new Random();
             bool ejecutar = false;
             bool ejecutarMenu = false;
 
@@ -36,7 +37,10 @@ namespace ConsoleApplication1
                     switch (k)
                     {
                         case 0: Opcion1(6); break;
-                        case 1: Opcion2(); break;
+                        case 1:
+                            int aleatorio = random.Next(1, 100);
+                            Opcion2(aleatorio);
+                            break;
                         case 2: return;
                     }
                     //menuVolver:
@@ -92,10 +96,10 @@ namespace ConsoleApplication1
             ConsoleColor colorSeleccionado = ConsoleColor.Red;
 
             Console.BackgroundColor = ConsoleColor.Black;
-            Console.SetCursorPosition(30, 5);
+            Console.SetCursorPosition(50, 7);
             Console.ForegroundColor = l == 0 ? colorSeleccionado : colorBase;
             Console.WriteLine("Volver");
-            Console.SetCursorPosition(45, 5);
+            Console.SetCursorPosition(65, 7);
             Console.ForegroundColor = l == 1 ? colorSeleccionado : colorBase;
             Console.WriteLine("Salir");
 
@@ -128,11 +132,48 @@ namespace ConsoleApplication1
             Console.WriteLine("Aciertos: " + aciertos);
         }
 
-        void Opcion2()
+        void Opcion2(int aleatorio)
         {
-            Console.SetCursorPosition(5, 15);
+            Console.Clear();
+            Console.SetCursorPosition(5, 3);
+            Console.WriteLine("Juego adivina un número. El ordenador saca un número aleatorio entre 1 y 100. ");
+            Console.SetCursorPosition(5, 4);
+            Console.WriteLine("El usuario tiene 5 intentos para adivinarlo.");
+            Console.SetCursorPosition(5, 5);
+            Console.WriteLine("Se informa mayor/menor en cada intento así como el número de intentos restantes. ");
+
+            int contador = 0;
+            Boolean ganar = false;
+            while (!ganar && contador < 5)
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.SetCursorPosition(5, contador*2+6);
+                Console.WriteLine("Introduce un numero:");
+                Console.SetCursorPosition(25, contador*2 + 6);
+                int num = int.Parse(Console.ReadLine());
+                if (num > aleatorio)
+                {
+                    Console.SetCursorPosition(30, contador*2+ 6);
+                    Console.WriteLine("Es menor");
+                }
+                else if (num < aleatorio)
+                {
+                    Console.SetCursorPosition(30, contador * 2 + 6);
+                    Console.WriteLine("Es mayor");
+                }
+                else
+                {
+                    ganar = true;
+                    Console.SetCursorPosition(30, contador * 2 + 6);
+                    Console.WriteLine("Acierto!");
+                }
+                Console.SetCursorPosition(5, contador * 2 + 7);
+                Console.WriteLine("\tQuedan: " + (5 - (contador + 1)) + " intentos"); //(5 - (contador + 1)) --> total - jugadas
+                contador++;
+            }
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("O P C I Ó N   2");
+            Console.SetCursorPosition(5, contador*2 + 8);
+            Console.WriteLine("El numero a acertar era: " + aleatorio);
         }
     }
 }
