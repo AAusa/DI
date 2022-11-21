@@ -1,0 +1,15 @@
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\obj\Debug\net6.0\Ej1.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\obj\Debug\net6.0\Ej1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\obj\Debug\net6.0\Ej1.AssemblyInfoInputs.cache
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\obj\Debug\net6.0\Ej1.AssemblyInfo.cs
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\obj\Debug\net6.0\Ej1.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\bin\Debug\net6.0\Ej1.exe
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\bin\Debug\net6.0\Ej1.deps.json
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\bin\Debug\net6.0\Ej1.runtimeconfig.json
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\bin\Debug\net6.0\Ej1.dll
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\bin\Debug\net6.0\Ej1.pdb
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\obj\Debug\net6.0\Ej1.dll
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\obj\Debug\net6.0\refint\Ej1.dll
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\obj\Debug\net6.0\Ej1.pdb
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\obj\Debug\net6.0\Ej1.genruntimeconfig.cache
+D:\Documentos\VS-DI\DI\OtrosAspectos\Ej1\Ej1\obj\Debug\net6.0\ref\Ej1.dll
