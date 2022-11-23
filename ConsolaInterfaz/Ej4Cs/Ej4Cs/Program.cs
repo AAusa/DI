@@ -349,15 +349,15 @@ public class Principal
             Console.WriteLine(porcentaje);
             switch (porcentaje)
             {
-                case int when porcentaje <= 15:    
+                case <= 15:    
                     segundo = random.Next(primer, 10);
                     resultado = '2';
                     break;
-                case int when porcentaje <= 40:
+                case <= 40:
                     segundo = primer;
                     resultado = 'X';
                     break;
-                case int when porcentaje <= 100:
+                case <= 100:
                     segundo = random.Next(1, primer);
                     resultado = '1';
                     break;

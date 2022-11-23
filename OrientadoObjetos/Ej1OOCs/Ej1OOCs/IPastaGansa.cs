@@ -1,4 +1,4 @@
-﻿interface IPastaGansa
+﻿public interface IPastaGansa
 {
     double ganarPasta(double beneficiosTotales);
 }

@@ -3,21 +3,12 @@ using System.Runtime.CompilerServices;
 
 public class Principal
 {
-    //irpf ver si hay q quitarlo
-    public static void getGanancia(Persona p)
+
+    public static void getGanancia(IPastaGansa ip)
     {
         Console.WriteLine("Introduce ganancia de la empresa: ");
         int gananciaEmpresa = Console.Read();
-        switch (p)
-        {
-            case EmpleadoEspecial empleadoEspecial:
-                Console.WriteLine("Ganancia: " + empleadoEspecial.ganarPasta(gananciaEmpresa));
-                break;
-
-            case Directivo directivo:
-                Console.WriteLine("Ganancia: " + directivo.ganarPasta(gananciaEmpresa));
-                break;
-        }
+        Console.WriteLine("Ganancia: " + ip.ganarPasta(gananciaEmpresa) + "euros");
     }
     public static void Main(String[]args)
     {
@@ -36,7 +27,7 @@ public class Principal
             case 1:
                 directivo.mostrar();
                 Console.WriteLine("Hacienda: " + directivo.hacienda() + " euros");
-                getGanancia(directivo);
+                Principal.getGanancia((IPastaGansa)directivo);
                 break;
             case 2:
                 empleado.mostrar();
@@ -45,7 +36,7 @@ public class Principal
             case 3:
                 empleadoEspecial.mostrar();
                 Console.WriteLine("Hacienda: " + empleadoEspecial.hacienda() + "euros");
-                getGanancia(empleadoEspecial);
+                Principal.getGanancia((IPastaGansa)empleadoEspecial);
                 break;
         }
     }

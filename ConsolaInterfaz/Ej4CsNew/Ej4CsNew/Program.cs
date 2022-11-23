@@ -29,7 +29,7 @@ namespace ConsoleApplication1
                     case ConsoleKey.Enter: ejecutar = true; break;
                 }
 
-                if (k < 0) k = 5; else if (k > 5) k = 0;
+                if (k < 0) k = 4; else if (k > 4) k = 0;
 
                 if (ejecutar)
                 {
@@ -46,7 +46,7 @@ namespace ConsoleApplication1
                             break;
                         case 3:
                             Opcion4();
-                            return;
+                            break;
                     }
                     //menuVolver:
                     while (!ejecutarMenu)
