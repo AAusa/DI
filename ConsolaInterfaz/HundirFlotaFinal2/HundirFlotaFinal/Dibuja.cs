@@ -114,7 +114,7 @@ namespace Hundir
             // Lineas tablero horizontales.:
             for (int contadorY = 0; contadorY < 10; contadorY++)//Mueve ejeY donde hay huecos
             {
-                for (int contadorX = 0; contadorX < 10; contadorX++)////Mueve ejeX
+                for (int contadorX = 0; contadorX < 10; contadorX++)//Mueve ejeX
                 {
                     Console.SetCursorPosition(contadorX * 2 + 1 + x, contadorY * 2 + 1 + y);
                     if (Tablero.CoordenadaEnBarcos(B, contadorX, contadorY) == true)//Barco
