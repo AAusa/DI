@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\VS-DI\\DI\\ConsolaInterfaz\\HundirFlotaFinal2\\HundirFlotaFinal\\HundirFlotaFinal.csproj",
-      "projectName": "HundirFlotaFinal",
-      "projectPath": "D:\\Documentos\\VS-DI\\DI\\ConsolaInterfaz\\HundirFlotaFinal2\\HundirFlotaFinal\\HundirFlotaFinal.csproj",
+      "projectUniqueName": "D:\\Documentos\\VS-DI\\DI\\aTenerEnCuenta\\aTenerEnCuenta\\aTenerEnCuenta.csproj",
+      "projectName": "aTenerEnCuenta",
+      "projectPath": "D:\\Documentos\\VS-DI\\DI\\aTenerEnCuenta\\aTenerEnCuenta\\aTenerEnCuenta.csproj",
       "packagesPath": "C:\\Users\\alu\\.nuget\\packages\\",
-      "outputPath": "D:\\Documentos\\VS-DI\\DI\\ConsolaInterfaz\\HundirFlotaFinal2\\HundirFlotaFinal\\obj\\",
+      "outputPath": "D:\\Documentos\\VS-DI\\DI\\aTenerEnCuenta\\aTenerEnCuenta\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

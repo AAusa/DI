@@ -12,42 +12,23 @@ public class Aula
     private String[] alumnado;//nombre alumnos
     private Double[,] notas;//nombre, asignatura 
 
-    public double this[String nombre, String asignatura]
+    public Aula(String[] alumnos)
     {
-        set
+        Random r = new Random();
+        notas = new double[alumnos.Length, 4];
+        alumnado = new string[alumnos.Length];
+        for (int i = 0; i < alumnos.Length; i++)//Recorre alumnos
         {
-            int indiceAlumno = 0, indiceAsignatura = 0;
-            if (Int32.TryParse(asignatura, out indiceAsignatura))//Si la asignatura es un numero
+            alumnado[i] = alumnos[i].ToString().Trim().ToUpper();
+            for (int j = 0; j < 4; j++)//Recorre asignaturas
             {
-                //Obtener indiceAlumno
-                for (int i = 0; i < alumnado.Length; i++)
-                {
-                    if (alumnado[i].Equals(nombre.ToUpper()))
-                    {
-                        indiceAlumno = i;
-                    }
-                }
-                notas[indiceAlumno, indiceAsignatura] = value;
-            }
-            else//La asignatura es un string
-            {
-                switch(asignatura)
-                {
-                    case "Mates":
-                        notas[indiceAlumno, 0] = value; 
-                        break;
-                    case "Lengua":
-                        notas[indiceAlumno, 1] = value;
-                        break;
-                    case "Ciencias":
-                        notas[indiceAlumno, 2] = value;
-                        break;
-                    case "Artes":
-                        notas[indiceAlumno, 3] = value;
-                        break;
-                }
+                notas[i, j] = r.NextInt64(10);
             }
         }
+    }
+
+    public double this[String nombre, String asignatura]
+    {
         get
         {
             int indiceAlumno = 0, indiceAsignatura = 0;
@@ -82,22 +63,6 @@ public class Aula
                 }
             }
             return 0;//En caso de que no se hayan dado bien los datos
-        }
-    }
-
-
-    public Aula(String[] alumnos)
-    {
-        Random r = new Random();
-        notas = new double[alumnos.Length, 3];
-        alumnado = new string[alumnos.Length];
-        for (int i = 0; i < alumnos.Length; i++)//Recorre alumnos
-        {
-            alumnos[i] = alumnos[i].ToString().Trim().ToUpper();
-            for(int j = 0; j < 3; j++)//Recorre asignaturas
-            {
-                notas[i, j] = r.NextInt64(10);
-            }
         }
     }
 
@@ -138,9 +103,9 @@ public class Aula
         return aprobados;
     }
 
-    public int[] getNotas(String alumno)
+    public double[] getNotas(String alumno)
     {
-        int[] notasAlumno = new int[3];
+        double[] notasAlumno = new double[3];
         if (alumnado.Contains(alumno.ToUpper()))
         {
             for (int i = 0; i < alumnado.Length; i++)
@@ -149,7 +114,7 @@ public class Aula
                 {
                     for (int j = 0; j < 3; j++)//Recorre asignaturas
                     {
-                        notas[i, j] = notasAlumno[j];
+                        notasAlumno[j] = notas[i, j];
                     }
                 }
             }
@@ -179,7 +144,7 @@ public class Aula
         }
         return notasAsignatura;
     }
-    public void getNotasMinMax(String alumno)
+    public String getNotasMinMax(String alumno)
     {
         double min = 11, max = 0;
         if (alumnado.Contains(alumno.ToUpper()))
@@ -201,7 +166,7 @@ public class Aula
                     }
                 }
             }
-            Console.WriteLine("Min: " +min+"\tMax: "+max);
+            return "Min: " +min+"\tMax: "+max;
         }
         else
         {
@@ -215,11 +180,14 @@ public class Aula
         
         for (int i = 0; i < alumnado.Length; i++)
         {
-            Console.WriteLine(alumnado[i]);
-            for (int j = 0; j < 3; j++)
-            {
-                Console.WriteLine(alumnado[i]+"\t");
-            }
+            Console.SetCursorPosition(5, 6+i);
+            Console.WriteLine(alumnado[i]+ ": " + notas[i,0]+"\t" + notas[i, 1]+ "\t"+ notas[i, 2]);
+            
         }            
     }
+
+    //public double[,] getNotasTotal()
+    //{
+    //    return notas;
+    //}
 }
