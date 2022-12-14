@@ -6,5 +6,9 @@ namespace BotonesPersonalizados
         {
             InitializeComponent();
         }
+        private void bVerificar1_MouseEnter(object sender, EventArgs e)
+        {
+            bVerificar1.BackColor = Color.Aqua;
+        }
     }
 }
