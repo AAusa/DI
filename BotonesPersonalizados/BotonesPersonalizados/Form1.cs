@@ -10,5 +10,10 @@ namespace BotonesPersonalizados
         {
             bVerificar1.BackColor = Color.Aqua;
         }
+
+        private void boton51_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

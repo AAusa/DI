@@ -1,0 +1,17 @@
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\bin\Debug\net6.0-windows\Ej1.exe
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\bin\Debug\net6.0-windows\Ej1.deps.json
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\bin\Debug\net6.0-windows\Ej1.runtimeconfig.json
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\bin\Debug\net6.0-windows\Ej1.dll
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\bin\Debug\net6.0-windows\Ej1.pdb
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\Ej1.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\Ej1.Form1.resources
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\Ej1.csproj.GenerateResource.cache
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\Ej1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\Ej1.AssemblyInfoInputs.cache
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\Ej1.AssemblyInfo.cs
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\Ej1.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\Ej1.dll
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\refint\Ej1.dll
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\Ej1.pdb
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\Ej1.genruntimeconfig.cache
+D:\Documentos\VS-DI\DI\WindowsForms\Ej1\Ej1\obj\Debug\net6.0-windows\ref\Ej1.dll

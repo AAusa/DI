@@ -197,6 +197,7 @@
             this.boton51.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.boton51.TextColor = System.Drawing.Color.White;
             this.boton51.UseVisualStyleBackColor = false;
+            this.boton51.Click += new System.EventHandler(this.boton51_Click);
             // 
             // bBorrar1
             // 
