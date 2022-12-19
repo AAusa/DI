@@ -18,6 +18,11 @@ namespace Ej1
 
         }
 
+        void Form1_MouseLeave(object sender, EventArgs e)
+        {
+            Text = "Fuera del formulario";
+        }
+
         private void panel1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             switch (e.Button)
@@ -34,10 +39,10 @@ namespace Ej1
                     break;
             }
         }
-
-        private void panel1_KeyDown(object sender, KeyEventArgs k)
+        //keyChar o keyCode
+        private void panel1_KeyDown(object sender, KeyPressEventArgs k)
         {
-            switch (k.KeyCode)
+            switch (k.key)
             {
                 case Keys.Escape:
                     Text = "titulo por defecto";
@@ -85,6 +90,8 @@ namespace Ej1
             this.Name = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.panel1_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.ResumeLayout(false);
 
         }
