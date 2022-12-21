@@ -2,10 +2,12 @@ namespace Ej1
 {
     public partial class Form1 : Form
     {
+        String titulo = "Defecto";
         public Form1()
         {
             InitializeComponent();
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -39,18 +41,14 @@ namespace Ej1
                     break;
             }
         }
-        //keyChar o keyCode
-        private void panel1_KeyDown(object sender, KeyPressEventArgs k)
+        private void this_KeyDown(object sender, KeyEventArgs k)
         {
-            switch (k.key)
+            titulo += k.KeyCode.ToString();
+            if(k.KeyCode == System.Windows.Forms.Keys.Escape)
             {
-                case Keys.Escape:
-                    Text = "titulo por defecto";
-                    break;
-                default:
-                    Text = "" + k.ToString();
-                    break;
+                titulo = "defecto";
             }
+            Text = titulo;
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
@@ -87,8 +85,10 @@ namespace Ej1
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.dcha);
             this.Controls.Add(this.izq);
+            this.KeyPreview = true;
             this.Name = "Form1";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.panel1_KeyDown);
+            this.Load += new System.EventHandler(this.Form1_Load_3);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.this_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
@@ -97,6 +97,21 @@ namespace Ej1
         }
 
         private void Form1_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void Form_KeyDown(object sender, KeyEventArgs e)
         {
 
         }
