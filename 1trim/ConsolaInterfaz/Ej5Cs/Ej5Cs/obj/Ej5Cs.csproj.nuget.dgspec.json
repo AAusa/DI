@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\VS-DI\\DI\\Ej5Cs\\Ej5Cs\\Ej5Cs.csproj": {}
+    "D:\\Documentos\\VS-DI\\DI\\1trim\\ConsolaInterfaz\\Ej5Cs\\Ej5Cs\\Ej5Cs.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\VS-DI\\DI\\Ej5Cs\\Ej5Cs\\Ej5Cs.csproj": {
+    "D:\\Documentos\\VS-DI\\DI\\1trim\\ConsolaInterfaz\\Ej5Cs\\Ej5Cs\\Ej5Cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\VS-DI\\DI\\Ej5Cs\\Ej5Cs\\Ej5Cs.csproj",
+        "projectUniqueName": "D:\\Documentos\\VS-DI\\DI\\1trim\\ConsolaInterfaz\\Ej5Cs\\Ej5Cs\\Ej5Cs.csproj",
         "projectName": "Ej5Cs",
-        "projectPath": "D:\\Documentos\\VS-DI\\DI\\Ej5Cs\\Ej5Cs\\Ej5Cs.csproj",
+        "projectPath": "D:\\Documentos\\VS-DI\\DI\\1trim\\ConsolaInterfaz\\Ej5Cs\\Ej5Cs\\Ej5Cs.csproj",
         "packagesPath": "C:\\Users\\alu\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\VS-DI\\DI\\Ej5Cs\\Ej5Cs\\obj\\",
+        "outputPath": "D:\\Documentos\\VS-DI\\DI\\1trim\\ConsolaInterfaz\\Ej5Cs\\Ej5Cs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

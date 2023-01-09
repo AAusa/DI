@@ -2,7 +2,7 @@ namespace Ej1
 {
     public partial class Form1 : Form
     {
-        String titulo = "Defecto";
+        String titulo = "Mouse Tester";
         public Form1()
         {
             InitializeComponent();
@@ -15,7 +15,6 @@ namespace Ej1
         }
         void Form1_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            this.MouseMove += new MouseEventHandler(Form1_MouseMove);
             Text = "x:" + e.X + "y:" + e.Y;
 
         }
@@ -43,10 +42,10 @@ namespace Ej1
         }
         private void this_KeyDown(object sender, KeyEventArgs k)
         {
-            titulo += k.KeyCode.ToString();
+            titulo = k.KeyCode.ToString();
             if(k.KeyCode == System.Windows.Forms.Keys.Escape)
             {
-                titulo = "defecto";
+                titulo = "Mouse Tester";
             }
             Text = titulo;
         }
@@ -55,7 +54,19 @@ namespace Ej1
         {
 
         }
-
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogo = MessageBox.Show("¿Desea cerrar el programa?",
+                       "Cerrar el programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogo == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+        }
         private void InitializeComponent()
         {
             this.izq = new System.Windows.Forms.Button();
@@ -70,6 +81,7 @@ namespace Ej1
             this.izq.TabIndex = 0;
             this.izq.Text = "izq.";
             this.izq.UseVisualStyleBackColor = true;
+            this.izq.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // dcha
             // 
@@ -79,6 +91,7 @@ namespace Ej1
             this.dcha.TabIndex = 1;
             this.dcha.Text = "dcha.";
             this.dcha.UseVisualStyleBackColor = true;
+            this.dcha.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // Form1
             // 
@@ -87,6 +100,7 @@ namespace Ej1
             this.Controls.Add(this.izq);
             this.KeyPreview = true;
             this.Name = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load_3);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.this_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
