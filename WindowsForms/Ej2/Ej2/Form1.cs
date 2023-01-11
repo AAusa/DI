@@ -13,6 +13,9 @@ namespace Ej2
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
             MinimizeBox = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            ShowInTaskbar = false;
+            Cursor = System.Windows.Forms.Cursors.Hand;
 
         }
 
@@ -34,7 +37,14 @@ namespace Ej2
 
         private void bImagen_Click(object sender, EventArgs e)
         {
-            this.BackgroundImage = new Bitmap(textBox4.Text);
+           try
+           {
+                this.BackgroundImage = new Bitmap(textBox4.Text);
+           }
+           catch (System.ArgumentException)
+           {
+                textBox4.Text = "Intro. path";
+           };
         }
 
         private void cerrar_KeyDown(object sender, KeyEventArgs k)
@@ -51,13 +61,20 @@ namespace Ej2
             }
             else if (k.KeyCode == System.Windows.Forms.Keys.Enter)
             {
-                c1 = Int32.Parse(textBox1.Text);
-                c2 = Int32.Parse(textBox2.Text);
-                c3 = Int32.Parse(textBox3.Text);
-                if (c1 > -1 && c1 < 256 && c2 > -1 && c2 < 256 && c3 > -1 && c3 < 256)
+                try
                 {
-                    this.BackColor = Color.FromArgb(c1, c2, c3);
+                    c1 = Int32.Parse(textBox1.Text);
+                    c2 = Int32.Parse(textBox2.Text);
+                    c3 = Int32.Parse(textBox3.Text);
+                    if (c1 > -1 && c1 < 256 && c2 > -1 && c2 < 256 && c3 > -1 && c3 < 256)
+                    {
+                        this.BackColor = Color.FromArgb(c1, c2, c3);
+                    }
                 }
+                catch (System.FormatException)
+                {
+                    textBox1.Text = "Introduce colores";
+                };
             }
         }
 
@@ -75,19 +92,68 @@ namespace Ej2
             }
             else if (k.KeyCode == System.Windows.Forms.Keys.Enter)
             {
-                this.BackgroundImage = new Bitmap(textBox4.Text);
+                try
+                {
+                    this.BackgroundImage = new Bitmap(textBox4.Text);
+                }
+                catch (System.ArgumentException)
+                {
+                    textBox4.Text = "Intro. path";
+                };
             }
         }
 
         private void bColor_Click(object sender, EventArgs e)
         {
-            c1 = Int32.Parse(textBox1.Text);
-            c2 = Int32.Parse(textBox2.Text);
-            c3 = Int32.Parse(textBox3.Text);
-            if (c1 > -1 && c1 < 256 && c2 > -1 && c2 < 256 && c3 > -1 && c3 < 256)
+            try
             {
-                this.BackColor = Color.FromArgb(c1, c2, c3);
+                c1 = Int32.Parse(textBox1.Text);
+                c2 = Int32.Parse(textBox2.Text);
+                c3 = Int32.Parse(textBox3.Text);
+                if (c1 > -1 && c1 < 256 && c2 > -1 && c2 < 256 && c3 > -1 && c3 < 256)
+                {
+                    this.BackColor = Color.FromArgb(c1, c2, c3);
+                }
             }
+            catch(System.FormatException)
+            {
+                textBox1.Text = "Introduce colores";
+            };
+        }
+
+        private void bCerrar_MouseEnter(object sender, EventArgs k)
+        {
+            bCerrar.BackColor = Color.Green;
+        }
+
+        private void bCerrar_MouseLeave(object sender, EventArgs k)
+        {
+            bCerrar.BackColor = Color.Gray;
+        }
+
+        private void bColor_MouseEnter(object sender, EventArgs k)
+        {
+            bColor.BackColor = Color.Green;
+        }
+
+        private void bColor_MouseLeave(object sender, EventArgs k)
+        {
+            bColor.BackColor = Color.Gray;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bImagen_MouseEnter(object sender, EventArgs k)
+        {
+            bImagen.BackColor = Color.Green;
+        }
+
+        private void bImagen_MouseLeave(object sender, EventArgs k)
+        {
+            bImagen.BackColor = Color.Gray;
         }
     }
 }

@@ -35,6 +35,10 @@
             this.bColor = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.bImagen = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bCerrar
@@ -47,6 +51,8 @@
             this.bCerrar.UseVisualStyleBackColor = true;
             this.bCerrar.Click += new System.EventHandler(this.bCerrar_Click);
             this.bCerrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cerrar_KeyDown);
+            this.bCerrar.MouseEnter += new System.EventHandler(this.bCerrar_MouseEnter);
+            this.bCerrar.MouseLeave += new System.EventHandler(this.bCerrar_MouseLeave);
             // 
             // textBox1
             // 
@@ -82,6 +88,8 @@
             this.bColor.UseVisualStyleBackColor = true;
             this.bColor.Click += new System.EventHandler(this.bColor_Click);
             this.bColor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cerrar_KeyDown);
+            this.bColor.MouseEnter += new System.EventHandler(this.bColor_MouseEnter);
+            this.bColor.MouseLeave += new System.EventHandler(this.bColor_MouseLeave);
             // 
             // textBox4
             // 
@@ -101,12 +109,55 @@
             this.bImagen.UseVisualStyleBackColor = true;
             this.bImagen.Click += new System.EventHandler(this.bImagen_Click);
             this.bImagen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cerrarImagen_KeyDown);
+            this.bImagen.MouseEnter += new System.EventHandler(this.bImagen_MouseEnter);
+            this.bImagen.MouseLeave += new System.EventHandler(this.bImagen_MouseLeave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(70, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(17, 15);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "R:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(69, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 15);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "G:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(70, 156);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 15);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "B:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(70, 195);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 15);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Path:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bImagen);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.bColor);
@@ -132,5 +183,9 @@
         private Button bColor;
         private TextBox textBox4;
         private Button bImagen;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
     }
 }
