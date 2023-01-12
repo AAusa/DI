@@ -1,0 +1,20 @@
+c:\users\pc\documents\visual studio 2012\Projects\SimonDice\SimonDice\bin\Debug\SimonDice.exe.config
+c:\users\pc\documents\visual studio 2012\Projects\SimonDice\SimonDice\bin\Debug\SimonDice.exe
+c:\users\pc\documents\visual studio 2012\Projects\SimonDice\SimonDice\bin\Debug\SimonDice.pdb
+c:\users\pc\documents\visual studio 2012\Projects\SimonDice\SimonDice\obj\Debug\SimonDice.Form1.resources
+c:\users\pc\documents\visual studio 2012\Projects\SimonDice\SimonDice\obj\Debug\SimonDice.Properties.Resources.resources
+c:\users\pc\documents\visual studio 2012\Projects\SimonDice\SimonDice\obj\Debug\SimonDice.csproj.GenerateResource.Cache
+c:\users\pc\documents\visual studio 2012\Projects\SimonDice\SimonDice\obj\Debug\SimonDice.exe
+c:\users\pc\documents\visual studio 2012\Projects\SimonDice\SimonDice\obj\Debug\SimonDice.pdb
+c:\users\pc\documents\visual studio 2012\Projects\SimonDice\SimonDice\obj\Debug\SimonDice.csprojResolveAssemblyReference.cache
+D:\Documentos\VS-DI\DI\SimonDice\21.- SimonDice\SimonDice\bin\Debug\SimonDice.exe.config
+D:\Documentos\VS-DI\DI\SimonDice\21.- SimonDice\SimonDice\bin\Debug\SimonDice.exe
+D:\Documentos\VS-DI\DI\SimonDice\21.- SimonDice\SimonDice\bin\Debug\SimonDice.pdb
+D:\Documentos\VS-DI\DI\SimonDice\21.- SimonDice\SimonDice\obj\Debug\SimonDice.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\SimonDice\21.- SimonDice\SimonDice\obj\Debug\SimonDice.csproj.SuggestedBindingRedirects.cache
+D:\Documentos\VS-DI\DI\SimonDice\21.- SimonDice\SimonDice\obj\Debug\SimonDice.Form1.resources
+D:\Documentos\VS-DI\DI\SimonDice\21.- SimonDice\SimonDice\obj\Debug\SimonDice.Properties.Resources.resources
+D:\Documentos\VS-DI\DI\SimonDice\21.- SimonDice\SimonDice\obj\Debug\SimonDice.csproj.GenerateResource.cache
+D:\Documentos\VS-DI\DI\SimonDice\21.- SimonDice\SimonDice\obj\Debug\SimonDice.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\SimonDice\21.- SimonDice\SimonDice\obj\Debug\SimonDice.exe
+D:\Documentos\VS-DI\DI\SimonDice\21.- SimonDice\SimonDice\obj\Debug\SimonDice.pdb
