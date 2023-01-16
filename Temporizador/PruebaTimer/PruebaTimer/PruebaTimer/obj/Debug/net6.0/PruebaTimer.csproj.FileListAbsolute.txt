@@ -1,0 +1,15 @@
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\bin\Debug\net6.0\PruebaTimer.exe
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\bin\Debug\net6.0\PruebaTimer.deps.json
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\bin\Debug\net6.0\PruebaTimer.runtimeconfig.json
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\bin\Debug\net6.0\PruebaTimer.dll
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\bin\Debug\net6.0\PruebaTimer.pdb
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\obj\Debug\net6.0\PruebaTimer.csproj.AssemblyReference.cache
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\obj\Debug\net6.0\PruebaTimer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\obj\Debug\net6.0\PruebaTimer.AssemblyInfoInputs.cache
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\obj\Debug\net6.0\PruebaTimer.AssemblyInfo.cs
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\obj\Debug\net6.0\PruebaTimer.csproj.CoreCompileInputs.cache
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\obj\Debug\net6.0\PruebaTimer.dll
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\obj\Debug\net6.0\refint\PruebaTimer.dll
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\obj\Debug\net6.0\PruebaTimer.pdb
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\obj\Debug\net6.0\PruebaTimer.genruntimeconfig.cache
+D:\Documentos\VS-DI\DI\Temporizador\PruebaTimer\PruebaTimer\PruebaTimer\obj\Debug\net6.0\ref\PruebaTimer.dll

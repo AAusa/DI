@@ -22,6 +22,7 @@ namespace SimonDice
         List<int> SimonDice = new List<int>();
         bool Hablando = false;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -88,6 +89,7 @@ namespace SimonDice
         {
             SimonDice.Add(NumeroAleatorio.Next(0, 4));
             new Thread(IniciarJuego).Start();
+            btn_iniciar.BackColor = Color.Gray;
 
         }
 
