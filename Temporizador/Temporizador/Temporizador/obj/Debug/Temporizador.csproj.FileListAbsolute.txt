@@ -9,3 +9,4 @@ D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporiz
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.exe
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.pdb
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.Form1.resources
+D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.Form2.resources

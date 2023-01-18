@@ -14,7 +14,7 @@ namespace Temporizador
 {
     public partial class Form1 : Form
     {
-        private int duration = 60;
+        private int duration = 193;
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace Temporizador
 
         private void bIniciar1_Click(object sender, EventArgs e)
         {
-            if(bIniciar1.BackColor == Color.Green)//Funcion de iniciar cuando esta parado
+            if(!timer1.Enabled)//Funcion de iniciar cuando esta parado
             {
                 bIniciar1.BackColor = Color.Red;
                 bIniciar1.BorderColor = Color.Red;
@@ -39,6 +39,8 @@ namespace Temporizador
                 bIniciar1.BorderColor = Color.Green;
                 bIniciar1.Text = "Iniciar";
                 timer1.Enabled = false;
+                timer1.Tick -= new EventHandler(count_down);
+
             }
         }
 
@@ -53,13 +55,121 @@ namespace Temporizador
             else if (duration > 0)
             {
                 duration--;
-                label1.Text = duration.ToString()+" "+timer1.Interval;
+                label1.Text = formateaTiempo(duration);
             }
         }
 
+        private String formateaTiempo(Int32 tsegundos)
+        {
+            String salida = "";
+            Int32 horas = (tsegundos / 3600);
+            Int32 minutos = ((tsegundos - horas * 3600) / 60);
+            Int32 segundos = tsegundos - (horas * 3600 + minutos * 60);
+            if(horas < 10)
+            {
+                if(minutos < 10)
+                {
+                    if (segundos < 10)//h,m,s
+                    {
+                        if(horas == 0)//si hora es 0 no se muestra
+                        {
+                            salida = "0" + minutos.ToString() + ":" + "0" + segundos.ToString();
+                        }
+                        else
+                        {
+                            salida = "0" + horas.ToString() + ":" + "0" + minutos.ToString() + ":" + "0" + segundos.ToString();
+                        }
+                    }
+                    else//h,m
+                    {
+                        if (horas == 0)//si hora es 0 no se muestra
+                        {
+                            salida = "0" + minutos.ToString() + ":" + segundos.ToString();
+                        }
+                        else
+                        {
+                            salida = "0" + horas.ToString() + ":" + "0" + minutos.ToString() + ":" + segundos.ToString();
+                        }
+                    }
+                }
+                else if (segundos < 10)//h,s
+                {
+                    if (horas == 0)//si hora es 0 no se muestra
+                    {
+                        salida = minutos.ToString() + ":" + "0" + segundos.ToString();
+                    }
+                    else
+                    {
+                        salida = "0" + horas.ToString() + ":" + minutos.ToString() + ":" + "0" + segundos.ToString();
+                    }
+                }
+                else//h
+                {
+                    if (horas == 0)//si hora es 0 no se muestra
+                    {
+                        salida = minutos.ToString() + ":" + segundos.ToString();
+                    }
+                    else
+                    {
+                        salida = "0" + horas.ToString() + ":" + minutos.ToString() + ":" + segundos.ToString();
+                    }
+                }
+            }
+            else
+            {
+                if (minutos < 10)
+                {
+                    if (segundos < 10)//m,s
+                    {
+                        if (horas == 0)//si hora es 0 no se muestra
+                        {
+                            salida = "0" + minutos.ToString() + ":" + "0" + segundos.ToString();
+                        }
+                        else
+                        {
+                            salida = horas.ToString() + ":" + "0" + minutos.ToString() + ":" + "0" + segundos.ToString();
+                        }
+                    }
+                    else//m
+                    {
+                        if (horas == 0)//si hora es 0 no se muestra
+                        {
+                            salida = "0" + minutos.ToString() + ":" + segundos.ToString();
+                        }
+                        else
+                        {
+                            salida = horas.ToString() + ":" + "0" + minutos.ToString() + ":" + segundos.ToString();
+                        }
+                    }
+                }
+                else//s
+                {
+                    if (horas == 0)//si hora es 0 no se muestra
+                    {
+                        salida = minutos.ToString() + ":" +"0"+ segundos.ToString();
+                    }
+                    else
+                    {
+                        salida = horas.ToString() + ":" + minutos.ToString() + ":" + "0"+segundos.ToString();
+                    }
+                }
+            }
+            return salida;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bReiniciar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bEditar1_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.Show();
         }
     }
 }

@@ -1,0 +1,448 @@
+﻿namespace Temporizador
+{
+    partial class Form2
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.lTitulo = new System.Windows.Forms.Label();
+            this.rbCuentaAtras = new System.Windows.Forms.RadioButton();
+            this.rbCuentaFecha = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbHoras = new System.Windows.Forms.ComboBox();
+            this.bHorasMenos = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bMinMas = new System.Windows.Forms.Button();
+            this.bMinMenos = new System.Windows.Forms.Button();
+            this.cbMin = new System.Windows.Forms.ComboBox();
+            this.lMin = new System.Windows.Forms.Label();
+            this.bSegMas = new System.Windows.Forms.Button();
+            this.bSegMenos = new System.Windows.Forms.Button();
+            this.cbSeg = new System.Windows.Forms.ComboBox();
+            this.lSeg = new System.Windows.Forms.Label();
+            this.lenCero = new System.Windows.Forms.Label();
+            this.rbReiniciar = new System.Windows.Forms.RadioButton();
+            this.rbParar = new System.Windows.Forms.RadioButton();
+            this.rbCrono = new System.Windows.Forms.RadioButton();
+            this.cbSonido = new System.Windows.Forms.ComboBox();
+            this.lSonido = new System.Windows.Forms.Label();
+            this.bIniciar = new System.Windows.Forms.Button();
+            this.bPuntos = new System.Windows.Forms.Button();
+            this.cbRepetir = new System.Windows.Forms.CheckBox();
+            this.SuspendLayout();
+            // 
+            // lTitulo
+            // 
+            this.lTitulo.AutoSize = true;
+            this.lTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F);
+            this.lTitulo.ForeColor = System.Drawing.Color.White;
+            this.lTitulo.Location = new System.Drawing.Point(12, 23);
+            this.lTitulo.Name = "lTitulo";
+            this.lTitulo.Size = new System.Drawing.Size(228, 26);
+            this.lTitulo.TabIndex = 0;
+            this.lTitulo.Text = "Editar temporizador";
+            this.lTitulo.Click += new System.EventHandler(this.lTitulo_Click);
+            // 
+            // rbCuentaAtras
+            // 
+            this.rbCuentaAtras.AutoSize = true;
+            this.rbCuentaAtras.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.rbCuentaAtras.ForeColor = System.Drawing.Color.White;
+            this.rbCuentaAtras.Location = new System.Drawing.Point(17, 91);
+            this.rbCuentaAtras.Name = "rbCuentaAtras";
+            this.rbCuentaAtras.Size = new System.Drawing.Size(110, 19);
+            this.rbCuentaAtras.TabIndex = 1;
+            this.rbCuentaAtras.TabStop = true;
+            this.rbCuentaAtras.Text = "Cuenta Atrás";
+            this.rbCuentaAtras.UseVisualStyleBackColor = true;
+            // 
+            // rbCuentaFecha
+            // 
+            this.rbCuentaFecha.AutoSize = true;
+            this.rbCuentaFecha.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.rbCuentaFecha.ForeColor = System.Drawing.Color.White;
+            this.rbCuentaFecha.Location = new System.Drawing.Point(145, 91);
+            this.rbCuentaFecha.Name = "rbCuentaFecha";
+            this.rbCuentaFecha.Size = new System.Drawing.Size(258, 19);
+            this.rbCuentaFecha.TabIndex = 2;
+            this.rbCuentaFecha.TabStop = true;
+            this.rbCuentaFecha.Text = "Contar hasta (desde) fecha y tiempo";
+            this.rbCuentaFecha.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(15, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 15);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Horas";
+            // 
+            // cbHoras
+            // 
+            this.cbHoras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbHoras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbHoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbHoras.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.cbHoras.ForeColor = System.Drawing.Color.White;
+            this.cbHoras.FormatString = "N0";
+            this.cbHoras.FormattingEnabled = true;
+            this.cbHoras.Location = new System.Drawing.Point(64, 164);
+            this.cbHoras.Name = "cbHoras";
+            this.cbHoras.Size = new System.Drawing.Size(50, 23);
+            this.cbHoras.TabIndex = 4;
+            // 
+            // bHorasMenos
+            // 
+            this.bHorasMenos.BackColor = System.Drawing.Color.Black;
+            this.bHorasMenos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.bHorasMenos.FlatAppearance.BorderSize = 0;
+            this.bHorasMenos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bHorasMenos.ForeColor = System.Drawing.Color.White;
+            this.bHorasMenos.Location = new System.Drawing.Point(18, 164);
+            this.bHorasMenos.Name = "bHorasMenos";
+            this.bHorasMenos.Size = new System.Drawing.Size(42, 23);
+            this.bHorasMenos.TabIndex = 5;
+            this.bHorasMenos.Text = "<";
+            this.bHorasMenos.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(120, 164);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = ">";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // bMinMas
+            // 
+            this.bMinMas.BackColor = System.Drawing.Color.Black;
+            this.bMinMas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.bMinMas.FlatAppearance.BorderSize = 0;
+            this.bMinMas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bMinMas.ForeColor = System.Drawing.Color.White;
+            this.bMinMas.Location = new System.Drawing.Point(284, 164);
+            this.bMinMas.Name = "bMinMas";
+            this.bMinMas.Size = new System.Drawing.Size(42, 23);
+            this.bMinMas.TabIndex = 10;
+            this.bMinMas.Text = ">";
+            this.bMinMas.UseVisualStyleBackColor = false;
+            // 
+            // bMinMenos
+            // 
+            this.bMinMenos.BackColor = System.Drawing.Color.Black;
+            this.bMinMenos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.bMinMenos.FlatAppearance.BorderSize = 0;
+            this.bMinMenos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bMinMenos.ForeColor = System.Drawing.Color.White;
+            this.bMinMenos.Location = new System.Drawing.Point(182, 164);
+            this.bMinMenos.Name = "bMinMenos";
+            this.bMinMenos.Size = new System.Drawing.Size(42, 23);
+            this.bMinMenos.TabIndex = 9;
+            this.bMinMenos.Text = "<";
+            this.bMinMenos.UseVisualStyleBackColor = false;
+            // 
+            // cbMin
+            // 
+            this.cbMin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbMin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.cbMin.ForeColor = System.Drawing.Color.White;
+            this.cbMin.FormatString = "N0";
+            this.cbMin.FormattingEnabled = true;
+            this.cbMin.Location = new System.Drawing.Point(228, 164);
+            this.cbMin.Name = "cbMin";
+            this.cbMin.Size = new System.Drawing.Size(50, 23);
+            this.cbMin.TabIndex = 8;
+            // 
+            // lMin
+            // 
+            this.lMin.AutoSize = true;
+            this.lMin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.lMin.ForeColor = System.Drawing.Color.White;
+            this.lMin.Location = new System.Drawing.Point(179, 136);
+            this.lMin.Name = "lMin";
+            this.lMin.Size = new System.Drawing.Size(58, 15);
+            this.lMin.TabIndex = 7;
+            this.lMin.Text = "Minutos";
+            // 
+            // bSegMas
+            // 
+            this.bSegMas.BackColor = System.Drawing.Color.Black;
+            this.bSegMas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.bSegMas.FlatAppearance.BorderSize = 0;
+            this.bSegMas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bSegMas.ForeColor = System.Drawing.Color.White;
+            this.bSegMas.Location = new System.Drawing.Point(450, 164);
+            this.bSegMas.Name = "bSegMas";
+            this.bSegMas.Size = new System.Drawing.Size(42, 23);
+            this.bSegMas.TabIndex = 14;
+            this.bSegMas.Text = ">";
+            this.bSegMas.UseVisualStyleBackColor = false;
+            // 
+            // bSegMenos
+            // 
+            this.bSegMenos.BackColor = System.Drawing.Color.Black;
+            this.bSegMenos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.bSegMenos.FlatAppearance.BorderSize = 0;
+            this.bSegMenos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bSegMenos.ForeColor = System.Drawing.Color.White;
+            this.bSegMenos.Location = new System.Drawing.Point(348, 164);
+            this.bSegMenos.Name = "bSegMenos";
+            this.bSegMenos.Size = new System.Drawing.Size(42, 23);
+            this.bSegMenos.TabIndex = 13;
+            this.bSegMenos.Text = "<";
+            this.bSegMenos.UseVisualStyleBackColor = false;
+            // 
+            // cbSeg
+            // 
+            this.cbSeg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSeg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbSeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbSeg.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.cbSeg.ForeColor = System.Drawing.Color.White;
+            this.cbSeg.FormatString = "N0";
+            this.cbSeg.FormattingEnabled = true;
+            this.cbSeg.Location = new System.Drawing.Point(394, 164);
+            this.cbSeg.Name = "cbSeg";
+            this.cbSeg.Size = new System.Drawing.Size(50, 23);
+            this.cbSeg.TabIndex = 12;
+            // 
+            // lSeg
+            // 
+            this.lSeg.AutoSize = true;
+            this.lSeg.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.lSeg.ForeColor = System.Drawing.Color.White;
+            this.lSeg.Location = new System.Drawing.Point(345, 136);
+            this.lSeg.Name = "lSeg";
+            this.lSeg.Size = new System.Drawing.Size(71, 15);
+            this.lSeg.TabIndex = 11;
+            this.lSeg.Text = "Segundos";
+            // 
+            // lenCero
+            // 
+            this.lenCero.AutoSize = true;
+            this.lenCero.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.lenCero.ForeColor = System.Drawing.Color.White;
+            this.lenCero.Location = new System.Drawing.Point(15, 223);
+            this.lenCero.Name = "lenCero";
+            this.lenCero.Size = new System.Drawing.Size(59, 15);
+            this.lenCero.TabIndex = 15;
+            this.lenCero.Text = "En Cero";
+            this.lenCero.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // rbReiniciar
+            // 
+            this.rbReiniciar.AccessibleRole = System.Windows.Forms.AccessibleRole.PageTabList;
+            this.rbReiniciar.AutoSize = true;
+            this.rbReiniciar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.rbReiniciar.ForeColor = System.Drawing.Color.White;
+            this.rbReiniciar.Location = new System.Drawing.Point(177, 255);
+            this.rbReiniciar.Name = "rbReiniciar";
+            this.rbReiniciar.Size = new System.Drawing.Size(175, 19);
+            this.rbReiniciar.TabIndex = 17;
+            this.rbReiniciar.TabStop = true;
+            this.rbReiniciar.Text = "Reiniciar temporizador";
+            this.rbReiniciar.UseVisualStyleBackColor = true;
+            this.rbReiniciar.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // rbParar
+            // 
+            this.rbParar.AccessibleRole = System.Windows.Forms.AccessibleRole.PageTabList;
+            this.rbParar.AutoSize = true;
+            this.rbParar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.rbParar.ForeColor = System.Drawing.Color.White;
+            this.rbParar.Location = new System.Drawing.Point(18, 255);
+            this.rbParar.Name = "rbParar";
+            this.rbParar.Size = new System.Drawing.Size(153, 19);
+            this.rbParar.TabIndex = 16;
+            this.rbParar.TabStop = true;
+            this.rbParar.Text = "Parar temporizador";
+            this.rbParar.UseVisualStyleBackColor = true;
+            this.rbParar.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // rbCrono
+            // 
+            this.rbCrono.AccessibleRole = System.Windows.Forms.AccessibleRole.PageTabList;
+            this.rbCrono.AutoSize = true;
+            this.rbCrono.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.rbCrono.ForeColor = System.Drawing.Color.White;
+            this.rbCrono.Location = new System.Drawing.Point(18, 295);
+            this.rbCrono.Name = "rbCrono";
+            this.rbCrono.Size = new System.Drawing.Size(274, 19);
+            this.rbCrono.TabIndex = 18;
+            this.rbCrono.TabStop = true;
+            this.rbCrono.Text = "Iniciar como cronómetro (incremento)";
+            this.rbCrono.UseVisualStyleBackColor = true;
+            // 
+            // cbSonido
+            // 
+            this.cbSonido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSonido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbSonido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbSonido.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.cbSonido.ForeColor = System.Drawing.Color.White;
+            this.cbSonido.FormatString = "N0";
+            this.cbSonido.FormattingEnabled = true;
+            this.cbSonido.Location = new System.Drawing.Point(18, 363);
+            this.cbSonido.Name = "cbSonido";
+            this.cbSonido.Size = new System.Drawing.Size(133, 23);
+            this.cbSonido.TabIndex = 20;
+            // 
+            // lSonido
+            // 
+            this.lSonido.AutoSize = true;
+            this.lSonido.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.lSonido.ForeColor = System.Drawing.Color.White;
+            this.lSonido.Location = new System.Drawing.Point(15, 334);
+            this.lSonido.Name = "lSonido";
+            this.lSonido.Size = new System.Drawing.Size(46, 15);
+            this.lSonido.TabIndex = 19;
+            this.lSonido.Text = "Horas";
+            // 
+            // bIniciar
+            // 
+            this.bIniciar.BackColor = System.Drawing.Color.Black;
+            this.bIniciar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.bIniciar.FlatAppearance.BorderSize = 0;
+            this.bIniciar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bIniciar.ForeColor = System.Drawing.Color.White;
+            this.bIniciar.Location = new System.Drawing.Point(158, 363);
+            this.bIniciar.Name = "bIniciar";
+            this.bIniciar.Size = new System.Drawing.Size(42, 23);
+            this.bIniciar.TabIndex = 21;
+            this.bIniciar.Text = "<";
+            this.bIniciar.UseVisualStyleBackColor = false;
+            // 
+            // bPuntos
+            // 
+            this.bPuntos.BackColor = System.Drawing.Color.Black;
+            this.bPuntos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.bPuntos.FlatAppearance.BorderSize = 0;
+            this.bPuntos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bPuntos.ForeColor = System.Drawing.Color.White;
+            this.bPuntos.Location = new System.Drawing.Point(205, 362);
+            this.bPuntos.Name = "bPuntos";
+            this.bPuntos.Size = new System.Drawing.Size(42, 23);
+            this.bPuntos.TabIndex = 22;
+            this.bPuntos.Text = "<";
+            this.bPuntos.UseVisualStyleBackColor = false;
+            // 
+            // cbRepetir
+            // 
+            this.cbRepetir.AutoSize = true;
+            this.cbRepetir.Location = new System.Drawing.Point(284, 366);
+            this.cbRepetir.Name = "cbRepetir";
+            this.cbRepetir.Size = new System.Drawing.Size(80, 17);
+            this.cbRepetir.TabIndex = 23;
+            this.cbRepetir.Text = "checkBox1";
+            this.cbRepetir.UseVisualStyleBackColor = true;
+            // 
+            // Form2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(517, 450);
+            this.Controls.Add(this.cbRepetir);
+            this.Controls.Add(this.bPuntos);
+            this.Controls.Add(this.bIniciar);
+            this.Controls.Add(this.cbSonido);
+            this.Controls.Add(this.lSonido);
+            this.Controls.Add(this.rbCrono);
+            this.Controls.Add(this.rbReiniciar);
+            this.Controls.Add(this.rbParar);
+            this.Controls.Add(this.lenCero);
+            this.Controls.Add(this.bSegMas);
+            this.Controls.Add(this.bSegMenos);
+            this.Controls.Add(this.cbSeg);
+            this.Controls.Add(this.lSeg);
+            this.Controls.Add(this.bMinMas);
+            this.Controls.Add(this.bMinMenos);
+            this.Controls.Add(this.cbMin);
+            this.Controls.Add(this.lMin);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bHorasMenos);
+            this.Controls.Add(this.cbHoras);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.rbCuentaFecha);
+            this.Controls.Add(this.rbCuentaAtras);
+            this.Controls.Add(this.lTitulo);
+            this.Name = "Form2";
+            this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lTitulo;
+        private System.Windows.Forms.RadioButton rbCuentaAtras;
+        private System.Windows.Forms.RadioButton rbCuentaFecha;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbHoras;
+        private System.Windows.Forms.Button bHorasMenos;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bMinMas;
+        private System.Windows.Forms.Button bMinMenos;
+        private System.Windows.Forms.ComboBox cbMin;
+        private System.Windows.Forms.Label lMin;
+        private System.Windows.Forms.Button bSegMas;
+        private System.Windows.Forms.Button bSegMenos;
+        private System.Windows.Forms.ComboBox cbSeg;
+        private System.Windows.Forms.Label lSeg;
+        private System.Windows.Forms.Label lenCero;
+        private System.Windows.Forms.RadioButton rbReiniciar;
+        private System.Windows.Forms.RadioButton rbParar;
+        private System.Windows.Forms.RadioButton rbCrono;
+        private System.Windows.Forms.ComboBox cbSonido;
+        private System.Windows.Forms.Label lSonido;
+        private System.Windows.Forms.Button bIniciar;
+        private System.Windows.Forms.Button bPuntos;
+        private System.Windows.Forms.CheckBox cbRepetir;
+    }
+}
