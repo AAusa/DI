@@ -14,10 +14,22 @@ namespace Temporizador
 {
     public partial class Form1 : Form
     {
-        private int duration = 193;
+        public int durationInitial;
+        private int duration = 0;
         public Form1()
         {
             InitializeComponent();
+            durationInitial = 180;
+            label1.Text = formateaTiempo(durationInitial);
+            duration = durationInitial;
+        }
+
+        public Form1(int s)
+        {
+            InitializeComponent();
+            durationInitial = s;
+            label1.Text = formateaTiempo(durationInitial);
+            duration = durationInitial;
         }
 
         private void bIniciar1_Click(object sender, EventArgs e)
@@ -163,13 +175,15 @@ namespace Temporizador
 
         private void bReiniciar1_Click(object sender, EventArgs e)
         {
-
+            duration = durationInitial;
+            label1.Text = formateaTiempo(duration);
         }
 
         private void bEditar1_Click(object sender, EventArgs e)
         {
             Form2 f = new Form2();
             f.Show();
+            this.Hide();
         }
     }
 }

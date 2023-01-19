@@ -16,5 +16,15 @@ namespace PruebaForm
         {
             InitializeComponent();
         }
+
+        private void fileSystemWatcher1_Changed(object sender, System.IO.FileSystemEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

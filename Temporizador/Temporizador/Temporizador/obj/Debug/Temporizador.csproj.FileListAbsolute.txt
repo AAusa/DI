@@ -3,10 +3,10 @@ D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\bin\Debug\Temporiz
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\bin\Debug\Temporizador.pdb
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.csproj.AssemblyReference.cache
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.csproj.SuggestedBindingRedirects.cache
+D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.Form1.resources
+D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.Form2.resources
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.Properties.Resources.resources
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.csproj.GenerateResource.cache
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.csproj.CoreCompileInputs.cache
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.exe
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.pdb
-D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.Form1.resources
-D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.Form2.resources

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lTitulo = new System.Windows.Forms.Label();
+            this.lTituloForm = new System.Windows.Forms.Label();
             this.rbCuentaAtras = new System.Windows.Forms.RadioButton();
             this.rbCuentaFecha = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,20 +52,26 @@
             this.bIniciar = new System.Windows.Forms.Button();
             this.bPuntos = new System.Windows.Forms.Button();
             this.cbRepetir = new System.Windows.Forms.CheckBox();
+            this.lTitulo = new System.Windows.Forms.Label();
+            this.tbTitulo = new System.Windows.Forms.TextBox();
+            this.cbMensaje = new System.Windows.Forms.CheckBox();
+            this.bIniciar2 = new CustomControls.RJControls.bIniciar();
+            this.bCancelar = new CustomControls.RJControls.bReiniciar();
+            this.bProbar = new CustomControls.RJControls.bEditar();
             this.SuspendLayout();
             // 
-            // lTitulo
+            // lTituloForm
             // 
-            this.lTitulo.AutoSize = true;
-            this.lTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F);
-            this.lTitulo.ForeColor = System.Drawing.Color.White;
-            this.lTitulo.Location = new System.Drawing.Point(12, 23);
-            this.lTitulo.Name = "lTitulo";
-            this.lTitulo.Size = new System.Drawing.Size(228, 26);
-            this.lTitulo.TabIndex = 0;
-            this.lTitulo.Text = "Editar temporizador";
-            this.lTitulo.Click += new System.EventHandler(this.lTitulo_Click);
+            this.lTituloForm.AutoSize = true;
+            this.lTituloForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lTituloForm.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F);
+            this.lTituloForm.ForeColor = System.Drawing.Color.White;
+            this.lTituloForm.Location = new System.Drawing.Point(12, 23);
+            this.lTituloForm.Name = "lTituloForm";
+            this.lTituloForm.Size = new System.Drawing.Size(228, 26);
+            this.lTituloForm.TabIndex = 0;
+            this.lTituloForm.Text = "Editar temporizador";
+            this.lTituloForm.Click += new System.EventHandler(this.lTitulo_Click);
             // 
             // rbCuentaAtras
             // 
@@ -133,6 +139,7 @@
             this.bHorasMenos.TabIndex = 5;
             this.bHorasMenos.Text = "<";
             this.bHorasMenos.UseVisualStyleBackColor = false;
+            this.bHorasMenos.Click += new System.EventHandler(this.bHorasMenos_Click);
             // 
             // button1
             // 
@@ -141,7 +148,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(120, 164);
+            this.button1.Location = new System.Drawing.Point(119, 164);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(42, 23);
             this.button1.TabIndex = 6;
@@ -156,12 +163,13 @@
             this.bMinMas.FlatAppearance.BorderSize = 0;
             this.bMinMas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.bMinMas.ForeColor = System.Drawing.Color.White;
-            this.bMinMas.Location = new System.Drawing.Point(284, 164);
+            this.bMinMas.Location = new System.Drawing.Point(283, 164);
             this.bMinMas.Name = "bMinMas";
             this.bMinMas.Size = new System.Drawing.Size(42, 23);
             this.bMinMas.TabIndex = 10;
             this.bMinMas.Text = ">";
             this.bMinMas.UseVisualStyleBackColor = false;
+            this.bMinMas.Click += new System.EventHandler(this.bMinMas_Click);
             // 
             // bMinMenos
             // 
@@ -176,6 +184,7 @@
             this.bMinMenos.TabIndex = 9;
             this.bMinMenos.Text = "<";
             this.bMinMenos.UseVisualStyleBackColor = false;
+            this.bMinMenos.Click += new System.EventHandler(this.bMinMenos_Click);
             // 
             // cbMin
             // 
@@ -211,12 +220,13 @@
             this.bSegMas.FlatAppearance.BorderSize = 0;
             this.bSegMas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.bSegMas.ForeColor = System.Drawing.Color.White;
-            this.bSegMas.Location = new System.Drawing.Point(450, 164);
+            this.bSegMas.Location = new System.Drawing.Point(449, 164);
             this.bSegMas.Name = "bSegMas";
             this.bSegMas.Size = new System.Drawing.Size(42, 23);
             this.bSegMas.TabIndex = 14;
             this.bSegMas.Text = ">";
             this.bSegMas.UseVisualStyleBackColor = false;
+            this.bSegMas.Click += new System.EventHandler(this.bSegMas_Click);
             // 
             // bSegMenos
             // 
@@ -231,6 +241,7 @@
             this.bSegMenos.TabIndex = 13;
             this.bSegMenos.Text = "<";
             this.bSegMenos.UseVisualStyleBackColor = false;
+            this.bSegMenos.Click += new System.EventHandler(this.bSegMenos_Click);
             // 
             // cbSeg
             // 
@@ -353,7 +364,7 @@
             this.bIniciar.Name = "bIniciar";
             this.bIniciar.Size = new System.Drawing.Size(42, 23);
             this.bIniciar.TabIndex = 21;
-            this.bIniciar.Text = "<";
+            this.bIniciar.Text = "->";
             this.bIniciar.UseVisualStyleBackColor = false;
             // 
             // bPuntos
@@ -367,25 +378,118 @@
             this.bPuntos.Name = "bPuntos";
             this.bPuntos.Size = new System.Drawing.Size(42, 23);
             this.bPuntos.TabIndex = 22;
-            this.bPuntos.Text = "<";
+            this.bPuntos.Text = "...";
             this.bPuntos.UseVisualStyleBackColor = false;
             // 
             // cbRepetir
             // 
             this.cbRepetir.AutoSize = true;
+            this.cbRepetir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.cbRepetir.ForeColor = System.Drawing.Color.White;
             this.cbRepetir.Location = new System.Drawing.Point(284, 366);
             this.cbRepetir.Name = "cbRepetir";
-            this.cbRepetir.Size = new System.Drawing.Size(80, 17);
+            this.cbRepetir.Size = new System.Drawing.Size(120, 19);
             this.cbRepetir.TabIndex = 23;
-            this.cbRepetir.Text = "checkBox1";
+            this.cbRepetir.Text = "Repetir sonido";
             this.cbRepetir.UseVisualStyleBackColor = true;
+            // 
+            // lTitulo
+            // 
+            this.lTitulo.AutoSize = true;
+            this.lTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.lTitulo.ForeColor = System.Drawing.Color.White;
+            this.lTitulo.Location = new System.Drawing.Point(15, 404);
+            this.lTitulo.Name = "lTitulo";
+            this.lTitulo.Size = new System.Drawing.Size(44, 15);
+            this.lTitulo.TabIndex = 24;
+            this.lTitulo.Text = "Título";
+            // 
+            // tbTitulo
+            // 
+            this.tbTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.tbTitulo.ForeColor = System.Drawing.Color.White;
+            this.tbTitulo.Location = new System.Drawing.Point(17, 432);
+            this.tbTitulo.Name = "tbTitulo";
+            this.tbTitulo.Size = new System.Drawing.Size(230, 23);
+            this.tbTitulo.TabIndex = 25;
+            // 
+            // cbMensaje
+            // 
+            this.cbMensaje.AutoSize = true;
+            this.cbMensaje.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.cbMensaje.ForeColor = System.Drawing.Color.White;
+            this.cbMensaje.Location = new System.Drawing.Point(18, 474);
+            this.cbMensaje.Name = "cbMensaje";
+            this.cbMensaje.Size = new System.Drawing.Size(107, 19);
+            this.cbMensaje.TabIndex = 26;
+            this.cbMensaje.Text = "Ver mensaje";
+            this.cbMensaje.UseVisualStyleBackColor = true;
+            // 
+            // bIniciar2
+            // 
+            this.bIniciar2.BackColor = System.Drawing.Color.Green;
+            this.bIniciar2.BackgroundColor = System.Drawing.Color.Green;
+            this.bIniciar2.BorderColor = System.Drawing.Color.Green;
+            this.bIniciar2.BorderRadius = 20;
+            this.bIniciar2.BorderSize = 3;
+            this.bIniciar2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bIniciar2.ForeColor = System.Drawing.Color.White;
+            this.bIniciar2.Location = new System.Drawing.Point(404, 509);
+            this.bIniciar2.Name = "bIniciar2";
+            this.bIniciar2.Size = new System.Drawing.Size(87, 40);
+            this.bIniciar2.TabIndex = 27;
+            this.bIniciar2.Text = "Iniciar";
+            this.bIniciar2.TextColor = System.Drawing.Color.White;
+            this.bIniciar2.UseVisualStyleBackColor = false;
+            this.bIniciar2.Click += new System.EventHandler(this.bIniciar2_Click);
+            // 
+            // bCancelar
+            // 
+            this.bCancelar.BackColor = System.Drawing.Color.Red;
+            this.bCancelar.BackgroundColor = System.Drawing.Color.Red;
+            this.bCancelar.BorderColor = System.Drawing.Color.Red;
+            this.bCancelar.BorderRadius = 20;
+            this.bCancelar.BorderSize = 3;
+            this.bCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bCancelar.ForeColor = System.Drawing.Color.White;
+            this.bCancelar.Location = new System.Drawing.Point(311, 509);
+            this.bCancelar.Name = "bCancelar";
+            this.bCancelar.Size = new System.Drawing.Size(87, 40);
+            this.bCancelar.TabIndex = 28;
+            this.bCancelar.Text = "Cancelar";
+            this.bCancelar.TextColor = System.Drawing.Color.White;
+            this.bCancelar.UseVisualStyleBackColor = false;
+            // 
+            // bProbar
+            // 
+            this.bProbar.BackColor = System.Drawing.Color.MediumBlue;
+            this.bProbar.BackgroundColor = System.Drawing.Color.MediumBlue;
+            this.bProbar.BorderColor = System.Drawing.Color.MediumBlue;
+            this.bProbar.BorderRadius = 20;
+            this.bProbar.BorderSize = 3;
+            this.bProbar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bProbar.ForeColor = System.Drawing.Color.White;
+            this.bProbar.Location = new System.Drawing.Point(18, 509);
+            this.bProbar.Name = "bProbar";
+            this.bProbar.Size = new System.Drawing.Size(87, 40);
+            this.bProbar.TabIndex = 29;
+            this.bProbar.Text = "Probar";
+            this.bProbar.TextColor = System.Drawing.Color.White;
+            this.bProbar.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(517, 450);
+            this.ClientSize = new System.Drawing.Size(517, 561);
+            this.Controls.Add(this.bProbar);
+            this.Controls.Add(this.bCancelar);
+            this.Controls.Add(this.bIniciar2);
+            this.Controls.Add(this.cbMensaje);
+            this.Controls.Add(this.tbTitulo);
+            this.Controls.Add(this.lTitulo);
             this.Controls.Add(this.cbRepetir);
             this.Controls.Add(this.bPuntos);
             this.Controls.Add(this.bIniciar);
@@ -409,7 +513,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rbCuentaFecha);
             this.Controls.Add(this.rbCuentaAtras);
-            this.Controls.Add(this.lTitulo);
+            this.Controls.Add(this.lTituloForm);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -420,7 +524,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lTitulo;
+        private System.Windows.Forms.Label lTituloForm;
         private System.Windows.Forms.RadioButton rbCuentaAtras;
         private System.Windows.Forms.RadioButton rbCuentaFecha;
         private System.Windows.Forms.Label label1;
@@ -444,5 +548,11 @@
         private System.Windows.Forms.Button bIniciar;
         private System.Windows.Forms.Button bPuntos;
         private System.Windows.Forms.CheckBox cbRepetir;
+        private System.Windows.Forms.Label lTitulo;
+        private System.Windows.Forms.TextBox tbTitulo;
+        private System.Windows.Forms.CheckBox cbMensaje;
+        private CustomControls.RJControls.bIniciar bIniciar2;
+        private CustomControls.RJControls.bReiniciar bCancelar;
+        private CustomControls.RJControls.bEditar bProbar;
     }
 }
