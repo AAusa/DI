@@ -41,6 +41,7 @@ namespace Temporizador
                         5});
             cbSeg.TabIndex = cbSegPointer;
             cbSeg.Text = cbSegPointer + "";
+
             
         }
 
@@ -113,11 +114,20 @@ namespace Temporizador
         }
         private void bIniciar2_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1(pasaraSeg(cbHoras.SelectedIndex == -1 ? 0 : cbHoras.SelectedIndex,
+            //int prueba = Convert.ToInt32(cbHoras.SelectedValue.ToString());
+            int pasaraseg = pasaraSeg(cbHoras.SelectedIndex == -1 ? 0 : cbHoras.SelectedIndex,
                                               cbMin.SelectedIndex == -1 ? 0 : cbMin.SelectedIndex,
-                                              cbSeg.SelectedIndex == -1 ? 0 : cbSeg.SelectedIndex));
+                                              cbSeg.SelectedIndex == -1 ? 0 : cbSeg.SelectedIndex);
+            //lTituloForm.Text += ""+cbHoras;
+
+            Form1 form1 = new Form1(pasaraseg);
             form1.Show();
-            this.Hide();
+            //this.Hide();
         }
-    }
+
+        private void cbHoras_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        }
 }

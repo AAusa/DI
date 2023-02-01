@@ -19,7 +19,7 @@ namespace Temporizador
         public Form1()
         {
             InitializeComponent();
-            durationInitial = 180;
+            durationInitial = 3600;
             label1.Text = formateaTiempo(durationInitial);
             duration = durationInitial;
         }

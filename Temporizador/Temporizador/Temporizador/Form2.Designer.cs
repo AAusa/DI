@@ -125,6 +125,7 @@
             this.cbHoras.Name = "cbHoras";
             this.cbHoras.Size = new System.Drawing.Size(50, 23);
             this.cbHoras.TabIndex = 4;
+            this.cbHoras.SelectedIndexChanged += new System.EventHandler(this.cbHoras_SelectedIndexChanged);
             // 
             // bHorasMenos
             // 
