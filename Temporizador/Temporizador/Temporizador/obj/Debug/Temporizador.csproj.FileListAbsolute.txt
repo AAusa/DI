@@ -10,3 +10,4 @@ D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporiz
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.csproj.CoreCompileInputs.cache
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.exe
 D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.pdb
+D:\Documentos\VS-DI\DI\Temporizador\Temporizador\Temporizador\obj\Debug\Temporizador.Form3.resources

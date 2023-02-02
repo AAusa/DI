@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.lTituloForm = new System.Windows.Forms.Label();
-            this.rbCuentaAtras = new System.Windows.Forms.RadioButton();
-            this.rbCuentaFecha = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.cbHoras = new System.Windows.Forms.ComboBox();
             this.bHorasMenos = new System.Windows.Forms.Button();
@@ -58,6 +56,14 @@
             this.bIniciar2 = new CustomControls.RJControls.bIniciar();
             this.bCancelar = new CustomControls.RJControls.bReiniciar();
             this.bProbar = new CustomControls.RJControls.bEditar();
+            this.gb1 = new System.Windows.Forms.GroupBox();
+            this.rbCuentaAtrasT = new System.Windows.Forms.RadioButton();
+            this.rbCuentaFechaT = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gb1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lTituloForm
@@ -72,32 +78,6 @@
             this.lTituloForm.TabIndex = 0;
             this.lTituloForm.Text = "Editar temporizador";
             this.lTituloForm.Click += new System.EventHandler(this.lTitulo_Click);
-            // 
-            // rbCuentaAtras
-            // 
-            this.rbCuentaAtras.AutoSize = true;
-            this.rbCuentaAtras.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.rbCuentaAtras.ForeColor = System.Drawing.Color.White;
-            this.rbCuentaAtras.Location = new System.Drawing.Point(17, 91);
-            this.rbCuentaAtras.Name = "rbCuentaAtras";
-            this.rbCuentaAtras.Size = new System.Drawing.Size(110, 19);
-            this.rbCuentaAtras.TabIndex = 1;
-            this.rbCuentaAtras.TabStop = true;
-            this.rbCuentaAtras.Text = "Cuenta Atrás";
-            this.rbCuentaAtras.UseVisualStyleBackColor = true;
-            // 
-            // rbCuentaFecha
-            // 
-            this.rbCuentaFecha.AutoSize = true;
-            this.rbCuentaFecha.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.rbCuentaFecha.ForeColor = System.Drawing.Color.White;
-            this.rbCuentaFecha.Location = new System.Drawing.Point(145, 91);
-            this.rbCuentaFecha.Name = "rbCuentaFecha";
-            this.rbCuentaFecha.Size = new System.Drawing.Size(258, 19);
-            this.rbCuentaFecha.TabIndex = 2;
-            this.rbCuentaFecha.TabStop = true;
-            this.rbCuentaFecha.Text = "Contar hasta (desde) fecha y tiempo";
-            this.rbCuentaFecha.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -350,9 +330,9 @@
             this.lSonido.ForeColor = System.Drawing.Color.White;
             this.lSonido.Location = new System.Drawing.Point(15, 334);
             this.lSonido.Name = "lSonido";
-            this.lSonido.Size = new System.Drawing.Size(46, 15);
+            this.lSonido.Size = new System.Drawing.Size(52, 15);
             this.lSonido.TabIndex = 19;
-            this.lSonido.Text = "Horas";
+            this.lSonido.Text = "Sonido";
             // 
             // bIniciar
             // 
@@ -461,6 +441,7 @@
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.TextColor = System.Drawing.Color.White;
             this.bCancelar.UseVisualStyleBackColor = false;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // bProbar
             // 
@@ -478,6 +459,71 @@
             this.bProbar.Text = "Probar";
             this.bProbar.TextColor = System.Drawing.Color.White;
             this.bProbar.UseVisualStyleBackColor = false;
+            this.bProbar.Click += new System.EventHandler(this.bProbar_Click);
+            // 
+            // gb1
+            // 
+            this.gb1.Controls.Add(this.rbCuentaAtrasT);
+            this.gb1.Controls.Add(this.rbCuentaFechaT);
+            this.gb1.Controls.Add(this.groupBox2);
+            this.gb1.Controls.Add(this.groupBox1);
+            this.gb1.ForeColor = System.Drawing.SystemColors.Control;
+            this.gb1.Location = new System.Drawing.Point(18, 77);
+            this.gb1.Name = "gb1";
+            this.gb1.Size = new System.Drawing.Size(473, 45);
+            this.gb1.TabIndex = 30;
+            this.gb1.TabStop = false;
+            // 
+            // rbCuentaAtrasT
+            // 
+            this.rbCuentaAtrasT.AutoSize = true;
+            this.rbCuentaAtrasT.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.rbCuentaAtrasT.ForeColor = System.Drawing.Color.White;
+            this.rbCuentaAtrasT.Location = new System.Drawing.Point(1, 17);
+            this.rbCuentaAtrasT.Name = "rbCuentaAtrasT";
+            this.rbCuentaAtrasT.Size = new System.Drawing.Size(110, 19);
+            this.rbCuentaAtrasT.TabIndex = 34;
+            this.rbCuentaAtrasT.TabStop = true;
+            this.rbCuentaAtrasT.Text = "Cuenta Atrás";
+            this.rbCuentaAtrasT.UseVisualStyleBackColor = true;
+            // 
+            // rbCuentaFechaT
+            // 
+            this.rbCuentaFechaT.AutoSize = true;
+            this.rbCuentaFechaT.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.rbCuentaFechaT.ForeColor = System.Drawing.Color.White;
+            this.rbCuentaFechaT.Location = new System.Drawing.Point(159, 17);
+            this.rbCuentaFechaT.Name = "rbCuentaFechaT";
+            this.rbCuentaFechaT.Size = new System.Drawing.Size(258, 19);
+            this.rbCuentaFechaT.TabIndex = 33;
+            this.rbCuentaFechaT.TabStop = true;
+            this.rbCuentaFechaT.Text = "Contar hasta (desde) fecha y tiempo";
+            this.rbCuentaFechaT.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox3);
+            this.groupBox2.Location = new System.Drawing.Point(0, 164);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(401, 73);
+            this.groupBox2.TabIndex = 32;
+            this.groupBox2.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(1, 178);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(400, 59);
+            this.groupBox3.TabIndex = 31;
+            this.groupBox3.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(1, 178);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(400, 59);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
             // 
             // Form2
             // 
@@ -512,12 +558,14 @@
             this.Controls.Add(this.bHorasMenos);
             this.Controls.Add(this.cbHoras);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rbCuentaFecha);
-            this.Controls.Add(this.rbCuentaAtras);
             this.Controls.Add(this.lTituloForm);
+            this.Controls.Add(this.gb1);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            this.gb1.ResumeLayout(false);
+            this.gb1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,8 +574,6 @@
         #endregion
 
         private System.Windows.Forms.Label lTituloForm;
-        private System.Windows.Forms.RadioButton rbCuentaAtras;
-        private System.Windows.Forms.RadioButton rbCuentaFecha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbHoras;
         private System.Windows.Forms.Button bHorasMenos;
@@ -555,5 +601,11 @@
         private CustomControls.RJControls.bIniciar bIniciar2;
         private CustomControls.RJControls.bReiniciar bCancelar;
         private CustomControls.RJControls.bEditar bProbar;
+        private System.Windows.Forms.GroupBox gb1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbCuentaFechaT;
+        private System.Windows.Forms.RadioButton rbCuentaAtrasT;
     }
 }

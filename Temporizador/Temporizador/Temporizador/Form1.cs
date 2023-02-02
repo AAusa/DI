@@ -16,6 +16,9 @@ namespace Temporizador
     {
         public int durationInitial;
         private int duration = 0;
+        private int opcionesRadioButton = 0;
+        private bool cuentaAtras = true;
+        String titulo = "";
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +33,26 @@ namespace Temporizador
             durationInitial = s;
             label1.Text = formateaTiempo(durationInitial);
             duration = durationInitial;
+        }
+
+        public Form1(int s, int opcionRadioButton)
+        {
+            InitializeComponent();
+            durationInitial = s;
+            label1.Text = formateaTiempo(durationInitial);
+            duration = durationInitial;
+            this.opcionesRadioButton = opcionRadioButton;
+        }
+
+        public Form1(int s, int opcionRadioButton, String titulo)
+        {
+            InitializeComponent();
+            durationInitial = s;
+            label1.Text = formateaTiempo(durationInitial);
+            duration = durationInitial;
+            this.opcionesRadioButton = opcionRadioButton;
+            this.titulo = titulo;
+            label2.Text = titulo;  
         }
 
         private void bIniciar1_Click(object sender, EventArgs e)
@@ -61,12 +84,38 @@ namespace Temporizador
 
             if (duration == 0)
             {
-                timer1.Stop();
+                if(opcionesRadioButton == 0)
+                {
+                    timer1.Stop();
+                }
+                else if (opcionesRadioButton == 1)
+                {
+                    duration = durationInitial;
+                    label1.Text = formateaTiempo(duration);
+                    timer1.Stop();
+                    bIniciar1.BackColor = Color.Green;
+                    bIniciar1.BorderColor = Color.Green;
+                    bIniciar1.Text = "Iniciar";
+                    timer1.Enabled = false;
+
+                }
+                else if (opcionesRadioButton == 2)
+                {
+                    duration++;
+                    label1.Text = formateaTiempo(duration);
+                    cuentaAtras = false;
+                }
+
 
             }
-            else if (duration > 0)
+            else if (duration > 0 && cuentaAtras)
             {
                 duration--;
+                label1.Text = formateaTiempo(duration);
+            }
+            else if (duration > 0 && !cuentaAtras)
+            {
+                duration++;
                 label1.Text = formateaTiempo(duration);
             }
         }

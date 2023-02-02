@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using RadioButton = System.Windows.Forms.RadioButton;
 
 namespace Temporizador
 {
@@ -16,6 +18,7 @@ namespace Temporizador
         int cbHorasPointer = 0;
         int cbMinPointer = 0;
         int cbSegPointer = 0;
+
 
         public Form2()
         {
@@ -42,7 +45,6 @@ namespace Temporizador
             cbSeg.TabIndex = cbSegPointer;
             cbSeg.Text = cbSegPointer + "";
 
-            
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -115,19 +117,52 @@ namespace Temporizador
         private void bIniciar2_Click(object sender, EventArgs e)
         {
             //int prueba = Convert.ToInt32(cbHoras.SelectedValue.ToString());
-            int pasaraseg = pasaraSeg(cbHoras.SelectedIndex == -1 ? 0 : cbHoras.SelectedIndex,
-                                              cbMin.SelectedIndex == -1 ? 0 : cbMin.SelectedIndex,
-                                              cbSeg.SelectedIndex == -1 ? 0 : cbSeg.SelectedIndex);
+            int pasaraseg = pasaraSeg(cbHoras.SelectedIndex == -1 ? 0 : cbHoras.SelectedIndex+1,
+                                              cbMin.SelectedIndex == -1 ? 0 : cbMin.SelectedIndex+1,
+                                              cbSeg.SelectedIndex == -1 ? 0 : cbSeg.SelectedIndex + 1);
             //lTituloForm.Text += ""+cbHoras;
 
-            Form1 form1 = new Form1(pasaraseg);
+            Form1 form1 = new Form1(pasaraseg, opcionesRadioButton(), tbTitulo.Text);
             form1.Show();
-            //this.Hide();
+            this.Hide();
+        }
+        private int opcionesRadioButton()
+        {
+            int opcion = 0;//Parar
+            if(rbReiniciar.Checked)
+            {
+                opcion = 1;
+            }
+            if (rbCrono.Checked)
+            {
+                opcion = 2;
+            }
+            return opcion;
         }
 
         private void cbHoras_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void rbCuentaFecha_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
+
+        private void bCancelar_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void bProbar_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3(tbTitulo.Text, pasaraSeg(cbHoras.SelectedIndex == -1 ? 0 : cbHoras.SelectedIndex + 1,
+                                              cbMin.SelectedIndex == -1 ? 0 : cbMin.SelectedIndex + 1,
+                                              cbSeg.SelectedIndex == -1 ? 0 : cbSeg.SelectedIndex + 1));
+            form3.Show();
+        }
+    }
 }

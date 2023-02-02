@@ -34,6 +34,7 @@
             this.bIniciar1 = new CustomControls.RJControls.bIniciar();
             this.bReiniciar1 = new CustomControls.RJControls.bReiniciar();
             this.bEditar1 = new CustomControls.RJControls.bEditar();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -101,12 +102,23 @@
             this.bEditar1.UseVisualStyleBackColor = false;
             this.bEditar1.Click += new System.EventHandler(this.bEditar1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(85, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 32);
+            this.label2.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(517, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bIniciar1);
             this.Controls.Add(this.bReiniciar1);
@@ -126,6 +138,7 @@
         private CustomControls.RJControls.bIniciar bIniciar1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
