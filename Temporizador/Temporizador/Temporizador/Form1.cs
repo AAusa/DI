@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,12 @@ namespace Temporizador
         private int duration = 0;
         private int opcionesRadioButton = 0;
         private bool cuentaAtras = true;
+        private bool mensaje = false;
         String titulo = "";
+        int sonido = -1;
+        string[] canciones = { "epic", "guitar", "piano"};
+        bool repetirMusica = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -55,6 +61,49 @@ namespace Temporizador
             label2.Text = titulo;  
         }
 
+        public Form1(int s, int opcionRadioButton, String titulo, bool mensaje)
+        {
+            InitializeComponent();
+            durationInitial = s;
+            label1.Text = formateaTiempo(durationInitial);
+            duration = durationInitial;
+            this.opcionesRadioButton = opcionRadioButton;
+            this.titulo = titulo;
+            label2.Text = titulo;
+            this.mensaje = mensaje;
+        }
+
+        public Form1(int s, int opcionRadioButton, String titulo, bool mensaje, int sonido)
+        {
+            InitializeComponent();
+            durationInitial = s;
+            label1.Text = formateaTiempo(durationInitial);
+            duration = durationInitial;
+            this.opcionesRadioButton = opcionRadioButton;
+            this.titulo = titulo;
+            label2.Text = titulo;
+            this.mensaje = mensaje;
+            this.sonido = sonido;//-1 no musica, 0-2 musica
+            string[] canciones = { "epic", "BMW", "Ford", "Mazda" };
+
+        }
+
+        public Form1(int s, int opcionRadioButton, String titulo, bool mensaje, int sonido, bool repetirMusica)
+        {
+            InitializeComponent();
+            durationInitial = s;
+            label1.Text = formateaTiempo(durationInitial);
+            duration = durationInitial;
+            this.opcionesRadioButton = opcionRadioButton;
+            this.titulo = titulo;
+            label2.Text = titulo;
+            this.mensaje = mensaje;
+            this.sonido = sonido;//-1 no musica, 0-2 musica
+            string[] canciones = { "epic", "BMW", "Ford", "Mazda" };
+            this.repetirMusica = repetirMusica;
+
+        }
+
         private void bIniciar1_Click(object sender, EventArgs e)
         {
             if(!timer1.Enabled)//Funcion de iniciar cuando esta parado
@@ -84,11 +133,16 @@ namespace Temporizador
 
             if (duration == 0)
             {
-                if(opcionesRadioButton == 0)
+                if (mensaje)
+                {
+                    Form3 form3 = new Form3(titulo, durationInitial);
+                    form3.Show();
+                }
+                if (opcionesRadioButton == 0)//parar
                 {
                     timer1.Stop();
                 }
-                else if (opcionesRadioButton == 1)
+                else if (opcionesRadioButton == 1)//reiniciar
                 {
                     duration = durationInitial;
                     label1.Text = formateaTiempo(duration);
@@ -99,7 +153,7 @@ namespace Temporizador
                     timer1.Enabled = false;
 
                 }
-                else if (opcionesRadioButton == 2)
+                else if (opcionesRadioButton == 2)//crono
                 {
                     duration++;
                     label1.Text = formateaTiempo(duration);
@@ -108,12 +162,12 @@ namespace Temporizador
 
 
             }
-            else if (duration > 0 && cuentaAtras)
+            else if (duration > 0 && cuentaAtras)//noCrono
             {
                 duration--;
                 label1.Text = formateaTiempo(duration);
             }
-            else if (duration > 0 && !cuentaAtras)
+            else if (duration > 0 && !cuentaAtras)//crono
             {
                 duration++;
                 label1.Text = formateaTiempo(duration);
@@ -233,6 +287,20 @@ namespace Temporizador
             Form2 f = new Form2();
             f.Show();
             this.Hide();
+        }
+
+        public void ReproducirMusica()
+        {
+            String ruta = "Properties.Resources." + canciones[sonido];
+            SoundPlayer sndplayr = new SoundPlayer(ruta);
+            if(repetirMusica)
+            {
+                sndplayr.PlayLooping();
+            }
+            else 
+            {
+                sndplayr.Play();
+            }
         }
     }
 }

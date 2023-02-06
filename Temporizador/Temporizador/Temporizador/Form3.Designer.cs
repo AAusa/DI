@@ -31,6 +31,7 @@
             this.lTituloForm = new System.Windows.Forms.Label();
             this.lTitulo = new System.Windows.Forms.Label();
             this.lTiempo = new System.Windows.Forms.Label();
+            this.bAceptar = new CustomControls.RJControls.bReiniciar();
             this.SuspendLayout();
             // 
             // lTituloForm
@@ -49,7 +50,7 @@
             this.lTitulo.AutoSize = true;
             this.lTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lTitulo.ForeColor = System.Drawing.Color.White;
-            this.lTitulo.Location = new System.Drawing.Point(17, 54);
+            this.lTitulo.Location = new System.Drawing.Point(17, 64);
             this.lTitulo.Name = "lTitulo";
             this.lTitulo.Size = new System.Drawing.Size(0, 18);
             this.lTitulo.TabIndex = 1;
@@ -59,17 +60,36 @@
             this.lTiempo.AutoSize = true;
             this.lTiempo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.lTiempo.ForeColor = System.Drawing.Color.White;
-            this.lTiempo.Location = new System.Drawing.Point(17, 91);
+            this.lTiempo.Location = new System.Drawing.Point(17, 101);
             this.lTiempo.Name = "lTiempo";
             this.lTiempo.Size = new System.Drawing.Size(0, 18);
             this.lTiempo.TabIndex = 2;
+            // 
+            // bAceptar
+            // 
+            this.bAceptar.BackColor = System.Drawing.Color.Orange;
+            this.bAceptar.BackgroundColor = System.Drawing.Color.Orange;
+            this.bAceptar.BorderColor = System.Drawing.Color.Orange;
+            this.bAceptar.BorderRadius = 20;
+            this.bAceptar.BorderSize = 3;
+            this.bAceptar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bAceptar.ForeColor = System.Drawing.Color.White;
+            this.bAceptar.Location = new System.Drawing.Point(112, 144);
+            this.bAceptar.Name = "bAceptar";
+            this.bAceptar.Size = new System.Drawing.Size(90, 40);
+            this.bAceptar.TabIndex = 3;
+            this.bAceptar.Text = "Aceptar";
+            this.bAceptar.TextColor = System.Drawing.Color.White;
+            this.bAceptar.UseVisualStyleBackColor = false;
+            this.bAceptar.Click += new System.EventHandler(this.bAceptar_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(382, 233);
+            this.ClientSize = new System.Drawing.Size(317, 228);
+            this.Controls.Add(this.bAceptar);
             this.Controls.Add(this.lTiempo);
             this.Controls.Add(this.lTitulo);
             this.Controls.Add(this.lTituloForm);
@@ -87,5 +107,6 @@
         private System.Windows.Forms.Label lTituloForm;
         private System.Windows.Forms.Label lTitulo;
         private System.Windows.Forms.Label lTiempo;
+        private CustomControls.RJControls.bReiniciar bAceptar;
     }
 }

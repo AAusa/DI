@@ -135,6 +135,9 @@ namespace Temporizador
 
         }
 
-        
+        private void bAceptar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

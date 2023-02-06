@@ -48,20 +48,19 @@
             this.cbSonido = new System.Windows.Forms.ComboBox();
             this.lSonido = new System.Windows.Forms.Label();
             this.bIniciar = new System.Windows.Forms.Button();
-            this.bPuntos = new System.Windows.Forms.Button();
             this.cbRepetir = new System.Windows.Forms.CheckBox();
             this.lTitulo = new System.Windows.Forms.Label();
             this.tbTitulo = new System.Windows.Forms.TextBox();
             this.cbMensaje = new System.Windows.Forms.CheckBox();
-            this.bIniciar2 = new CustomControls.RJControls.bIniciar();
-            this.bCancelar = new CustomControls.RJControls.bReiniciar();
-            this.bProbar = new CustomControls.RJControls.bEditar();
             this.gb1 = new System.Windows.Forms.GroupBox();
             this.rbCuentaAtrasT = new System.Windows.Forms.RadioButton();
             this.rbCuentaFechaT = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bProbar = new CustomControls.RJControls.bEditar();
+            this.bCancelar = new CustomControls.RJControls.bReiniciar();
+            this.bIniciar2 = new CustomControls.RJControls.bIniciar();
             this.gb1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -320,7 +319,7 @@
             this.cbSonido.FormattingEnabled = true;
             this.cbSonido.Location = new System.Drawing.Point(18, 363);
             this.cbSonido.Name = "cbSonido";
-            this.cbSonido.Size = new System.Drawing.Size(133, 23);
+            this.cbSonido.Size = new System.Drawing.Size(181, 23);
             this.cbSonido.TabIndex = 20;
             // 
             // lSonido
@@ -341,26 +340,13 @@
             this.bIniciar.FlatAppearance.BorderSize = 0;
             this.bIniciar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.bIniciar.ForeColor = System.Drawing.Color.White;
-            this.bIniciar.Location = new System.Drawing.Point(158, 363);
+            this.bIniciar.Location = new System.Drawing.Point(205, 362);
             this.bIniciar.Name = "bIniciar";
             this.bIniciar.Size = new System.Drawing.Size(42, 23);
             this.bIniciar.TabIndex = 21;
             this.bIniciar.Text = "->";
             this.bIniciar.UseVisualStyleBackColor = false;
-            // 
-            // bPuntos
-            // 
-            this.bPuntos.BackColor = System.Drawing.Color.Black;
-            this.bPuntos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.bPuntos.FlatAppearance.BorderSize = 0;
-            this.bPuntos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.bPuntos.ForeColor = System.Drawing.Color.White;
-            this.bPuntos.Location = new System.Drawing.Point(205, 362);
-            this.bPuntos.Name = "bPuntos";
-            this.bPuntos.Size = new System.Drawing.Size(42, 23);
-            this.bPuntos.TabIndex = 22;
-            this.bPuntos.Text = "...";
-            this.bPuntos.UseVisualStyleBackColor = false;
+            this.bIniciar.Click += new System.EventHandler(this.bIniciar_Click);
             // 
             // cbRepetir
             // 
@@ -406,60 +392,7 @@
             this.cbMensaje.TabIndex = 26;
             this.cbMensaje.Text = "Ver mensaje";
             this.cbMensaje.UseVisualStyleBackColor = true;
-            // 
-            // bIniciar2
-            // 
-            this.bIniciar2.BackColor = System.Drawing.Color.Green;
-            this.bIniciar2.BackgroundColor = System.Drawing.Color.Green;
-            this.bIniciar2.BorderColor = System.Drawing.Color.Green;
-            this.bIniciar2.BorderRadius = 20;
-            this.bIniciar2.BorderSize = 3;
-            this.bIniciar2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.bIniciar2.ForeColor = System.Drawing.Color.White;
-            this.bIniciar2.Location = new System.Drawing.Point(404, 509);
-            this.bIniciar2.Name = "bIniciar2";
-            this.bIniciar2.Size = new System.Drawing.Size(87, 40);
-            this.bIniciar2.TabIndex = 27;
-            this.bIniciar2.Text = "Iniciar";
-            this.bIniciar2.TextColor = System.Drawing.Color.White;
-            this.bIniciar2.UseVisualStyleBackColor = false;
-            this.bIniciar2.Click += new System.EventHandler(this.bIniciar2_Click);
-            // 
-            // bCancelar
-            // 
-            this.bCancelar.BackColor = System.Drawing.Color.Red;
-            this.bCancelar.BackgroundColor = System.Drawing.Color.Red;
-            this.bCancelar.BorderColor = System.Drawing.Color.Red;
-            this.bCancelar.BorderRadius = 20;
-            this.bCancelar.BorderSize = 3;
-            this.bCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.bCancelar.ForeColor = System.Drawing.Color.White;
-            this.bCancelar.Location = new System.Drawing.Point(311, 509);
-            this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(87, 40);
-            this.bCancelar.TabIndex = 28;
-            this.bCancelar.Text = "Cancelar";
-            this.bCancelar.TextColor = System.Drawing.Color.White;
-            this.bCancelar.UseVisualStyleBackColor = false;
-            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
-            // 
-            // bProbar
-            // 
-            this.bProbar.BackColor = System.Drawing.Color.MediumBlue;
-            this.bProbar.BackgroundColor = System.Drawing.Color.MediumBlue;
-            this.bProbar.BorderColor = System.Drawing.Color.MediumBlue;
-            this.bProbar.BorderRadius = 20;
-            this.bProbar.BorderSize = 3;
-            this.bProbar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            this.bProbar.ForeColor = System.Drawing.Color.White;
-            this.bProbar.Location = new System.Drawing.Point(18, 509);
-            this.bProbar.Name = "bProbar";
-            this.bProbar.Size = new System.Drawing.Size(87, 40);
-            this.bProbar.TabIndex = 29;
-            this.bProbar.Text = "Probar";
-            this.bProbar.TextColor = System.Drawing.Color.White;
-            this.bProbar.UseVisualStyleBackColor = false;
-            this.bProbar.Click += new System.EventHandler(this.bProbar_Click);
+            this.cbMensaje.CheckedChanged += new System.EventHandler(this.cbMensaje_CheckedChanged);
             // 
             // gb1
             // 
@@ -525,6 +458,60 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             // 
+            // bProbar
+            // 
+            this.bProbar.BackColor = System.Drawing.Color.MediumBlue;
+            this.bProbar.BackgroundColor = System.Drawing.Color.MediumBlue;
+            this.bProbar.BorderColor = System.Drawing.Color.MediumBlue;
+            this.bProbar.BorderRadius = 20;
+            this.bProbar.BorderSize = 3;
+            this.bProbar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bProbar.ForeColor = System.Drawing.Color.White;
+            this.bProbar.Location = new System.Drawing.Point(18, 509);
+            this.bProbar.Name = "bProbar";
+            this.bProbar.Size = new System.Drawing.Size(87, 40);
+            this.bProbar.TabIndex = 29;
+            this.bProbar.Text = "Probar";
+            this.bProbar.TextColor = System.Drawing.Color.White;
+            this.bProbar.UseVisualStyleBackColor = false;
+            this.bProbar.Click += new System.EventHandler(this.bProbar_Click);
+            // 
+            // bCancelar
+            // 
+            this.bCancelar.BackColor = System.Drawing.Color.Red;
+            this.bCancelar.BackgroundColor = System.Drawing.Color.Red;
+            this.bCancelar.BorderColor = System.Drawing.Color.Red;
+            this.bCancelar.BorderRadius = 20;
+            this.bCancelar.BorderSize = 3;
+            this.bCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bCancelar.ForeColor = System.Drawing.Color.White;
+            this.bCancelar.Location = new System.Drawing.Point(311, 509);
+            this.bCancelar.Name = "bCancelar";
+            this.bCancelar.Size = new System.Drawing.Size(87, 40);
+            this.bCancelar.TabIndex = 28;
+            this.bCancelar.Text = "Cancelar";
+            this.bCancelar.TextColor = System.Drawing.Color.White;
+            this.bCancelar.UseVisualStyleBackColor = false;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
+            // 
+            // bIniciar2
+            // 
+            this.bIniciar2.BackColor = System.Drawing.Color.Green;
+            this.bIniciar2.BackgroundColor = System.Drawing.Color.Green;
+            this.bIniciar2.BorderColor = System.Drawing.Color.Green;
+            this.bIniciar2.BorderRadius = 20;
+            this.bIniciar2.BorderSize = 3;
+            this.bIniciar2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.bIniciar2.ForeColor = System.Drawing.Color.White;
+            this.bIniciar2.Location = new System.Drawing.Point(404, 509);
+            this.bIniciar2.Name = "bIniciar2";
+            this.bIniciar2.Size = new System.Drawing.Size(87, 40);
+            this.bIniciar2.TabIndex = 27;
+            this.bIniciar2.Text = "Iniciar";
+            this.bIniciar2.TextColor = System.Drawing.Color.White;
+            this.bIniciar2.UseVisualStyleBackColor = false;
+            this.bIniciar2.Click += new System.EventHandler(this.bIniciar2_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,7 +525,6 @@
             this.Controls.Add(this.tbTitulo);
             this.Controls.Add(this.lTitulo);
             this.Controls.Add(this.cbRepetir);
-            this.Controls.Add(this.bPuntos);
             this.Controls.Add(this.bIniciar);
             this.Controls.Add(this.cbSonido);
             this.Controls.Add(this.lSonido);
@@ -593,7 +579,6 @@
         private System.Windows.Forms.ComboBox cbSonido;
         private System.Windows.Forms.Label lSonido;
         private System.Windows.Forms.Button bIniciar;
-        private System.Windows.Forms.Button bPuntos;
         private System.Windows.Forms.CheckBox cbRepetir;
         private System.Windows.Forms.Label lTitulo;
         private System.Windows.Forms.TextBox tbTitulo;

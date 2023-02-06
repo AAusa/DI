@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace Temporizador
         int cbHorasPointer = 0;
         int cbMinPointer = 0;
         int cbSegPointer = 0;
+        string[] canciones = { "epic", "guitar", "piano" };
 
 
         public Form2()
@@ -44,6 +46,11 @@ namespace Temporizador
                         5});
             cbSeg.TabIndex = cbSegPointer;
             cbSeg.Text = cbSegPointer + "";
+            this.cbSonido.Items.AddRange(new object[] {"Epic",
+                        "Guitar",
+                        "Piano"});
+            cbSonido.TabIndex = 0;
+            cbSonido.Text = "Selecciona canción...";
 
         }
 
@@ -121,19 +128,18 @@ namespace Temporizador
                                               cbMin.SelectedIndex == -1 ? 0 : cbMin.SelectedIndex+1,
                                               cbSeg.SelectedIndex == -1 ? 0 : cbSeg.SelectedIndex + 1);
             //lTituloForm.Text += ""+cbHoras;
-
-            Form1 form1 = new Form1(pasaraseg, opcionesRadioButton(), tbTitulo.Text);
+            Form1 form1 = new Form1(pasaraseg, opcionesRadioButton(), tbTitulo.Text, cbMensaje.Checked, cbSonido.SelectedIndex, cbRepetir.Checked);
             form1.Show();
             this.Hide();
         }
         private int opcionesRadioButton()
         {
             int opcion = 0;//Parar
-            if(rbReiniciar.Checked)
+            if(rbReiniciar.Checked)//reiniciar
             {
                 opcion = 1;
             }
-            if (rbCrono.Checked)
+            if (rbCrono.Checked)//crono
             {
                 opcion = 2;
             }
@@ -152,6 +158,7 @@ namespace Temporizador
 
         private void bCancelar_Click(object sender, EventArgs e)
         {
+            
             Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
@@ -159,10 +166,42 @@ namespace Temporizador
 
         private void bProbar_Click(object sender, EventArgs e)
         {
+            iniciarForm3();
+        }
+
+        private void cbMensaje_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void iniciarForm3()
+        {
             Form3 form3 = new Form3(tbTitulo.Text, pasaraSeg(cbHoras.SelectedIndex == -1 ? 0 : cbHoras.SelectedIndex + 1,
                                               cbMin.SelectedIndex == -1 ? 0 : cbMin.SelectedIndex + 1,
                                               cbSeg.SelectedIndex == -1 ? 0 : cbSeg.SelectedIndex + 1));
             form3.Show();
+        }
+
+        public void ReproducirMusica()
+        {
+            if(cbSonido.SelectedIndex != -1)//si hay musica seleccionada
+            {
+                String ruta = "Properties.Resources." + canciones[cbSonido.SelectedIndex];
+                SoundPlayer sndplayr = new SoundPlayer(ruta);
+                if (cbRepetir.Checked)
+                {
+                    sndplayr.PlayLooping();
+                }
+                else
+                {
+                    sndplayr.Play();
+                }
+            }
+        }
+
+        private void bIniciar_Click(object sender, EventArgs e)
+        {
+            ReproducirMusica();
         }
     }
 }
