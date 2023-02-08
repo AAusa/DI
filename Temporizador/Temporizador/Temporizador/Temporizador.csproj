@@ -63,34 +63,52 @@
     <Compile Include="bEditar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="EditarCuentaFecha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="EditarCuentaFecha.Designer.cs">
+      <DependentUpon>EditarCuentaFecha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="EleccionCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="EleccionCuenta.Designer.cs">
+      <DependentUpon>EleccionCuenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Temporizador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Temporizador.Designer.cs">
+      <DependentUpon>Temporizador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCuentaAtras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCuentaAtras.Designer.cs">
+      <DependentUpon>EditarCuentaAtras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensaje.Designer.cs">
+      <DependentUpon>Mensaje.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="EditarCuentaFecha.resx">
+      <DependentUpon>EditarCuentaFecha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="EleccionCuenta.resx">
+      <DependentUpon>EleccionCuenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Temporizador.resx">
+      <DependentUpon>Temporizador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCuentaAtras.resx">
+      <DependentUpon>EditarCuentaAtras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensaje.resx">
+      <DependentUpon>Mensaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,7 +134,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\epic.wav" />
+    <Content Include="Resources\epic2.wav" />
     <Content Include="Resources\guitar.wav" />
     <Content Include="Resources\piano.wav" />
   </ItemGroup>

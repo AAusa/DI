@@ -63,9 +63,9 @@ namespace Temporizador.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream epic {
+        internal static System.IO.UnmanagedMemoryStream epic2 {
             get {
-                return ResourceManager.GetStream("epic", resourceCulture);
+                return ResourceManager.GetStream("epic2", resourceCulture);
             }
         }
         
