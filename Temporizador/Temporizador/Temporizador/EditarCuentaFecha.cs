@@ -21,31 +21,12 @@ namespace Temporizador
         int cbSegPointer = 0;
         string[] canciones = { "epic", "guitar", "piano" };
         String rutaSonido = "";
+        bool incremento = false;
 
         public EditarCuentaFecha()
         {
             InitializeComponent();
-            this.cbHoras.Items.AddRange(new object[] {1,
-                        2,
-                        3,
-                        4,
-                        5});
-            cbHoras.TabIndex = cbHorasPointer;
-            cbHoras.Text = cbHorasPointer+"";
-            this.cbMin.Items.AddRange(new object[] {1,
-                        2,
-                        3,
-                        4,
-                        5});
-            cbMin.TabIndex = cbMinPointer;
-            cbMin.Text = cbMinPointer + "";
-            this.cbSeg.Items.AddRange(new object[] {1,
-                        2,
-                        3,
-                        4,
-                        5});
-            cbSeg.TabIndex = cbSegPointer;
-            cbSeg.Text = cbSegPointer + "";
+
             this.cbSonido.Items.AddRange(new object[] {"Epic",
                         "Guitar",
                         "Piano"});
@@ -66,8 +47,7 @@ namespace Temporizador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cbHoras.TabIndex = ++cbHorasPointer;
-            cbHoras.Text = cbHorasPointer + "";
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -87,33 +67,24 @@ namespace Temporizador
 
         private void bHorasMenos_Click(object sender, EventArgs e)
         {
-            cbHoras.TabIndex = --cbHorasPointer;
-            cbHoras.Text = cbHorasPointer + "";
+
 
         }
 
         private void bMinMenos_Click(object sender, EventArgs e)
         {
-            cbMin.TabIndex = --cbMinPointer;
-            cbMin.Text = cbMinPointer + "";
         }
 
         private void bMinMas_Click(object sender, EventArgs e)
         {
-            cbMin.TabIndex = ++cbMinPointer;
-            cbMin.Text = cbMinPointer + "";
         }
 
         private void bSegMas_Click(object sender, EventArgs e)
         {
-            cbSeg.TabIndex = ++cbSegPointer;
-            cbSeg.Text = cbSegPointer + "";
         }
 
         private void bSegMenos_Click(object sender, EventArgs e)
         {
-            cbSeg.TabIndex = --cbSegPointer;
-            cbSeg.Text = cbSegPointer + "";
         }
         private int pasaraSeg(Int32 horas, Int32 min, Int32 seg)
         {
@@ -123,6 +94,7 @@ namespace Temporizador
         }
         private void bIniciar2_Click(object sender, EventArgs e)
         {
+            /*
             //int prueba = Convert.ToInt32(cbHoras.SelectedValue.ToString());
             int pasaraseg = pasaraSeg(cbHoras.SelectedIndex == -1 ? 0 : cbHoras.SelectedIndex+1,
                                               cbMin.SelectedIndex == -1 ? 0 : cbMin.SelectedIndex+1,
@@ -131,20 +103,24 @@ namespace Temporizador
             Temporizador form1 = new Temporizador(pasaraseg, opcionesRadioButton(), tbTitulo.Text, cbMensaje.Checked, cbSonido.SelectedIndex, cbRepetir.Checked);
             form1.Show();
             this.Hide();
-        }
-        private int opcionesRadioButton()
-        {
-            int opcion = 0;//Parar
-            if(rbReiniciar.Checked)//reiniciar
+            */
+            String fecha = tbFecha.Text+" "+tbHora.Text;
+            int seg = 0;
+            if(EsFecha(fecha))
             {
-                opcion = 1;
+                seg = getSeg(ConvertToDateTime(tbFecha.Text + " " + tbHora.Text));
+                Temporizador form1 = new Temporizador(seg, tbTitulo.Text, cbMensaje.Checked, cbSonido.SelectedIndex, cbRepetir.Checked, incremento);
+                form1.Show();
+                this.Hide();
             }
-            if (rbCrono.Checked)//crono
+            else
             {
-                opcion = 2;
+                tbFecha.Text = "Revise formato";
+                tbHora.Text = "Revise formato";
             }
-            return opcion;
+          
         }
+        
 
         private void cbHoras_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -176,10 +152,20 @@ namespace Temporizador
 
         public void iniciarForm3()
         {
-            Mensaje form3 = new Mensaje(tbTitulo.Text, pasaraSeg(cbHoras.SelectedIndex == -1 ? 0 : cbHoras.SelectedIndex + 1,
-                                              cbMin.SelectedIndex == -1 ? 0 : cbMin.SelectedIndex + 1,
-                                              cbSeg.SelectedIndex == -1 ? 0 : cbSeg.SelectedIndex + 1));
-            form3.Show();
+            String fecha = tbFecha.Text + " " + tbHora.Text;
+            int seg = 0;
+            if (EsFecha(fecha))
+            {
+                seg = getSeg(ConvertToDateTime(tbFecha.Text + " " + tbHora.Text));
+                Mensaje form3 = new Mensaje(tbTitulo.Text,seg);
+                form3.Show();
+            }
+            else
+            {
+                tbFecha.Text = "Revise formato";
+                tbHora.Text = "Revise formato";
+            }
+
         }
 
         public void ReproducirMusica()
@@ -210,6 +196,58 @@ namespace Temporizador
         {
             SoundPlayer sndplayr = new SoundPlayer(rutaSonido);
             sndplayr.Stop();
+        }
+
+        private DateTime ConvertToDateTime(string value)
+        {
+            DateTime convertedDate = Convert.ToDateTime("09/02/2023 9:00");
+            try
+            {
+                convertedDate = Convert.ToDateTime(value);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("'{0}' is not in the proper format.", value);
+            }
+            return convertedDate;
+        }
+
+        private int getSeg(DateTime value)
+        {
+            int seg = 0;
+            if(value < DateTime.Now)//valor introducido menor que ahora
+            {
+                seg = (int)(DateTime.Now - value).TotalSeconds;//incremento
+                incremento = true;
+
+            }
+            else
+            {
+                seg = (int)(value - DateTime.Now).TotalSeconds;//decremento
+            }
+            return seg;
+        }
+        public static Boolean EsFecha(String fecha)
+        {
+            try
+            {
+                DateTime.Parse(fecha);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private void cbSonido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbTitulo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -123,11 +123,9 @@ namespace Temporizador
         }
         private void bIniciar2_Click(object sender, EventArgs e)
         {
-            //int prueba = Convert.ToInt32(cbHoras.SelectedValue.ToString());
             int pasaraseg = pasaraSeg(cbHoras.SelectedIndex == -1 ? 0 : cbHoras.SelectedIndex+1,
                                               cbMin.SelectedIndex == -1 ? 0 : cbMin.SelectedIndex+1,
                                               cbSeg.SelectedIndex == -1 ? 0 : cbSeg.SelectedIndex + 1);
-            //lTituloForm.Text += ""+cbHoras;
             Temporizador form1 = new Temporizador(pasaraseg, opcionesRadioButton(), tbTitulo.Text, cbMensaje.Checked, cbSonido.SelectedIndex, cbRepetir.Checked);
             form1.Show();
             this.Hide();

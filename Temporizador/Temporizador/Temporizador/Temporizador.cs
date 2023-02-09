@@ -26,6 +26,8 @@ namespace Temporizador
         bool repetirMusica = false;
         SoundPlayer sndplayr = null;
         bool pararMusica = false;
+        bool incrementoFecha = false;
+        bool fecha = false;
         public Temporizador()
         {
             InitializeComponent();
@@ -85,8 +87,6 @@ namespace Temporizador
             label2.Text = titulo;
             this.mensaje = mensaje;
             this.sonido = sonido;//-1 no musica, 0-2 musica
-            string[] canciones = { "epic", "guitar", "piano" };
-
         }
 
         public Temporizador(int s, int opcionRadioButton, String titulo, bool mensaje, int sonido, bool repetirMusica)
@@ -100,22 +100,62 @@ namespace Temporizador
             label2.Text = titulo;
             this.mensaje = mensaje;
             this.sonido = sonido;//-1 no musica, 0-2 musica
-            string[] canciones = { "epic", "BMW", "Ford", "Mazda" };
             this.repetirMusica = repetirMusica;
 
         }
 
+        public Temporizador(int s, String titulo, bool mensaje, int sonido, bool repetirMusica, bool incremento)
+        {
+            InitializeComponent();
+            durationInitial = s;
+            label1.Text = formateaTiempo(durationInitial);
+            duration = durationInitial;
+            label2.Text = titulo;
+            this.mensaje = mensaje;
+            this.sonido = sonido;//-1 no musica, 0-2 musica
+            this.repetirMusica = repetirMusica;
+            incrementoFecha = incremento;
+            fecha = true;
+            bReiniciar1.Visible = false;
+            bIniciar1.Visible = false;
+            bIniciar1.BackColor = Color.Red;
+            bIniciar1.BorderColor = Color.Red;
+            bIniciar1.Text = "Parar";
+            timer1.Enabled = true;
+            if (!fecha)
+            {
+                timer1.Tick += new EventHandler(count_down);
+
+            }
+            else
+            {
+                timer1.Tick += new EventHandler(count_downFecha);
+
+            }
+            timer1.Interval = 1000;
+            timer1.Start();
+        }
+
         private void bIniciar1_Click(object sender, EventArgs e)
         {
+         
             if(!timer1.Enabled)//Funcion de iniciar cuando esta parado
             {
                 bIniciar1.BackColor = Color.Red;
                 bIniciar1.BorderColor = Color.Red;
                 bIniciar1.Text = "Parar";
                 timer1.Enabled = true;
-                timer1.Tick += new EventHandler(count_down);
+                if(!fecha)
+                {
+                    timer1.Tick += new EventHandler(count_down);
+
+                }
+                else
+                {
+                    timer1.Tick += new EventHandler(count_downFecha);
+
+                }
                 timer1.Interval = 1000;
-                //biniciar1.click += new eventhandler(biniciar1_click);
                 timer1.Start();
             }
             else//Funcion de parar cuando esta iniciado
@@ -129,7 +169,16 @@ namespace Temporizador
                 bIniciar1.BorderColor = Color.Green;
                 bIniciar1.Text = "Iniciar";
                 timer1.Enabled = false;
-                timer1.Tick -= new EventHandler(count_down);
+                if (!fecha)
+                {
+                    timer1.Tick -= new EventHandler(count_down);
+
+                }
+                else
+                {
+                    timer1.Tick -= new EventHandler(count_downFecha);
+
+                }
 
             }
         }
@@ -172,12 +221,42 @@ namespace Temporizador
 
 
             }
-            else if (duration > 0 && cuentaAtras)//noCrono
+            else if (duration > 0 && cuentaAtras)//Crono (hacia atras)
             {
                 duration--;
                 label1.Text = formateaTiempo(duration);
             }
-            else if (duration > 0 && !cuentaAtras)//crono
+            else if (duration > 0 && !cuentaAtras)//crono (hacia adelante)
+            {
+                duration++;
+                label1.Text = formateaTiempo(duration);
+            }
+        }
+
+        private void count_downFecha(object sender, EventArgs e)
+        {
+            if(!incrementoFecha)//si es crono
+            {
+                if (duration > 0)//va restando
+                {
+                    duration--;
+                    label1.Text = formateaTiempo(duration);
+                }
+                if (duration == 0)//para
+                {
+                    if (sonido > -1 && !pararMusica)
+                    {
+                        ReproducirMusica();
+                    }
+                    if (mensaje)
+                    {
+                        Mensaje form3 = new Mensaje(titulo, durationInitial);
+                        form3.Show();
+                    }
+                    timer1.Stop();
+                }
+            }
+            else//si es incremento infinito
             {
                 duration++;
                 label1.Text = formateaTiempo(duration);
