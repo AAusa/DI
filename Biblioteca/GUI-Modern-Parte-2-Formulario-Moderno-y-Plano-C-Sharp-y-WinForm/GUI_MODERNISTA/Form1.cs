@@ -97,7 +97,7 @@ namespace GUI_MODERNISTA
 
         private void btnproductos_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new productos());
+            AbrirFormEnPanel(new login());
         }
 
         private void btninicio_Click(object sender, EventArgs e)

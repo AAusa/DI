@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI_MODERNISTA
 {
-    public partial class productos : Form
+    public partial class login : Form
     {
-        public productos()
+        public login()
         {
             InitializeComponent();
         }

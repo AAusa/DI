@@ -16,5 +16,35 @@ namespace GUI_MODERNISTA
         {
             InitializeComponent();
         }
+
+        private void ltitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lDescripcion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
