@@ -51,6 +51,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="biblioteca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="biblioteca.Designer.cs">
+      <DependentUpon>biblioteca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prestamos.Designer.cs">
+      <DependentUpon>prestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="socios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="socios.Designer.cs">
+      <DependentUpon>socios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="libros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="libros.Designer.cs">
+      <DependentUpon>libros.cs</DependentUpon>
+    </Compile>
     <Compile Include="inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,14 +89,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="biblioteca.resx">
+      <DependentUpon>biblioteca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inicio.resx">
       <DependentUpon>inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="libros.resx">
+      <DependentUpon>libros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prestamos.resx">
+      <DependentUpon>prestamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,6 +117,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="socios.resx">
+      <DependentUpon>socios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

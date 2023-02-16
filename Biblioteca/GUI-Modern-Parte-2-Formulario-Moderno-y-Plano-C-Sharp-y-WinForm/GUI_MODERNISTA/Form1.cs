@@ -65,17 +65,17 @@ namespace GUI_MODERNISTA
 
         private void btnrptventa_Click(object sender, EventArgs e)
         {
-            SubmenuReportes.Visible = false;
+            AbrirFormEnPanel(new libros());
         }
 
         private void btnrptcompra_Click(object sender, EventArgs e)
         {
-            SubmenuReportes.Visible = false;
+            AbrirFormEnPanel(new socios());
         }
 
         private void btnrptpagos_Click(object sender, EventArgs e)
         {
-            SubmenuReportes.Visible = false;
+            AbrirFormEnPanel(new prestamos());
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
@@ -94,6 +94,28 @@ namespace GUI_MODERNISTA
             fh.Show();
            
         }
+        private void login_MouseHover(object sender, EventArgs e)
+        {
+            btnlogin.BackColor = Color.SeaGreen;
+        }
+        private void biblio_MouseHover(object sender, EventArgs e)
+        {
+            btnbiblioteca.BackColor = Color.SeaGreen;
+        }
+
+        private void book_MouseHover(object sender, EventArgs e)
+        {
+            btnlibro.BackColor = Color.SeaGreen;
+        }
+
+        private void socio_MouseHover(object sender, EventArgs e)
+        {
+            btnsocio.BackColor = Color.SeaGreen;
+        }
+        private void prestamo_MouseHover(object sender, EventArgs e)
+        {
+            btnprestamos.BackColor = Color.SeaGreen;
+        }
 
         private void btnproductos_Click(object sender, EventArgs e)
         {
@@ -107,6 +129,7 @@ namespace GUI_MODERNISTA
 
         private void btnbiblioteca_Click(object sender, EventArgs e)
         {
+            AbrirFormEnPanel(new biblioteca());
             SubmenuReportes.Visible = true;
 
         }

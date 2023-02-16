@@ -30,9 +30,13 @@ D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-
 D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.csproj.SuggestedBindingRedirects.cache
 D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.Form1.resources
 D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.inicio.resources
-D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.productos.resources
 D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.Properties.Resources.resources
 D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.csproj.GenerateResource.cache
 D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.csproj.CoreCompileInputs.cache
 D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.exe
 D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.pdb
+D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.login.resources
+D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.biblioteca.resources
+D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.libros.resources
+D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.socios.resources
+D:\Documentos\VS-DI\DI\Biblioteca\GUI-Modern-Parte-2-Formulario-Moderno-y-Plano-C-Sharp-y-WinForm\GUI_MODERNISTA\obj\Debug\GUI_MODERNISTA.prestamos.resources

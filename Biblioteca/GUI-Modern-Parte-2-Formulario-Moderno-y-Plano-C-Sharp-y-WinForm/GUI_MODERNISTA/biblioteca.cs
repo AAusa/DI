@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI_MODERNISTA
 {
-    public partial class login : Form
+    public partial class biblioteca : Form
     {
-        public login()
+        public biblioteca()
         {
             InitializeComponent();
-        }
-
-        private void login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

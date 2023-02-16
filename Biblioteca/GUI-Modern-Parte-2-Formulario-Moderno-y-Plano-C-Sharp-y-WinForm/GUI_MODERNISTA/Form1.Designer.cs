@@ -42,7 +42,7 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnprestamos = new System.Windows.Forms.Button();
-            this.btnrptcompra = new System.Windows.Forms.Button();
+            this.btnsocio = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnlibro = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.PictureBox();
@@ -139,7 +139,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel1.BackColor = System.Drawing.Color.Green;
             this.panel1.Location = new System.Drawing.Point(0, 134);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(5, 40);
@@ -147,7 +147,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel3.BackColor = System.Drawing.Color.Green;
             this.panel3.Location = new System.Drawing.Point(0, 180);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5, 40);
@@ -174,7 +174,7 @@
             this.SubmenuReportes.Controls.Add(this.panel11);
             this.SubmenuReportes.Controls.Add(this.panel10);
             this.SubmenuReportes.Controls.Add(this.btnprestamos);
-            this.SubmenuReportes.Controls.Add(this.btnrptcompra);
+            this.SubmenuReportes.Controls.Add(this.btnsocio);
             this.SubmenuReportes.Controls.Add(this.panel9);
             this.SubmenuReportes.Controls.Add(this.btnlibro);
             this.SubmenuReportes.Location = new System.Drawing.Point(41, 229);
@@ -185,15 +185,15 @@
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel11.BackColor = System.Drawing.Color.Green;
             this.panel11.Location = new System.Drawing.Point(0, 68);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(5, 28);
+            this.panel11.Size = new System.Drawing.Size(5, 32);
             this.panel11.TabIndex = 19;
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel10.BackColor = System.Drawing.Color.Green;
             this.panel10.Location = new System.Drawing.Point(0, 34);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(5, 28);
@@ -216,28 +216,30 @@
             this.btnprestamos.Text = "Préstamos";
             this.btnprestamos.UseVisualStyleBackColor = false;
             this.btnprestamos.Click += new System.EventHandler(this.btnrptpagos_Click);
+            this.btnprestamos.MouseHover += new System.EventHandler(this.prestamo_MouseHover);
             // 
-            // btnrptcompra
+            // btnsocio
             // 
-            this.btnrptcompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnrptcompra.FlatAppearance.BorderSize = 0;
-            this.btnrptcompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnrptcompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnrptcompra.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrptcompra.ForeColor = System.Drawing.Color.White;
-            this.btnrptcompra.Image = global::GUI_MODERNISTA.Properties.Resources.socionew;
-            this.btnrptcompra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnrptcompra.Location = new System.Drawing.Point(3, 34);
-            this.btnrptcompra.Name = "btnrptcompra";
-            this.btnrptcompra.Size = new System.Drawing.Size(176, 28);
-            this.btnrptcompra.TabIndex = 18;
-            this.btnrptcompra.Text = "Socios";
-            this.btnrptcompra.UseVisualStyleBackColor = false;
-            this.btnrptcompra.Click += new System.EventHandler(this.btnrptcompra_Click);
+            this.btnsocio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnsocio.FlatAppearance.BorderSize = 0;
+            this.btnsocio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnsocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsocio.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsocio.ForeColor = System.Drawing.Color.White;
+            this.btnsocio.Image = global::GUI_MODERNISTA.Properties.Resources.socionew;
+            this.btnsocio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsocio.Location = new System.Drawing.Point(3, 34);
+            this.btnsocio.Name = "btnsocio";
+            this.btnsocio.Size = new System.Drawing.Size(176, 28);
+            this.btnsocio.TabIndex = 18;
+            this.btnsocio.Text = "Socios";
+            this.btnsocio.UseVisualStyleBackColor = false;
+            this.btnsocio.Click += new System.EventHandler(this.btnrptcompra_Click);
+            this.btnsocio.MouseHover += new System.EventHandler(this.socio_MouseHover);
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel9.BackColor = System.Drawing.Color.Green;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(5, 28);
@@ -260,6 +262,7 @@
             this.btnlibro.Text = "Libros";
             this.btnlibro.UseVisualStyleBackColor = false;
             this.btnlibro.Click += new System.EventHandler(this.btnrptventa_Click);
+            this.btnlibro.MouseHover += new System.EventHandler(this.book_MouseHover);
             // 
             // btnsalir
             // 
@@ -290,6 +293,7 @@
             this.btnbiblioteca.Text = "Biblioteca";
             this.btnbiblioteca.UseVisualStyleBackColor = false;
             this.btnbiblioteca.Click += new System.EventHandler(this.btnbiblioteca_Click);
+            this.btnbiblioteca.MouseHover += new System.EventHandler(this.biblio_MouseHover);
             // 
             // btnlogin
             // 
@@ -309,6 +313,7 @@
             this.btnlogin.Text = "Login";
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnproductos_Click);
+            this.btnlogin.MouseHover += new System.EventHandler(this.login_MouseHover);
             // 
             // btninicio
             // 
@@ -367,7 +372,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnprestamos;
-        private System.Windows.Forms.Button btnrptcompra;
+        private System.Windows.Forms.Button btnsocio;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnlibro;
     }
