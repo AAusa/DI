@@ -133,5 +133,16 @@ namespace GUI_MODERNISTA
             SubmenuReportes.Visible = true;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new LeerBD());
+
+        }
+
+        private void BD_MouseHover(object sender, EventArgs e)
+        {
+            bBD.BackColor = Color.SeaGreen;
+        }
     }
 }

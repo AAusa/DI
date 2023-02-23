@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.resultado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,6 +128,7 @@
             this.button1.TabIndex = 48;
             this.button1.Text = "AGREGAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lTitulo
             // 
@@ -179,12 +181,24 @@
             this.label6.TabIndex = 58;
             this.label6.Text = "SOCIO:";
             // 
+            // resultado
+            // 
+            this.resultado.AutoSize = true;
+            this.resultado.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.resultado.ForeColor = System.Drawing.Color.White;
+            this.resultado.Location = new System.Drawing.Point(108, 435);
+            this.resultado.Name = "resultado";
+            this.resultado.Size = new System.Drawing.Size(0, 24);
+            this.resultado.TabIndex = 61;
+            // 
             // prestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1048, 534);
+            this.Controls.Add(this.resultado);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label6);
@@ -222,5 +236,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label resultado;
     }
 }

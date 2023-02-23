@@ -42,6 +42,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lTitulo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.resultado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,6 +136,7 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "AGREGAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lusuario
             // 
@@ -176,12 +178,23 @@
             this.pictureBox2.TabIndex = 34;
             this.pictureBox2.TabStop = false;
             // 
+            // resultado
+            // 
+            this.resultado.AutoSize = true;
+            this.resultado.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.resultado.ForeColor = System.Drawing.Color.White;
+            this.resultado.Location = new System.Drawing.Point(96, 422);
+            this.resultado.Name = "resultado";
+            this.resultado.Size = new System.Drawing.Size(0, 24);
+            this.resultado.TabIndex = 45;
+            // 
             // socios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1048, 534);
+            this.Controls.Add(this.resultado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label4);
@@ -219,5 +232,6 @@
         private System.Windows.Forms.Label lusuario;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lTitulo;
+        private System.Windows.Forms.Label resultado;
     }
 }

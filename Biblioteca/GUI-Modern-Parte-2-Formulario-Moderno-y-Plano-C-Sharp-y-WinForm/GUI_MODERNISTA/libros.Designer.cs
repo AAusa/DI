@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.resultado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,19 +58,20 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(108, 467);
+            this.button1.Location = new System.Drawing.Point(558, 259);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(415, 33);
             this.button1.TabIndex = 15;
             this.button1.Text = "AGREGAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lcontrasena
             // 
             this.lcontrasena.AutoSize = true;
             this.lcontrasena.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.lcontrasena.ForeColor = System.Drawing.Color.White;
-            this.lcontrasena.Location = new System.Drawing.Point(102, 267);
+            this.lcontrasena.Location = new System.Drawing.Point(554, 117);
             this.lcontrasena.Name = "lcontrasena";
             this.lcontrasena.Size = new System.Drawing.Size(243, 24);
             this.lcontrasena.TabIndex = 14;
@@ -78,7 +80,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.textBox2.Location = new System.Drawing.Point(367, 264);
+            this.textBox2.Location = new System.Drawing.Point(819, 114);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(156, 33);
             this.textBox2.TabIndex = 13;
@@ -156,7 +158,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(102, 367);
+            this.label3.Location = new System.Drawing.Point(554, 216);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 24);
             this.label3.TabIndex = 27;
@@ -165,7 +167,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.textBox5.Location = new System.Drawing.Point(270, 364);
+            this.textBox5.Location = new System.Drawing.Point(722, 213);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(253, 33);
             this.textBox5.TabIndex = 26;
@@ -175,7 +177,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(102, 317);
+            this.label4.Location = new System.Drawing.Point(554, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 24);
             this.label4.TabIndex = 25;
@@ -184,7 +186,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.textBox6.Location = new System.Drawing.Point(270, 314);
+            this.textBox6.Location = new System.Drawing.Point(722, 164);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(253, 33);
             this.textBox6.TabIndex = 24;
@@ -194,7 +196,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(102, 416);
+            this.label5.Location = new System.Drawing.Point(102, 263);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 24);
             this.label5.TabIndex = 23;
@@ -203,7 +205,7 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.textBox7.Location = new System.Drawing.Point(270, 413);
+            this.textBox7.Location = new System.Drawing.Point(270, 260);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(253, 33);
             this.textBox7.TabIndex = 22;
@@ -211,12 +213,22 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(616, 94);
+            this.pictureBox2.Location = new System.Drawing.Point(624, 317);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(359, 406);
+            this.pictureBox2.Size = new System.Drawing.Size(313, 244);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
+            // 
+            // resultado
+            // 
+            this.resultado.AutoSize = true;
+            this.resultado.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultado.ForeColor = System.Drawing.Color.White;
+            this.resultado.Location = new System.Drawing.Point(102, 349);
+            this.resultado.Name = "resultado";
+            this.resultado.Size = new System.Drawing.Size(0, 24);
+            this.resultado.TabIndex = 28;
             // 
             // libros
             // 
@@ -224,6 +236,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1064, 573);
+            this.Controls.Add(this.resultado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label4);
@@ -268,5 +281,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label resultado;
     }
 }

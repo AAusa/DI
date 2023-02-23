@@ -16,5 +16,20 @@ namespace GUI_MODERNISTA
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nombre = textBox4.Text;
+            string apellidos = textBox3.Text;
+            string fechaNac = textBox1.Text;
+            string domicilio = textBox6.Text;
+            string tfno = textBox5.Text;
+            resultado.Text = "Datos introducidos:" + nombre + " / " + apellidos + " / " + fechaNac + " / " + domicilio + " / " + tfno;
+            textBox1.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+        }
     }
 }

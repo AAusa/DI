@@ -38,6 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SubmenuReportes = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -45,6 +46,7 @@
             this.btnsocio = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnlibro = new System.Windows.Forms.Button();
+            this.bBD = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.PictureBox();
             this.btnbiblioteca = new System.Windows.Forms.Button();
             this.btnlogin = new System.Windows.Forms.Button();
@@ -156,7 +158,9 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.MenuVertical.Controls.Add(this.panel2);
             this.MenuVertical.Controls.Add(this.SubmenuReportes);
+            this.MenuVertical.Controls.Add(this.bBD);
             this.MenuVertical.Controls.Add(this.btnsalir);
             this.MenuVertical.Controls.Add(this.panel3);
             this.MenuVertical.Controls.Add(this.btnbiblioteca);
@@ -168,6 +172,14 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(220, 612);
             this.MenuVertical.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Green;
+            this.panel2.Location = new System.Drawing.Point(0, 331);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 40);
+            this.panel2.TabIndex = 8;
             // 
             // SubmenuReportes
             // 
@@ -263,6 +275,25 @@
             this.btnlibro.UseVisualStyleBackColor = false;
             this.btnlibro.Click += new System.EventHandler(this.btnrptventa_Click);
             this.btnlibro.MouseHover += new System.EventHandler(this.book_MouseHover);
+            // 
+            // bBD
+            // 
+            this.bBD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.bBD.FlatAppearance.BorderSize = 0;
+            this.bBD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.bBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bBD.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBD.ForeColor = System.Drawing.Color.White;
+            this.bBD.Image = ((System.Drawing.Image)(resources.GetObject("bBD.Image")));
+            this.bBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bBD.Location = new System.Drawing.Point(3, 331);
+            this.bBD.Name = "bBD";
+            this.bBD.Size = new System.Drawing.Size(217, 40);
+            this.bBD.TabIndex = 7;
+            this.bBD.Text = "Leer BD";
+            this.bBD.UseVisualStyleBackColor = false;
+            this.bBD.Click += new System.EventHandler(this.button1_Click);
+            this.bBD.MouseHover += new System.EventHandler(this.BD_MouseHover);
             // 
             // btnsalir
             // 
@@ -375,6 +406,8 @@
         private System.Windows.Forms.Button btnsocio;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnlibro;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button bBD;
     }
 }
 

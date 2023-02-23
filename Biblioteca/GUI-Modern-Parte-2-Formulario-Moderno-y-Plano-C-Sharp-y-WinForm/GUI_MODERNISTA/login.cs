@@ -21,5 +21,14 @@ namespace GUI_MODERNISTA
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string usuario = textBox1.Text;
+            string contrasena = textBox2.Text;
+            resultado.Text = "Usuario y contraseña introducidos:"+usuario+" / "+contrasena;
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
     }
 }
